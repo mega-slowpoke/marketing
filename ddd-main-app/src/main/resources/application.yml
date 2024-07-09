@@ -1,0 +1,5 @@
+spring:
+  config:
+    name: ddd-main-app
+  profiles:
+    active: dev
