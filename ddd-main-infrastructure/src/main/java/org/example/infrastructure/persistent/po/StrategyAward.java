@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class StrategyAward {
-    private Long Id;
+    private Long id;
     private Long StrategyId;
     private Long awardId;
     private String awardDesc;
@@ -18,9 +18,11 @@ public class StrategyAward {
     private Date createTime;
     private Date updateTime;
 
+    public StrategyAward() {
+    }
 
     public StrategyAward(Long id, Long strategyId, Long awardId, String awardDesc, Integer awardTotal, Integer awardRemaining, BigDecimal awardRate, String awardTitle, String awardSubtitle, String ruleModel, String sortOrder, Date createTime, Date updateTime) {
-        Id = id;
+        this.id = id;
         StrategyId = strategyId;
         this.awardId = awardId;
         this.awardDesc = awardDesc;
@@ -36,11 +38,11 @@ public class StrategyAward {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public Long getStrategyId() {
@@ -137,5 +139,24 @@ public class StrategyAward {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "StrategyAward{" +
+                "id=" + id +
+                ", StrategyId=" + StrategyId +
+                ", awardId=" + awardId +
+                ", awardDesc='" + awardDesc + '\'' +
+                ", awardTotal=" + awardTotal +
+                ", awardRemaining=" + awardRemaining +
+                ", awardRate=" + awardRate +
+                ", awardTitle='" + awardTitle + '\'' +
+                ", awardSubtitle='" + awardSubtitle + '\'' +
+                ", ruleModel='" + ruleModel + '\'' +
+                ", sortOrder='" + sortOrder + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
     }
 }

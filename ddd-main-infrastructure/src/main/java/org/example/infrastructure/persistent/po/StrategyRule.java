@@ -13,6 +13,9 @@ public class StrategyRule {
     private Date createTime;
     private Date updateTime;
 
+    public StrategyRule() {
+    }
+
     public StrategyRule(Long id, Long strategyId, Integer awardId, Integer ruleType, String ruleModel, String ruleValue, String ruleDesc, Date createTime, Date updateTime) {
         this.id = id;
         this.strategyId = strategyId;
@@ -95,5 +98,21 @@ public class StrategyRule {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+
+    @Override
+    public String toString() {
+        return "StrategyRule{" +
+                "id=" + id +
+                ", strategyId=" + strategyId +
+                ", awardId=" + awardId +
+                ", ruleType=" + ruleType +
+                ", ruleModel='" + ruleModel + '\'' +
+                ", ruleValue='" + ruleValue + '\'' +
+                ", ruleDesc='" + ruleDesc + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
     }
 }

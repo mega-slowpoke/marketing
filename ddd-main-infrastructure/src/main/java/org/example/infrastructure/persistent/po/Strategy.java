@@ -59,4 +59,15 @@ public class Strategy {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
+    @Override
+    public String toString() {
+        return "Strategy{" +
+                "id=" + id +
+                ", strategyId=" + strategyId +
+                ", strategyDesc='" + strategyDesc + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }

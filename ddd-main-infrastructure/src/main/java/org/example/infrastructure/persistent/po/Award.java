@@ -1,5 +1,7 @@
 package org.example.infrastructure.persistent.po;
 
+import org.springframework.context.annotation.Bean;
+
 import java.util.Date;
 
 public class Award {
@@ -11,6 +13,9 @@ public class Award {
     private String awardDesc;
     private Date createTime;
     private Date updateTime;
+
+    public Award() {
+    }
 
     public Award(Long id, Long awardId, String awardKey, String awardConfig, String awardDesc, Date createTime, Date updateTime) {
         this.id = id;
@@ -76,5 +81,18 @@ public class Award {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Award{" +
+                "id=" + id +
+                ", awardId=" + awardId +
+                ", awardKey='" + awardKey + '\'' +
+                ", awardConfig='" + awardConfig + '\'' +
+                ", awardDesc='" + awardDesc + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
     }
 }
