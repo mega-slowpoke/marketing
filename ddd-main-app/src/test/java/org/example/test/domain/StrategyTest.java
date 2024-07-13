@@ -28,6 +28,7 @@ public class StrategyTest {
 
     @Test
     public void LotteryTest() {
+        iStrategyInitializer.doLottery(100001L);
         log.info("lottery1: get awardId" + iStrategyInitializer.doLottery(100001L));
         log.info("lottery2: get awardId" + iStrategyInitializer.doLottery(100001L));
         log.info("lottery3: get awardId" + iStrategyInitializer.doLottery(100001L));

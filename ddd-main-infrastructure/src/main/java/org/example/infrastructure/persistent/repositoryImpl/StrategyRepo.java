@@ -71,7 +71,7 @@ public class StrategyRepo implements IStrategyRepo {
 
     @Override
     public Integer getAwardIdFromDistributionMap(Long strategyId, Integer randomIdx) {
-        String key = Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId;
+        String key = Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId;
         return iRedisService.getFromMap(key, randomIdx);
     }
 }
