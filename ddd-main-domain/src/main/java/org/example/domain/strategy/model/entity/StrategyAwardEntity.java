@@ -6,7 +6,7 @@ import java.util.Date;
 public class StrategyAwardEntity {
     private Long id;
     private Long StrategyId;
-    private Long awardId;
+    private Integer awardId;
     private Integer awardTotal;
     private Integer awardRemaining;
     private BigDecimal awardRate;
@@ -14,7 +14,7 @@ public class StrategyAwardEntity {
     public StrategyAwardEntity() {
     }
 
-    public StrategyAwardEntity(Long id, Long strategyId, Long awardId, String awardDesc, Integer awardTotal, Integer awardRemaining, BigDecimal awardRate, String awardTitle, String awardSubtitle, String ruleModel) {
+    public StrategyAwardEntity(Long id, Long strategyId, Integer awardId, String awardDesc, Integer awardTotal, Integer awardRemaining, BigDecimal awardRate, String awardTitle, String awardSubtitle, String ruleModel) {
         this.id = id;
         StrategyId = strategyId;
         this.awardId = awardId;
@@ -39,11 +39,11 @@ public class StrategyAwardEntity {
         StrategyId = strategyId;
     }
 
-    public Long getAwardId() {
+    public Integer getAwardId() {
         return awardId;
     }
 
-    public void setAwardId(Long awardId) {
+    public void setAwardId(Integer awardId) {
         this.awardId = awardId;
     }
 

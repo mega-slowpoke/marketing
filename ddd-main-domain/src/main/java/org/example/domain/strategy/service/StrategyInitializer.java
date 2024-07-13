@@ -8,10 +8,14 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static java.util.Random.*;
 
 @Slf4j
 @Service
@@ -43,10 +47,10 @@ public class StrategyInitializer implements IStrategyInitializer{
         BigDecimal rateRange = totalRate.divide(minRate, 0, RoundingMode.CEILING);
 
         // 5. 生成策略奖品概率查找表「这里指需要在list集合中，存放上对应的奖品占位即可，占位越多等于概率越高」
-        Map<Integer, Long> awardDistribution = new ConcurrentHashMap<>();
+        Map<Integer, Integer> awardDistribution = new ConcurrentHashMap<>();
         int idx = 0;
         for (StrategyAwardEntity strategyAward : strategyAwardEntityList) {
-            Long awardId = strategyAward.getAwardId();
+            Integer awardId = strategyAward.getAwardId();
             BigDecimal awardRate = strategyAward.getAwardRate();
             // 计算出每个概率值需要占用多少个slot (向上取整，最后得到的只是近似值）
             int slotNum = rateRange.multiply(awardRate).setScale(0, RoundingMode.CEILING).intValue();
@@ -56,6 +60,15 @@ public class StrategyInitializer implements IStrategyInitializer{
         }
 
         // 4. move map to redis
+        iStrategyRepo.putAwardDistributionToRedis(strategyId, rateRange, awardDistribution);
+    }
+
+    @Override
+    public Integer getRandomAward(Long strategyId) {
+        Integer rateRange = iStrategyRepo.getRateRange(strategyId);
+        int randomIdx = new SecureRandom().nextInt(rateRange);
+        Map<Integer, Integer> awardDistribution = iStrategyRepo.getAwardDistribution();
 
     }
+
 }
