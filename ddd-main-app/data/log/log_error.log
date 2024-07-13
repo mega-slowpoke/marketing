@@ -2457,3 +2457,11 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
 	... 43 common frames omitted
+24-07-13.07:24:22.090 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m30s66ms688µs).
+24-07-13.07:24:35.552 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:25:46.173 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:25:56.348 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:25:59.565 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:26:56.941 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:28:47.227 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s173ms409µs500ns).
+24-07-13.07:28:47.248 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer

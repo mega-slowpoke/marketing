@@ -2751,3 +2751,242 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 24-07-13.07:12:41.709 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
 24-07-13.07:12:41.752 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.68 seconds (JVM running for 4.256)
 24-07-13.07:12:42.056 [main            ] INFO  StrategyTest           - test succeed
+24-07-13.07:13:47.171 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 209168 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:13:47.172 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:13:47.763 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:13:47.766 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:13:47.784 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-13.07:13:48.858 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:13:49.371 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:13:49.428 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:13:50.935 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:13:50.984 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.13 seconds (JVM running for 4.843)
+24-07-13.07:13:51.379 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:13:51.680 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:13:51.795 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:13:51.813 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:15:11.128 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 211892 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:15:11.128 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:15:11.743 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:15:11.745 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:15:11.766 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-13.07:15:12.864 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:15:13.372 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:15:13.429 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:15:14.926 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:15:14.973 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.163 seconds (JVM running for 4.862)
+24-07-13.07:15:43.296 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:15:44.262 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:15:51.096 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:15:51.109 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:18:30.912 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 212080 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:18:30.920 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:18:31.477 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:18:31.480 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:18:31.495 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+24-07-13.07:18:32.603 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:18:33.104 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:18:33.167 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:18:34.621 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:18:34.665 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.01 seconds (JVM running for 4.774)
+24-07-13.07:18:35.018 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:18:35.303 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:18:35.429 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:18:35.441 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:18:43.351 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 211716 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:18:43.352 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:18:43.975 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:18:43.977 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:18:43.997 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-13.07:18:45.129 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:18:45.630 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:18:45.691 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:18:47.127 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:18:47.173 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.147 seconds (JVM running for 4.89)
+24-07-13.07:18:51.035 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:18:51.916 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:24:22.090 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m30s66ms688µs).
+24-07-13.07:24:22.170 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:24:22.195 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:24:31.064 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 178028 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:24:31.065 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:24:31.626 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:24:31.628 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:24:31.648 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+24-07-13.07:24:32.863 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:24:33.373 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:24:33.428 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:24:34.825 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:24:34.869 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.064 seconds (JVM running for 4.688)
+24-07-13.07:24:35.204 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:24:35.504 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:24:35.552 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:24:35.585 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:24:35.588 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:25:12.090 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 183788 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:25:12.091 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:25:12.676 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:25:12.678 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:25:12.695 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-13.07:25:13.841 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:25:14.359 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:25:14.415 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:25:15.868 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:25:15.922 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.148 seconds (JVM running for 4.847)
+24-07-13.07:25:23.864 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:25:24.781 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:25:46.173 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:25:46.223 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:25:46.230 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:25:50.243 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 167064 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:25:50.245 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:25:51.050 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:25:51.053 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:25:51.075 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-13.07:25:51.358 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 213224 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:25:51.359 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:25:51.994 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:25:51.997 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:25:52.017 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-07-13.07:25:52.380 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:25:52.942 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:25:53.002 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:25:53.188 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:25:53.949 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:25:54.035 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:25:54.956 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:25:55.059 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.193 seconds (JVM running for 5.884)
+24-07-13.07:25:55.716 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:25:55.763 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.709 seconds (JVM running for 5.411)
+24-07-13.07:25:56.072 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:25:56.307 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:25:56.348 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:25:56.348 [main            ] INFO  StrategyTest           - test succeed
+24-07-13.07:25:56.375 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:25:56.378 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:25:59.250 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:25:59.522 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:25:59.565 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:25:59.565 [main            ] INFO  StrategyTest           - test succeed
+24-07-13.07:25:59.593 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:25:59.596 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:26:52.966 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 214452 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:26:52.967 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:26:53.485 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:26:53.488 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:26:53.505 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+24-07-13.07:26:54.569 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:26:55.050 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:26:55.106 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:26:56.296 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:26:56.348 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.665 seconds (JVM running for 4.255)
+24-07-13.07:26:56.659 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:26:56.900 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:26:56.941 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:26:56.970 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:26:56.973 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:27:39.678 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 209780 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:27:39.679 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:27:40.279 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:27:40.281 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:27:40.296 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+24-07-13.07:27:41.374 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:27:41.883 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:27:41.942 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:27:43.475 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:27:43.522 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.149 seconds (JVM running for 4.839)
+24-07-13.07:27:52.180 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:27:53.054 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:28:47.227 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s173ms409µs500ns).
+24-07-13.07:28:47.248 [main            ] ERROR StrategyInitializer    - No such strategy, initializeStrategy fails atorg.example.domain.strategy.service.StrategyInitializer
+24-07-13.07:28:47.290 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:28:47.300 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:28:51.186 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 211300 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:28:51.187 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:28:51.708 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:28:51.711 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:28:51.729 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+24-07-13.07:28:52.765 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:28:53.249 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:28:53.308 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:28:54.579 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:28:54.629 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.717 seconds (JVM running for 4.298)
+24-07-13.07:28:54.915 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:28:55.149 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:28:55.269 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:28:55.278 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-13.07:29:01.052 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 214708 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:29:01.053 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:29:01.626 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:29:01.628 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:29:01.647 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-13.07:29:02.722 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:29:03.222 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:29:03.280 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:29:04.698 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:29:04.749 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.019 seconds (JVM running for 4.725)
+24-07-13.07:29:55.675 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 209312 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:29:55.676 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:29:56.211 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:29:56.213 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:29:56.228 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+24-07-13.07:29:57.281 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:29:57.763 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:29:57.822 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:29:59.083 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:29:59.129 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.717 seconds (JVM running for 4.368)
+24-07-13.07:30:05.316 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 189792 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:30:05.316 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:30:05.924 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:30:05.926 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:30:05.944 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+24-07-13.07:30:07.057 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:30:07.577 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:30:07.644 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:30:09.143 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:30:09.188 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.183 seconds (JVM running for 4.911)
+24-07-13.07:30:53.553 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 209216 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:30:53.554 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:30:54.151 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:30:54.154 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:30:54.173 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-07-13.07:30:55.287 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:30:55.779 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:30:55.838 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:30:57.206 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:30:57.261 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.058 seconds (JVM running for 4.756)
+24-07-13.07:31:38.444 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 215392 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:31:38.445 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:31:39.055 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:31:39.058 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:31:39.076 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+24-07-13.07:31:40.165 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:31:40.664 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:31:40.721 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:31:42.111 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:31:42.155 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.033 seconds (JVM running for 4.771)
+24-07-13.07:31:49.131 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 214588 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:31:49.132 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:31:49.746 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:31:49.749 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:31:49.765 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+24-07-13.07:31:50.892 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:31:51.391 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:31:51.444 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:31:52.848 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:31:52.900 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.09 seconds (JVM running for 4.818)
+24-07-13.07:37:31.999 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 202892 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-13.07:37:32.000 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-13.07:37:32.748 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-13.07:37:32.751 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-13.07:37:32.774 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-13.07:37:34.114 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-13.07:37:34.732 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:37:34.812 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-13.07:37:36.459 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-13.07:37:36.514 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.909 seconds (JVM running for 6.846)
+24-07-13.07:37:53.203 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-13.07:37:54.232 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-13.07:39:06.810 [main            ] INFO  StrategyTest           - test succeed
+24-07-13.07:39:06.843 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-13.07:39:06.856 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

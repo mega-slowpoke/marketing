@@ -6,6 +6,7 @@
         <id column="id" property="id"/>
         <result column="strategy_id" property="strategyId"/>
         <result column="award_id" property="awardId"/>
+        <result column="award_rate" property="awardRate"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
@@ -17,8 +18,8 @@
     </select>
 
     <select id="queryStrategyAwardListById" resultMap="CaseMap">
-        SELECT id, strategy_id, award_id, create_time, update_time
-        FROM strategy
+        SELECT id, strategy_id, award_id, award_rate, create_time, update_time
+        FROM strategy_award
         WHERE strategy_id = #{strategyId}
     </select>
 

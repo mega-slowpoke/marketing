@@ -1,5 +1,6 @@
 package org.example.domain.strategy.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Slf4j
 @Service
 public class StrategyInitializer implements IStrategyInitializer{
 
@@ -22,6 +24,14 @@ public class StrategyInitializer implements IStrategyInitializer{
     public void initializeStrategy(Long strategyId) {
         // 1. get strategy awards
         List<StrategyAwardEntity> strategyAwardEntityList = iStrategyRepo.queryStrategyAwardEntityList(strategyId);
+
+        // if list is empty, we will get divide by zero error
+        if (strategyAwardEntityList == null || strategyAwardEntityList.isEmpty()) {
+            String errorStr = "No such strategy, initializeStrategy fails at" + StrategyInitializer.class.getCanonicalName();
+            log.error(errorStr);
+            throw new RuntimeException(errorStr);
+        }
+
 
         // 2. create buckets for all award
         // find the minimum rate and total rate
