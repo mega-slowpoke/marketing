@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface IStrategyRepo {
 
-    List<StrategyAwardEntity> queryStrategyAwardEntityList(Integer strategyId);
+    List<StrategyAwardEntity> queryStrategyAwardEntityList(Long strategyId);
 }

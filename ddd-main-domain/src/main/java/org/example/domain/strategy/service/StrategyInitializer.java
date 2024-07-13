@@ -2,6 +2,7 @@ package org.example.domain.strategy.service;
 
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.repository.IStrategyRepo;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
@@ -11,13 +12,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Service
 public class StrategyInitializer implements IStrategyInitializer{
 
     @Resource
     private IStrategyRepo iStrategyRepo;
 
     @Override
-    public void initializeStrategy(Integer strategyId) {
+    public void initializeStrategy(Long strategyId) {
         // 1. get strategy awards
         List<StrategyAwardEntity> strategyAwardEntityList = iStrategyRepo.queryStrategyAwardEntityList(strategyId);
 

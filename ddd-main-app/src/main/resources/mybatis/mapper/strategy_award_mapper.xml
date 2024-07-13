@@ -16,4 +16,10 @@
         LIMIT 10
     </select>
 
+    <select id="queryStrategyAwardListById" resultMap="CaseMap">
+        SELECT id, strategy_id, award_id, create_time, update_time
+        FROM strategy
+        WHERE strategy_id = #{strategyId}
+    </select>
+
 </mapper>

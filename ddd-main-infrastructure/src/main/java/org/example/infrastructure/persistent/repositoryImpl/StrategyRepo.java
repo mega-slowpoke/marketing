@@ -5,11 +5,13 @@ import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.infrastructure.persistent.dao.IStrategyAwardDAO;
 import org.example.infrastructure.persistent.po.StrategyAward;
 import org.example.infrastructure.persistent.redis.IRedisService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class StrategyRepo implements IStrategyRepo {
 
     @Resource
@@ -19,7 +21,7 @@ public class StrategyRepo implements IStrategyRepo {
     private IRedisService iRedisService;
 
     @Override
-    public List<StrategyAwardEntity> queryStrategyAwardEntityList(Integer strategyId) {
+    public List<StrategyAwardEntity> queryStrategyAwardEntityList(Long strategyId) {
         String key = "strategy:" + strategyId;
         List<StrategyAwardEntity> strategyAwardEntityList = iRedisService.getValue(key);
 
@@ -27,7 +29,7 @@ public class StrategyRepo implements IStrategyRepo {
         if (strategyAwardEntityList != null && !strategyAwardEntityList.isEmpty()) return strategyAwardEntityList;
 
         // if redis not exists, query database
-        List<StrategyAward> strategyAwardList  =  iStrategyAwardDAO.queryStrategyAwardList();
+        List<StrategyAward> strategyAwardList  =  iStrategyAwardDAO.queryStrategyAwardListById(strategyId);
         List<StrategyAwardEntity> res = new ArrayList<>();
         for (StrategyAward strategyAward : strategyAwardList) {
             StrategyAwardEntity strategyAwardEntity = new StrategyAwardEntity();
