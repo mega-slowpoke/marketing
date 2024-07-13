@@ -7,6 +7,7 @@ import org.example.infrastructure.persistent.po.StrategyAward;
 import org.example.infrastructure.persistent.redis.IRedisService;
 import org.example.types.common.Constants;
 import org.redisson.api.RMap;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-@Service
+@Repository
 public class StrategyRepo implements IStrategyRepo {
 
     @Resource
@@ -52,18 +53,18 @@ public class StrategyRepo implements IStrategyRepo {
     }
 
     @Override
-    public void putAwardDistributionToRedis(Long strategyId, BigDecimal rateRange, Map<Integer, Integer> awardDistributionMap) {
-        String rateKey = Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId;
+    public void putAwardDistributionToRedis(Long strategyId, Integer totalBucket, Map<Integer, Integer> awardDistributionMap) {
+        String bucketKey = Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId;
         String mapKey = Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId;
 
         // 存储rateRange和奖品分布
-        iRedisService.setValue(rateKey, rateRange.intValue());
+        iRedisService.setValue(bucketKey, totalBucket);
         RMap<Integer, Integer> cachedMap = iRedisService.getMap(mapKey);
         cachedMap.putAll(awardDistributionMap);
     }
 
     @Override
-    public Integer getRateRange(Long strategyId) {
+    public Integer getRange(Long strategyId) {
         String key = Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId;
         return iRedisService.getValue(key);
     }

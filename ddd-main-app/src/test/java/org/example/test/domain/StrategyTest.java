@@ -21,10 +21,15 @@ public class StrategyTest {
     private IStrategyInitializer iStrategyInitializer;
 
 
-
     @Test
     public void TestStrategyAward() {
         iStrategyInitializer.initializeStrategy(100001L);
+    }
 
+    @Test
+    public void LotteryTest() {
+        log.info("lottery1: get awardId" + iStrategyInitializer.doLottery(100001L));
+        log.info("lottery2: get awardId" + iStrategyInitializer.doLottery(100001L));
+        log.info("lottery3: get awardId" + iStrategyInitializer.doLottery(100001L));
     }
 }

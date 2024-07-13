@@ -60,13 +60,13 @@ public class StrategyInitializer implements IStrategyInitializer{
         }
 
         // 4. move map to redis
-        iStrategyRepo.putAwardDistributionToRedis(strategyId, rateRange, awardDistribution);
+        iStrategyRepo.putAwardDistributionToRedis(strategyId, awardDistribution.size(), awardDistribution);
     }
 
     @Override
     public Integer doLottery(Long strategyId) {
-        Integer rateRange = iStrategyRepo.getRateRange(strategyId);
-        int randomIdx = new SecureRandom().nextInt(rateRange);
+        Integer totalBucket = iStrategyRepo.getRange(strategyId);
+        int randomIdx = new SecureRandom().nextInt(totalBucket);
         return iStrategyRepo.getAwardIdFromDistributionMap(strategyId, randomIdx);
     }
 }

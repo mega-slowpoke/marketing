@@ -10,9 +10,9 @@ public interface IStrategyRepo {
 
     List<StrategyAwardEntity> queryStrategyAwardEntityList(Long strategyId);
 
-    void putAwardDistributionToRedis(Long strategyId, BigDecimal rateRange, Map<Integer, Integer> awardDistribution);
+    void putAwardDistributionToRedis(Long strategyId, Integer totalBucket, Map<Integer, Integer> awardDistribution);
 
-    Integer getRateRange(Long strategyId);
+    Integer getRange(Long strategyId);
 
     Integer getAwardIdFromDistributionMap(Long strategyId, Integer randomIdx);
 }
