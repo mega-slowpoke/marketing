@@ -13,4 +13,6 @@ public interface IStrategyRepo {
     void putAwardDistributionToRedis(Long strategyId, BigDecimal rateRange, Map<Integer, Integer> awardDistribution);
 
     Integer getRateRange(Long strategyId);
+
+    Integer getAwardIdFromDistributionMap(Long strategyId, Integer randomIdx);
 }

@@ -64,11 +64,9 @@ public class StrategyInitializer implements IStrategyInitializer{
     }
 
     @Override
-    public Integer getRandomAward(Long strategyId) {
+    public Integer doLottery(Long strategyId) {
         Integer rateRange = iStrategyRepo.getRateRange(strategyId);
         int randomIdx = new SecureRandom().nextInt(rateRange);
-        Map<Integer, Integer> awardDistribution = iStrategyRepo.getAwardDistribution();
-
+        return iStrategyRepo.getAwardIdFromDistributionMap(strategyId, randomIdx);
     }
-
 }
