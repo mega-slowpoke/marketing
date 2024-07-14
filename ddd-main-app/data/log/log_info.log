@@ -873,3 +873,13 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 24-07-14.09:40:46.534 [main            ] INFO  StrategyTest           - lottery1: get awardId101
 24-07-14.09:40:46.537 [main            ] INFO  StrategyTest           - lottery2: get awardId102
 24-07-14.09:40:46.541 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-14.09:49:18.109 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 329248 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-14.09:49:18.110 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-14.09:49:18.809 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-14.09:49:18.811 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-14.09:49:18.835 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-07-14.09:49:20.128 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-14.09:49:20.711 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-14.09:49:20.788 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-14.09:49:22.219 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-14.09:49:22.265 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.479 seconds (JVM running for 5.273)

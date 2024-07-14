@@ -37,7 +37,7 @@ public class StrategyInitializer implements IStrategyInitializer{
 
         // 该策略有累计积分规则，生成各累计积分对应的中奖情况并放入redis
         for (String rule : strategyEntity.getRuleModels()) {
-
+            // 先拿到rule对应的
         }
 //
 
