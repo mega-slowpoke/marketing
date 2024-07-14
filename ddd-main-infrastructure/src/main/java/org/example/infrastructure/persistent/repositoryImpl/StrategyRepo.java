@@ -95,7 +95,7 @@ public class StrategyRepo implements IStrategyRepo {
         strategyEntity = new StrategyEntity();
         strategyEntity.setStrategyId(strategy.getStrategyId());
         strategyEntity.setStrategyDesc(strategy.getStrategyDesc());
-        strategyEntity.setRuleModels(strategy.getRuleModels());
+        strategyEntity.setRuleModels(strategy.getRuleModels().split(Constants.SPLIT));
         iRedisService.setValue(cacheKey, strategyEntity);
         return strategyEntity;
     }

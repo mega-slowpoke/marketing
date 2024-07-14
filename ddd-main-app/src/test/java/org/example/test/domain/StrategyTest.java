@@ -36,4 +36,7 @@ public class StrategyTest {
         log.info("lottery2: get awardId" + iLotteryExecutor.doLottery(100001L));
         log.info("lottery3: get awardId" + iLotteryExecutor.doLottery(100001L));
     }
+
+
+
 }

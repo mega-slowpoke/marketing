@@ -32,13 +32,14 @@ public class StrategyInitializer implements IStrategyInitializer{
         // 用户根据积累的积分，可以缩小中奖范围的，比如说总共积累了6000积分抽奖，那么接下来的抽奖固定会抽到103-109的奖品，不会让用户再抽到过低价值的奖品如101、102
         // 3. 如果该抽奖策略带有累计积分的规则，则生成各累计积分对应的中奖情况
         StrategyEntity strategyEntity = iStrategyRepo.queryStrategy(strategyId);
-        String ruleWeight = strategyEntity.getRuleWeight();
         // 该策略没有积累积分规则
-        if (null == ruleWeight) return true;
+        if (!strategyEntity.getRuleWeight()) return true;
 
         // 该策略有累计积分规则，生成各累计积分对应的中奖情况并放入redis
-
-
+//        for (String str : ) {
+//
+//        }
+//
 
         return null;
     }

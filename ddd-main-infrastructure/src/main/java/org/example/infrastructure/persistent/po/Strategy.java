@@ -6,7 +6,6 @@ public class Strategy {
     private Long id;
     private Long strategyId;
     private String strategyDesc;
-
     private String ruleModels;
     private Date createTime;
     private Date updateTime;
@@ -74,12 +73,14 @@ public class Strategy {
     }
 
 
+
     @Override
     public String toString() {
         return "Strategy{" +
                 "id=" + id +
                 ", strategyId=" + strategyId +
                 ", strategyDesc='" + strategyDesc + '\'' +
+                ", ruleModels='" + ruleModels + '\'' +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 '}';

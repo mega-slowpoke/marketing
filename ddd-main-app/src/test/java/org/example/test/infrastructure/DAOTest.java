@@ -61,4 +61,10 @@ public class DAOTest {
             System.out.println(sr);
         }
     }
+
+    @Test
+    public void queryStrategyByIdTest() {
+        Strategy strategy = iStrategyDAO.queryStrategyById(100001L);
+        System.out.println(strategy);
+    }
 }
