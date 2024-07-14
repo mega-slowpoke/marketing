@@ -2,20 +2,16 @@ package org.example.domain.strategy.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
+import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.security.SecureRandom;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
-
-import static java.util.Random.*;
 
 @Slf4j
 @Service
@@ -26,7 +22,7 @@ public class StrategyInitializer implements IStrategyInitializer{
 
 
     @Override
-    public void initializeStrategy(Long strategyId) {
+    public Boolean initializeStrategy(Long strategyId) {
         // 1. get strategy awards
         List<StrategyAwardEntity> strategyAwardEntityList = iStrategyRepo.queryStrategyAwardEntityList(strategyId);
 
@@ -35,8 +31,16 @@ public class StrategyInitializer implements IStrategyInitializer{
 
         // 用户根据积累的积分，可以缩小中奖范围的，比如说总共积累了6000积分抽奖，那么接下来的抽奖固定会抽到103-109的奖品，不会让用户再抽到过低价值的奖品如101、102
         // 3. 如果该抽奖策略带有累计积分的规则，则生成各累计积分对应的中奖情况
-//        StrategyRule strategyRule = iStrategyRepo.queryStrategyRule()
+        StrategyEntity strategyEntity = iStrategyRepo.queryStrategy(strategyId);
+        String ruleWeight = strategyEntity.getRuleWeight();
+        // 该策略没有积累积分规则
+        if (null == ruleWeight) return true;
 
+        // 该策略有累计积分规则，生成各累计积分对应的中奖情况并放入redis
+
+
+
+        return null;
     }
 
     private void generateAwardDistribution(Long strategyId, List<StrategyAwardEntity> strategyAwardEntityList) {

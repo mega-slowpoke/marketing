@@ -1,9 +1,14 @@
 package org.example.infrastructure.persistent.repositoryImpl;
 
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
+import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.infrastructure.persistent.dao.IStrategyAwardDAO;
+import org.example.infrastructure.persistent.dao.IStrategyDAO;
+import org.example.infrastructure.persistent.dao.IStrategyRuleDAO;
+import org.example.infrastructure.persistent.po.Strategy;
 import org.example.infrastructure.persistent.po.StrategyAward;
+import org.example.infrastructure.persistent.po.StrategyRule;
 import org.example.infrastructure.persistent.redis.IRedisService;
 import org.example.types.common.Constants;
 import org.redisson.api.RMap;
@@ -21,6 +26,12 @@ public class StrategyRepo implements IStrategyRepo {
 
     @Resource
     private IStrategyAwardDAO iStrategyAwardDAO;
+
+    @Resource
+    private IStrategyDAO iStrategyDAO;
+
+    @Resource
+    private IStrategyRuleDAO iStrategyRuleDAO;
 
     @Resource
     private IRedisService iRedisService;
@@ -74,4 +85,19 @@ public class StrategyRepo implements IStrategyRepo {
         String key = Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId;
         return iRedisService.getFromMap(key, randomIdx);
     }
+
+    @Override
+    public StrategyEntity queryStrategy(Long strategyId) {
+        String cacheKey = Constants.RedisKey.STRATEGY_KEY + strategyId;
+        StrategyEntity strategyEntity = iRedisService.getValue(cacheKey);
+        if (strategyEntity != null) return strategyEntity;
+        Strategy strategy = iStrategyDAO.queryStrategyById(strategyId);
+        strategyEntity = new StrategyEntity();
+        strategyEntity.setStrategyId(strategy.getStrategyId());
+        strategyEntity.setStrategyDesc(strategy.getStrategyDesc());
+        strategyEntity.setRuleModels(strategy.getRuleModels());
+        iRedisService.setValue(cacheKey, strategyEntity);
+        return strategyEntity;
+    }
+
 }

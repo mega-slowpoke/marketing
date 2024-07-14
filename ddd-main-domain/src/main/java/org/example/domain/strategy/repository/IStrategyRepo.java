@@ -1,6 +1,7 @@
 package org.example.domain.strategy.repository;
 
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
+import org.example.domain.strategy.model.entity.StrategyEntity;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -15,4 +16,6 @@ public interface IStrategyRepo {
     Integer getRange(Long strategyId);
 
     Integer getAwardIdFromDistributionMap(Long strategyId, Integer randomIdx);
+
+    StrategyEntity queryStrategy(Long strategyId);
 }
