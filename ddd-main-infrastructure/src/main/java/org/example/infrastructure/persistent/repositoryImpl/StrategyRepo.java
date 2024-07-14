@@ -64,9 +64,9 @@ public class StrategyRepo implements IStrategyRepo {
     }
 
     @Override
-    public void putAwardDistributionToRedis(Long strategyId, Integer totalBucket, Map<Integer, Integer> awardDistributionMap) {
-        String bucketKey = Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyId;
-        String mapKey = Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId;
+    public void putAwardDistributionToRedis(String strategyKey, Integer totalBucket, Map<Integer, Integer> awardDistributionMap) {
+        String bucketKey = Constants.RedisKey.STRATEGY_RATE_RANGE_KEY + strategyKey;
+        String mapKey = Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyKey;
 
         // 存储rateRange和奖品分布
         iRedisService.setValue(bucketKey, totalBucket);
@@ -87,7 +87,7 @@ public class StrategyRepo implements IStrategyRepo {
     }
 
     @Override
-    public StrategyEntity queryStrategy(Long strategyId) {
+    public StrategyEntity queryStrategyById(Long strategyId) {
         String cacheKey = Constants.RedisKey.STRATEGY_KEY + strategyId;
         StrategyEntity strategyEntity = iRedisService.getValue(cacheKey);
         if (strategyEntity != null) return strategyEntity;

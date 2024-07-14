@@ -20,6 +20,6 @@ public class RepoTest {
 
     @Test
     public void queryStrategyTest() {
-        log.info(iStrategyRepo.queryStrategy(100001L).toString());
+        log.info(iStrategyRepo.queryStrategyById(100001L).toString());
     }
 }

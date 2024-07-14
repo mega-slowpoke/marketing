@@ -27,24 +27,24 @@ public class StrategyInitializer implements IStrategyInitializer{
         List<StrategyAwardEntity> strategyAwardEntityList = iStrategyRepo.queryStrategyAwardEntityList(strategyId);
 
         // 2. generate award distribution 生成全部概率的中奖分布情况
-        generateAwardDistribution(strategyId, strategyAwardEntityList);
+        generateAwardDistribution(String.valueOf(strategyId), strategyAwardEntityList);
 
         // 用户根据积累的积分，可以缩小中奖范围的，比如说总共积累了6000积分抽奖，那么接下来的抽奖固定会抽到103-109的奖品，不会让用户再抽到过低价值的奖品如101、102
         // 3. 如果该抽奖策略带有累计积分的规则，则生成各累计积分对应的中奖情况
-        StrategyEntity strategyEntity = iStrategyRepo.queryStrategy(strategyId);
+        StrategyEntity strategyEntity = iStrategyRepo.queryStrategyById(strategyId);
         // 该策略没有积累积分规则
         if (!strategyEntity.getRuleWeight()) return true;
 
         // 该策略有累计积分规则，生成各累计积分对应的中奖情况并放入redis
-//        for (String str : ) {
-//
-//        }
+        for (String rule : strategyEntity.getRuleModels()) {
+
+        }
 //
 
         return null;
     }
 
-    private void generateAwardDistribution(Long strategyId, List<StrategyAwardEntity> strategyAwardEntityList) {
+    private void generateAwardDistribution(String strategyKey, List<StrategyAwardEntity> strategyAwardEntityList) {
         // if list is empty, we will get divide by zero error
         if (strategyAwardEntityList == null || strategyAwardEntityList.isEmpty()) {
             String errorStr = "No such strategy, initializeStrategy fails at" + StrategyInitializer.class.getCanonicalName();
@@ -75,7 +75,7 @@ public class StrategyInitializer implements IStrategyInitializer{
         }
 
         // 4. move map to redis
-        iStrategyRepo.putAwardDistributionToRedis(strategyId, awardDistribution.size(), awardDistribution);
+        iStrategyRepo.putAwardDistributionToRedis(strategyKey, awardDistribution.size(), awardDistribution);
 
     }
 
