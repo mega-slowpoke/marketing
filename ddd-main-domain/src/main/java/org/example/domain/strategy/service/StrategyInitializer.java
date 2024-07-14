@@ -24,18 +24,28 @@ public class StrategyInitializer implements IStrategyInitializer{
     @Resource
     private IStrategyRepo iStrategyRepo;
 
+
     @Override
     public void initializeStrategy(Long strategyId) {
         // 1. get strategy awards
         List<StrategyAwardEntity> strategyAwardEntityList = iStrategyRepo.queryStrategyAwardEntityList(strategyId);
 
+        // 2. generate award distribution 生成全部概率的中奖分布情况
+        generateAwardDistribution(strategyId, strategyAwardEntityList);
+
+        // 用户根据积累的积分，可以缩小中奖范围的，比如说总共积累了6000积分抽奖，那么接下来的抽奖固定会抽到103-109的奖品，不会让用户再抽到过低价值的奖品如101、102
+        // 3. 如果该抽奖策略带有累计积分的规则，则生成各累计积分对应的中奖情况
+//        StrategyRule strategyRule = iStrategyRepo.queryStrategyRule()
+
+    }
+
+    private void generateAwardDistribution(Long strategyId, List<StrategyAwardEntity> strategyAwardEntityList) {
         // if list is empty, we will get divide by zero error
         if (strategyAwardEntityList == null || strategyAwardEntityList.isEmpty()) {
             String errorStr = "No such strategy, initializeStrategy fails at" + StrategyInitializer.class.getCanonicalName();
             log.error(errorStr);
             throw new RuntimeException(errorStr);
         }
-
 
         // 2. create buckets for all award
         // find the minimum rate and total rate
@@ -61,12 +71,8 @@ public class StrategyInitializer implements IStrategyInitializer{
 
         // 4. move map to redis
         iStrategyRepo.putAwardDistributionToRedis(strategyId, awardDistribution.size(), awardDistribution);
+
     }
 
-    @Override
-    public Integer doLottery(Long strategyId) {
-        Integer totalBucket = iStrategyRepo.getRange(strategyId);
-        int randomIdx = new SecureRandom().nextInt(totalBucket);
-        return iStrategyRepo.getAwardIdFromDistributionMap(strategyId, randomIdx);
-    }
+
 }

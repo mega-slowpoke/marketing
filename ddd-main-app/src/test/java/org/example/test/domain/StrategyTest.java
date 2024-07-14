@@ -1,6 +1,7 @@
 package org.example.test.domain;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.domain.strategy.service.ILotteryExecutor;
 import org.example.domain.strategy.service.IStrategyInitializer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,6 +21,9 @@ public class StrategyTest {
     @Resource
     private IStrategyInitializer iStrategyInitializer;
 
+    @Resource
+    private ILotteryExecutor iLotteryExecutor;
+
 
     @Test
     public void TestStrategyAward() {
@@ -28,9 +32,8 @@ public class StrategyTest {
 
     @Test
     public void LotteryTest() {
-        iStrategyInitializer.doLottery(100001L);
-        log.info("lottery1: get awardId" + iStrategyInitializer.doLottery(100001L));
-        log.info("lottery2: get awardId" + iStrategyInitializer.doLottery(100001L));
-        log.info("lottery3: get awardId" + iStrategyInitializer.doLottery(100001L));
+        log.info("lottery1: get awardId" + iLotteryExecutor.doLottery(100001L));
+        log.info("lottery2: get awardId" + iLotteryExecutor.doLottery(100001L));
+        log.info("lottery3: get awardId" + iLotteryExecutor.doLottery(100001L));
     }
 }

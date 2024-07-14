@@ -1,6 +1,6 @@
 package org.example.domain.strategy.service;
 
-public interface LotteryExecutor {
+public interface ILotteryExecutor {
     /**
      *  Do lottery, return an award ID
      * */
