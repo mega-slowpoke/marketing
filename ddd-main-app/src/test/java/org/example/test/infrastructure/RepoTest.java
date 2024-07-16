@@ -18,8 +18,15 @@ public class RepoTest {
     @Resource
     private IStrategyRepo iStrategyRepo;
 
+
+
     @Test
     public void queryStrategyTest() {
         log.info(iStrategyRepo.queryStrategyById(100001L).toString());
+    }
+
+    @Test
+    public void queryStrategyRuleTest() {
+        log.info(iStrategyRepo.queryStrategyRuleByIdAndName(100001L, "rule_weight").toString());
     }
 }

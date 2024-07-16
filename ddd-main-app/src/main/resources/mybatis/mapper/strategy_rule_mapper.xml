@@ -5,7 +5,6 @@
     <resultMap id="CaseMap" type="org.example.infrastructure.persistent.po.StrategyRule">
         <id column="id" property="id"/>
         <result column="strategy_id" property="strategyId"/>
-        <result column="award_id" property="awardId"/>
         <result column="rule_model" property="ruleModel"/>
         <result column="rule_value" property="ruleValue"/>
         <result column="rule_desc" property="ruleDesc"/>
@@ -19,7 +18,7 @@
     </select>
 
     <select id="queryStrategyRuleByIdAndName" resultMap="CaseMap">
-        SELECT strategy_id, rule_value
+        SELECT strategy_id, rule_model, rule_value, rule_desc
         FROM strategy_rule
         WHERE strategy_id = #{strategyId} AND rule_model = #{ruleModel}
     </select>

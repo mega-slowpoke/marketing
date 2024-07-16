@@ -5,6 +5,7 @@ import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
 import org.example.domain.strategy.repository.IStrategyRepo;
+import org.example.types.exception.AppException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -39,17 +40,24 @@ public class StrategyInitializer implements IStrategyInitializer{
         if (ruleWeight != null) return true;
 
         // 该策略有累计积分规则，生成各累计积分对应的中奖情况并放入redis
-        StrategyRuleEntity strategyRule = iStrategyRepo.queryStrategyRuleByIdAndName(strategyId, ruleWeight);
-//        Map<>
-        for (String rule : strategyEntity.getRuleModels()) {
+        StrategyRuleEntity strategyRuleEntity  = iStrategyRepo.queryStrategyRuleByIdAndName(strategyId, ruleWeight);
+        Map<Integer, List<Integer>> ruleWeightMap = strategyRuleEntity.getRuleWeightMap();
+        if (ruleWeightMap == null) {
+              throw new AppException("strategy has rule_weight model but get empty ruleWeightMap");
+        }
+
+        for (Map.Entry<Integer, List<Integer>> ruleEntry : ruleWeightMap.entrySet()) {
+            // 拿到累计对应积分允许获得的award list
+            List<Integer> awardList = ruleEntry.getValue();
             // 先做一个copy
             List<StrategyAwardEntity> strategyAwardEntitiyListClone = new ArrayList<>(strategyAwardEntityList);
-            // 移除没有的包括在其中的奖品
-//            strategyAwardEntitiyListClone.removeIf();
+            // 如果没有包含在award list中，就移除其中的奖品
+            strategyAwardEntitiyListClone.removeIf((award) -> !awardList.contains(award.getAwardId()));
+            // 生成移除之后的奖品分布
+            generateAwardDistribution(strategyId+ "_" + ruleEntry.getKey(), strategyAwardEntitiyListClone);
         }
-//
 
-        return null;
+        return true;
     }
 
     private void generateAwardDistribution(String strategyKey, List<StrategyAwardEntity> strategyAwardEntityList) {

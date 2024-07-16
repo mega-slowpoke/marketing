@@ -353,3 +353,62 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 24-07-16.13:26:14.458 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
 24-07-16.13:26:14.553 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 24-07-16.13:26:14.556 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-16.13:28:39.078 [main            ] INFO  DAOTest                - Starting DAOTest using Java 1.8.0_402 on MECHREVO with PID 425936 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.13:28:39.079 [main            ] INFO  DAOTest                - The following 1 profile is active: "dev"
+24-07-16.13:28:39.812 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.13:28:39.815 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.13:28:39.841 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-07-16.13:28:42.151 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.13:28:42.460 [main            ] INFO  RepoTest               - Starting RepoTest using Java 1.8.0_402 on MECHREVO with PID 429040 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.13:28:42.461 [main            ] INFO  RepoTest               - The following 1 profile is active: "dev"
+24-07-16.13:28:43.067 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.13:28:43.192 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.13:28:43.721 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.13:28:43.746 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.13:28:43.887 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 0 Redis repository interfaces.
+24-07-16.13:28:46.380 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.13:28:46.446 [main            ] INFO  DAOTest                - Started DAOTest in 7.7 seconds (JVM running for 8.497)
+24-07-16.13:28:46.767 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.13:28:46.860 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-16.13:28:47.239 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-16.13:28:47.352 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-16.13:28:47.377 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-16.13:28:47.437 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.13:28:47.523 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.13:28:49.111 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.13:28:49.159 [main            ] INFO  RepoTest               - Started RepoTest in 6.983 seconds (JVM running for 7.696)
+24-07-16.13:28:49.486 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-16.13:28:49.760 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-16.13:28:49.797 [main            ] INFO  RepoTest               - StrategyRuleEntity{strategyId=100001, ruleModel='null', ruleValue='6000:102,103,104,105,106,107,108,109', ruleDesc='null'}
+24-07-16.13:28:49.827 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-16.13:28:49.831 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-16.13:29:29.920 [main            ] INFO  RepoTest               - Starting RepoTest using Java 1.8.0_402 on MECHREVO with PID 431384 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.13:29:29.921 [main            ] INFO  RepoTest               - The following 1 profile is active: "dev"
+24-07-16.13:29:30.627 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.13:29:30.630 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.13:29:30.653 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-16.13:29:32.129 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.13:29:32.791 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.13:29:32.864 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.13:29:34.249 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.13:29:34.301 [main            ] INFO  RepoTest               - Started RepoTest in 4.806 seconds (JVM running for 5.454)
+24-07-16.13:29:34.652 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-16.13:29:35.008 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-16.13:29:35.049 [main            ] INFO  RepoTest               - StrategyRuleEntity{strategyId=100001, ruleModel='rule_weight', ruleValue='6000:102,103,104,105,106,107,108,109', ruleDesc='消耗6000分，必中奖范围'}
+24-07-16.13:29:35.086 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-16.13:29:35.090 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-16.13:33:03.265 [main            ] INFO  RepoTest               - Starting RepoTest using Java 1.8.0_402 on MECHREVO with PID 427572 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.13:33:03.266 [main            ] INFO  RepoTest               - The following 1 profile is active: "dev"
+24-07-16.13:33:04.058 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.13:33:04.061 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.13:33:04.089 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-16.13:33:05.289 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.13:33:05.884 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.13:33:05.962 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.13:33:07.610 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.13:33:07.661 [main            ] INFO  RepoTest               - Started RepoTest in 4.929 seconds (JVM running for 5.885)
+24-07-16.13:33:08.017 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-16.13:33:08.371 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-16.13:33:08.416 [main            ] INFO  RepoTest               - StrategyRuleEntity{strategyId=100001, ruleModel='rule_weight', ruleValue='6000:102,103,104,105,106,107,108,109', ruleDesc='消耗6000分，必中奖范围'}
+24-07-16.13:33:08.429 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-16.13:33:08.432 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
