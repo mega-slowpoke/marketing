@@ -74,16 +74,16 @@ public class StrategyRepo implements IStrategyRepo {
     }
 
     @Override
-    public Integer getRange(Long strategyId) {
-        String key = Constants.RedisKey.STRATEGY_TOTAL_BUCKET_KEY + strategyId;
-        return iRedisService.getValue(key);
+    public Integer getRange(String bucketNumberKey) {
+        return iRedisService.getValue(bucketNumberKey);
     }
 
     @Override
-    public Integer getAwardIdFromDistributionMap(Long strategyId, Integer randomIdx) {
-        String key = Constants.RedisKey.AWARD_DISTRIBUTION_KEY + strategyId;
-        return iRedisService.getFromMap(key, randomIdx);
+    public Integer getAwardIdFromDistributionMap(String awardDistributionKey, Integer randomIdx) {
+        return iRedisService.getFromMap(awardDistributionKey, randomIdx);
     }
+
+
 
     @Override
     public StrategyEntity queryStrategyById(Long strategyId) {

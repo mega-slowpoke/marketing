@@ -31,10 +31,30 @@ public class StrategyTest {
     }
 
     @Test
-    public void LotteryTest() {
+    public void LotteryTest1() {
         log.info("lottery1: get awardId" + iLotteryExecutor.doLottery(100001L));
         log.info("lottery2: get awardId" + iLotteryExecutor.doLottery(100001L));
         log.info("lottery3: get awardId" + iLotteryExecutor.doLottery(100001L));
+    }
+
+    @Test
+    public void LotteryTest() {
+        log.info("lottery1: get awardId" + iLotteryExecutor.doLottery(100001L, "4000"));
+        log.info("lottery2: get awardId" + iLotteryExecutor.doLottery(100001L, "4000"));
+        log.info("lottery3: get awardId" + iLotteryExecutor.doLottery(100001L, "4000"));
+
+        log.info("-------------------------------------------------------------------");
+
+        log.info("lottery1: get awardId" + iLotteryExecutor.doLottery(100001L, "5000"));
+        log.info("lottery2: get awardId" + iLotteryExecutor.doLottery(100001L, "5000"));
+        log.info("lottery3: get awardId" + iLotteryExecutor.doLottery(100001L, "5000"));
+
+        log.info("-------------------------------------------------------------------");
+
+        log.info("lottery1: get awardId" + iLotteryExecutor.doLottery(100001L, "6000"));
+        log.info("lottery2: get awardId" + iLotteryExecutor.doLottery(100001L, "6000"));
+        log.info("lottery3: get awardId" + iLotteryExecutor.doLottery(100001L, "6000"));
+
     }
 
 

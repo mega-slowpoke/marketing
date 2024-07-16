@@ -92,8 +92,5 @@ public class StrategyInitializer implements IStrategyInitializer{
 
         // 4. move map to redis
         iStrategyRepo.putAwardDistributionToRedis(strategyKey, awardDistribution.size(), awardDistribution);
-
     }
-
-
 }

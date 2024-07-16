@@ -985,3 +985,238 @@ Caused by: java.net.SocketException: Socket closed
 24-07-16.14:48:26.503 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
 24-07-16.14:48:36.851 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 24-07-16.14:48:36.867 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-16.18:36:59.679 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 24864 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:36:59.680 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:37:00.542 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:37:00.545 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:37:00.571 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-07-16.18:37:01.599 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:37:02.118 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:02.168 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:03.672 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:37:03.712 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.381 seconds (JVM running for 5.144)
+24-07-16.18:37:04.102 [main            ] INFO  StrategyTest           - lottery1: get awardId102
+24-07-16.18:37:04.105 [main            ] INFO  StrategyTest           - lottery2: get awardId102
+24-07-16.18:37:04.108 [main            ] INFO  StrategyTest           - lottery3: get awardId104
+24-07-16.18:37:22.966 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 37548 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:37:22.967 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:37:23.542 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:37:23.544 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:37:23.558 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+24-07-16.18:37:24.394 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:37:24.843 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:24.897 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:26.331 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:37:26.376 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.72 seconds (JVM running for 4.36)
+24-07-16.18:37:26.695 [main            ] INFO  StrategyTest           - lottery1: get awardId103
+24-07-16.18:37:26.698 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:37:26.699 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-16.18:37:31.941 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 25812 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:37:31.942 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:37:32.526 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:37:32.528 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:37:32.547 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-16.18:37:33.441 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:37:33.888 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:33.937 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:35.359 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:37:35.420 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.771 seconds (JVM running for 4.398)
+24-07-16.18:37:35.729 [main            ] INFO  StrategyTest           - lottery1: get awardId102
+24-07-16.18:37:35.732 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:37:35.734 [main            ] INFO  StrategyTest           - lottery3: get awardId104
+24-07-16.18:37:40.060 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 37948 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:37:40.060 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:37:40.678 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:37:40.680 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:37:40.697 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-16.18:37:41.564 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:37:42.002 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:42.054 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:43.425 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:37:43.487 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.718 seconds (JVM running for 4.343)
+24-07-16.18:37:43.797 [main            ] INFO  StrategyTest           - lottery1: get awardId105
+24-07-16.18:37:43.800 [main            ] INFO  StrategyTest           - lottery2: get awardId104
+24-07-16.18:37:43.803 [main            ] INFO  StrategyTest           - lottery3: get awardId103
+24-07-16.18:37:48.271 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 38784 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:37:48.272 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:37:48.888 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:37:48.892 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:37:48.912 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-07-16.18:37:49.845 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:37:50.347 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:50.414 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:37:52.125 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:37:52.179 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.224 seconds (JVM running for 4.86)
+24-07-16.18:37:52.490 [main            ] INFO  StrategyTest           - lottery1: get awardId104
+24-07-16.18:37:52.493 [main            ] INFO  StrategyTest           - lottery2: get awardId102
+24-07-16.18:37:52.496 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-16.18:38:21.595 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 33112 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:38:21.596 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:38:22.167 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:38:22.169 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:38:22.186 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+24-07-16.18:38:23.116 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:38:23.592 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:38:23.647 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:38:25.046 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:38:25.089 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.801 seconds (JVM running for 4.422)
+24-07-16.18:38:25.381 [main            ] INFO  StrategyTest           - lottery1: get awardId104
+24-07-16.18:38:25.383 [main            ] INFO  StrategyTest           - lottery2: get awardId102
+24-07-16.18:38:25.385 [main            ] INFO  StrategyTest           - lottery3: get awardId104
+24-07-16.18:38:25.386 [main            ] INFO  StrategyTest           - lottery1: get awardId107
+24-07-16.18:38:25.388 [main            ] INFO  StrategyTest           - lottery2: get awardId104
+24-07-16.18:38:25.391 [main            ] INFO  StrategyTest           - lottery3: get awardId103
+24-07-16.18:38:25.393 [main            ] INFO  StrategyTest           - lottery1: get awardId103
+24-07-16.18:38:25.395 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:38:25.397 [main            ] INFO  StrategyTest           - lottery3: get awardId105
+24-07-16.18:38:49.952 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 26256 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:38:49.952 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:38:50.542 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:38:50.544 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:38:50.559 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+24-07-16.18:38:51.385 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:38:51.828 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:38:51.879 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:38:53.256 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:38:53.299 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.647 seconds (JVM running for 4.271)
+24-07-16.18:38:53.611 [main            ] INFO  StrategyTest           - lottery1: get awardId104
+24-07-16.18:38:53.614 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:38:53.616 [main            ] INFO  StrategyTest           - lottery3: get awardId103
+24-07-16.18:38:53.616 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:38:53.618 [main            ] INFO  StrategyTest           - lottery1: get awardId105
+24-07-16.18:38:53.620 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:38:53.622 [main            ] INFO  StrategyTest           - lottery3: get awardId105
+24-07-16.18:38:53.622 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:38:53.624 [main            ] INFO  StrategyTest           - lottery1: get awardId103
+24-07-16.18:38:53.626 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:38:53.628 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-16.18:39:05.557 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 35004 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:39:05.557 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:39:06.143 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:39:06.145 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:39:06.160 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+24-07-16.18:39:06.989 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:39:07.421 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:39:07.473 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:39:08.846 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:39:08.892 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.628 seconds (JVM running for 4.276)
+24-07-16.18:39:09.205 [main            ] INFO  StrategyTest           - lottery1: get awardId105
+24-07-16.18:39:09.207 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:39:09.209 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-16.18:39:09.209 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:39:09.211 [main            ] INFO  StrategyTest           - lottery1: get awardId103
+24-07-16.18:39:09.213 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:39:09.215 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-16.18:39:09.215 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:39:09.217 [main            ] INFO  StrategyTest           - lottery1: get awardId102
+24-07-16.18:39:09.222 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:39:09.224 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-16.18:39:45.321 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 37344 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:39:45.322 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:39:45.886 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:39:45.888 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:39:45.904 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+24-07-16.18:39:46.752 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:39:47.222 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:39:47.274 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:39:48.687 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:39:48.732 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.708 seconds (JVM running for 4.32)
+24-07-16.18:39:49.066 [main            ] INFO  StrategyTest           - lottery1: get awardId102
+24-07-16.18:39:49.068 [main            ] INFO  StrategyTest           - lottery2: get awardId102
+24-07-16.18:39:49.071 [main            ] INFO  StrategyTest           - lottery3: get awardId104
+24-07-16.18:39:49.071 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:39:49.073 [main            ] INFO  StrategyTest           - lottery1: get awardId104
+24-07-16.18:39:49.076 [main            ] INFO  StrategyTest           - lottery2: get awardId102
+24-07-16.18:39:49.078 [main            ] INFO  StrategyTest           - lottery3: get awardId103
+24-07-16.18:39:49.078 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:39:49.081 [main            ] INFO  StrategyTest           - lottery1: get awardId104
+24-07-16.18:39:49.083 [main            ] INFO  StrategyTest           - lottery2: get awardId104
+24-07-16.18:39:49.085 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-16.18:40:05.635 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 39176 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:40:05.636 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:40:06.223 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:40:06.225 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:40:06.242 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+24-07-16.18:40:07.108 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:40:07.551 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:40:07.598 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:40:08.966 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:40:09.009 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.685 seconds (JVM running for 4.325)
+24-07-16.18:40:59.028 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 39748 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:40:59.029 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:40:59.630 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:40:59.633 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:40:59.651 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+24-07-16.18:41:00.568 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:41:01.035 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:41:01.082 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:41:06.000 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 34832 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:41:06.001 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:41:06.585 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:41:06.588 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:41:06.607 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+24-07-16.18:41:07.477 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:41:07.903 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:41:07.951 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:41:09.354 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:41:09.411 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.732 seconds (JVM running for 4.395)
+24-07-16.18:41:09.703 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-16.18:41:10.052 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-16.18:41:10.228 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-16.18:41:10.239 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-16.18:41:29.676 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 38044 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:41:29.676 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:41:30.240 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:41:30.242 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:41:30.257 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+24-07-16.18:41:31.130 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:41:31.608 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:41:31.664 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:41:33.061 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:41:33.113 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.742 seconds (JVM running for 4.36)
+24-07-16.18:41:33.498 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-16.18:41:33.730 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-16.18:41:33.788 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-16.18:41:33.791 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-16.18:41:41.242 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 38488 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:41:41.243 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:41:41.826 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:41:41.829 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:41:41.846 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+24-07-16.18:41:42.693 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:41:43.147 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:41:43.193 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:41:44.642 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:41:44.695 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.754 seconds (JVM running for 4.463)
+24-07-16.18:41:45.004 [main            ] INFO  StrategyTest           - lottery1: get awardId103
+24-07-16.18:41:45.006 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:41:45.008 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-16.18:41:45.008 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:41:45.011 [main            ] INFO  StrategyTest           - lottery1: get awardId104
+24-07-16.18:41:45.013 [main            ] INFO  StrategyTest           - lottery2: get awardId106
+24-07-16.18:41:45.015 [main            ] INFO  StrategyTest           - lottery3: get awardId106
+24-07-16.18:41:45.015 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:41:45.017 [main            ] INFO  StrategyTest           - lottery1: get awardId104
+24-07-16.18:41:45.019 [main            ] INFO  StrategyTest           - lottery2: get awardId107
+24-07-16.18:41:45.021 [main            ] INFO  StrategyTest           - lottery3: get awardId107
+24-07-16.18:41:58.177 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 35472 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-16.18:41:58.179 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-07-16.18:41:58.799 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.18:41:58.801 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.18:41:58.820 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+24-07-16.18:41:59.701 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.18:42:00.144 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:42:00.189 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-16.18:42:01.627 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.18:42:01.672 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.809 seconds (JVM running for 4.458)
+24-07-16.18:42:01.960 [main            ] INFO  StrategyTest           - lottery1: get awardId102
+24-07-16.18:42:01.962 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:42:01.964 [main            ] INFO  StrategyTest           - lottery3: get awardId102
+24-07-16.18:42:01.964 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:42:01.966 [main            ] INFO  StrategyTest           - lottery1: get awardId103
+24-07-16.18:42:01.968 [main            ] INFO  StrategyTest           - lottery2: get awardId103
+24-07-16.18:42:01.971 [main            ] INFO  StrategyTest           - lottery3: get awardId107
+24-07-16.18:42:01.971 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
+24-07-16.18:42:01.973 [main            ] INFO  StrategyTest           - lottery1: get awardId106
+24-07-16.18:42:01.976 [main            ] INFO  StrategyTest           - lottery2: get awardId104
+24-07-16.18:42:01.978 [main            ] INFO  StrategyTest           - lottery3: get awardId105

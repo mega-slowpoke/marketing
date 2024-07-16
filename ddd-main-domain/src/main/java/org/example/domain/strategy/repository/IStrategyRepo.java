@@ -13,9 +13,9 @@ public interface IStrategyRepo {
 
     void putAwardDistributionToRedis(String strategyKey, Integer totalBucket, Map<Integer, Integer> awardDistribution);
 
-    Integer getRange(Long strategyId);
+    Integer getRange(String strategyKey);
 
-    Integer getAwardIdFromDistributionMap(Long strategyId, Integer randomIdx);
+    Integer getAwardIdFromDistributionMap(String strategyKey, Integer randomIdx);
 
     StrategyEntity queryStrategyById(Long strategyId);
 
