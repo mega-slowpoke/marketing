@@ -7,7 +7,7 @@ import java.util.Date;
 public class Award {
 
     private Long id;
-    private Long awardId;
+    private Integer awardId;
     private String awardKey;
     private String awardConfig;
     private String awardDesc;
@@ -17,7 +17,7 @@ public class Award {
     public Award() {
     }
 
-    public Award(Long id, Long awardId, String awardKey, String awardConfig, String awardDesc, Date createTime, Date updateTime) {
+    public Award(Long id, Integer awardId, String awardKey, String awardConfig, String awardDesc, Date createTime, Date updateTime) {
         this.id = id;
         this.awardId = awardId;
         this.awardKey = awardKey;
@@ -35,11 +35,11 @@ public class Award {
         this.id = id;
     }
 
-    public Long getAwardId() {
+    public Integer getAwardId() {
         return awardId;
     }
 
-    public void setAwardId(Long awardId) {
+    public void setAwardId(Integer awardId) {
         this.awardId = awardId;
     }
 

@@ -6,8 +6,7 @@ import java.util.Date;
 public class StrategyAward {
     private Long id;
     private Long StrategyId;
-    private Long awardId;
-    private String awardDesc;
+    private Integer awardId;
     private Integer awardTotal;
     private Integer awardRemaining;
     private BigDecimal awardRate;
@@ -21,11 +20,10 @@ public class StrategyAward {
     public StrategyAward() {
     }
 
-    public StrategyAward(Long id, Long strategyId, Long awardId, String awardDesc, Integer awardTotal, Integer awardRemaining, BigDecimal awardRate, String awardTitle, String awardSubtitle, String ruleModel, String sortOrder, Date createTime, Date updateTime) {
+    public StrategyAward(Long id, Long strategyId, Integer awardId, Integer awardTotal, Integer awardRemaining, BigDecimal awardRate, String awardTitle, String awardSubtitle, String ruleModel, String sortOrder, Date createTime, Date updateTime) {
         this.id = id;
         StrategyId = strategyId;
         this.awardId = awardId;
-        this.awardDesc = awardDesc;
         this.awardTotal = awardTotal;
         this.awardRemaining = awardRemaining;
         this.awardRate = awardRate;
@@ -53,20 +51,12 @@ public class StrategyAward {
         StrategyId = strategyId;
     }
 
-    public Long getAwardId() {
+    public Integer getAwardId() {
         return awardId;
     }
 
-    public void setAwardId(Long awardId) {
+    public void setAwardId(Integer awardId) {
         this.awardId = awardId;
-    }
-
-    public String getAwardDesc() {
-        return awardDesc;
-    }
-
-    public void setAwardDesc(String awardDesc) {
-        this.awardDesc = awardDesc;
     }
 
     public Integer getAwardTotal() {
@@ -147,7 +137,6 @@ public class StrategyAward {
                 "id=" + id +
                 ", StrategyId=" + StrategyId +
                 ", awardId=" + awardId +
-                ", awardDesc='" + awardDesc + '\'' +
                 ", awardTotal=" + awardTotal +
                 ", awardRemaining=" + awardRemaining +
                 ", awardRate=" + awardRate +

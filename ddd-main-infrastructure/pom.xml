@@ -23,6 +23,11 @@
             <groupId>org.example</groupId>
             <artifactId>ddd-main-domain</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.23.4</version>
+        </dependency>
     </dependencies>
 
     <build>

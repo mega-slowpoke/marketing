@@ -22,49 +22,12 @@ import java.util.List;
 @SpringBootTest
 public class ApiTest {
 
-    @Resource
-    private IAwardDAO iAwardDAO;
-    @Resource
-    private IStrategyDAO iStrategyDAO;
-    @Resource
-    private IStrategyAwardDAO iStrategyAwardDAO;
-    @Resource
-    private IStrategyRuleDAO iStrategyRuleDAO;
+
 
     @Test
     public void test() {
         log.info("测试完成");
     }
 
-    @Test
-    public void testIStrategyDAO() {
-        List<Strategy> strategyList = iStrategyDAO.queryStrategyList();
-        for (Strategy s : strategyList) {
-            System.out.println(s);
-        }
-    }
 
-    @Test
-    public void testIAwardDAO() {
-        List<Award> awardList = iAwardDAO.queryAwardList();
-        for (Award award : awardList) {
-            System.out.println(award);
-        }
-    }
-
-    @Test
-    public void testIStrategyAwardDAO() {
-        List<StrategyAward> strategyAwardList = iStrategyAwardDAO.queryStrategyAwardList();
-        for (StrategyAward strategyAward: strategyAwardList) {
-            System.out.println(strategyAward);
-        }
-    }
-
-    @Test
-    public void testIStrategyRuleDAO() {
-        List<StrategyRule> strategyRules = iStrategyRuleDAO.queryStrategyRuleList();
-        for (StrategyRule sr: strategyRules) {
-            System.out.println(sr);
-        }
-    }
 }

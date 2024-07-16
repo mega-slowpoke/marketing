@@ -5,8 +5,6 @@ import java.util.Date;
 public class StrategyRule {
     private Long id;
     private Long strategyId;
-    private Integer awardId;
-    private Integer ruleType;
     private String ruleModel;
     private String ruleValue;
     private String ruleDesc;
@@ -16,11 +14,9 @@ public class StrategyRule {
     public StrategyRule() {
     }
 
-    public StrategyRule(Long id, Long strategyId, Integer awardId, Integer ruleType, String ruleModel, String ruleValue, String ruleDesc, Date createTime, Date updateTime) {
+    public StrategyRule(Long id, Long strategyId, String ruleModel, String ruleValue, String ruleDesc, Date createTime, Date updateTime) {
         this.id = id;
         this.strategyId = strategyId;
-        this.awardId = awardId;
-        this.ruleType = ruleType;
         this.ruleModel = ruleModel;
         this.ruleValue = ruleValue;
         this.ruleDesc = ruleDesc;
@@ -42,22 +38,6 @@ public class StrategyRule {
 
     public void setStrategyId(Long strategyId) {
         this.strategyId = strategyId;
-    }
-
-    public Integer getAwardId() {
-        return awardId;
-    }
-
-    public void setAwardId(Integer awardId) {
-        this.awardId = awardId;
-    }
-
-    public Integer getRuleType() {
-        return ruleType;
-    }
-
-    public void setRuleType(Integer ruleType) {
-        this.ruleType = ruleType;
     }
 
     public String getRuleModel() {
@@ -106,8 +86,6 @@ public class StrategyRule {
         return "StrategyRule{" +
                 "id=" + id +
                 ", strategyId=" + strategyId +
-                ", awardId=" + awardId +
-                ", ruleType=" + ruleType +
                 ", ruleModel='" + ruleModel + '\'' +
                 ", ruleValue='" + ruleValue + '\'' +
                 ", ruleDesc='" + ruleDesc + '\'' +

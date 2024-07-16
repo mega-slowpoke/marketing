@@ -6,19 +6,23 @@ public class Strategy {
     private Long id;
     private Long strategyId;
     private String strategyDesc;
+    private String ruleModels;
     private Date createTime;
     private Date updateTime;
 
     public Strategy() {
     }
 
-    public Strategy(Long id, Long strategyId, String strategyDesc, Date createTime, Date updateTime) {
+    public Strategy(Long id, Long strategyId, String strategyDesc, String ruleModels, Date createTime, Date updateTime) {
         this.id = id;
         this.strategyId = strategyId;
         this.strategyDesc = strategyDesc;
+        this.ruleModels = ruleModels;
         this.createTime = createTime;
         this.updateTime = updateTime;
     }
+
+
 
     public Long getId() {
         return id;
@@ -44,6 +48,14 @@ public class Strategy {
         this.strategyDesc = strategyDesc;
     }
 
+    public String getRuleModels() {
+        return ruleModels;
+    }
+
+    public void setRuleModels(String ruleModels) {
+        this.ruleModels = ruleModels;
+    }
+
     public Date getCreateTime() {
         return createTime;
     }
@@ -60,12 +72,15 @@ public class Strategy {
         this.updateTime = updateTime;
     }
 
+
+
     @Override
     public String toString() {
         return "Strategy{" +
                 "id=" + id +
                 ", strategyId=" + strategyId +
                 ", strategyDesc='" + strategyDesc + '\'' +
+                ", ruleModels='" + ruleModels + '\'' +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 '}';
