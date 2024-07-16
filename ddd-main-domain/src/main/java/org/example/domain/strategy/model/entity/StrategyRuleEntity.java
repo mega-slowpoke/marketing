@@ -67,6 +67,7 @@ public class StrategyRuleEntity {
 
     public void setRuleValue(String ruleValue) {
         this.ruleValue = ruleValue;
+        this.ruleWeightMap = buildRuleWeightMap(ruleValue);
     }
 
     public String getRuleDesc() {

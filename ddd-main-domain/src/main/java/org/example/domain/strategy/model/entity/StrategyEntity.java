@@ -11,7 +11,7 @@ public class StrategyEntity {
     /** 该抽奖策略所对应的相关抽奖规则 */
     private String[] ruleModels;
 
-    private Boolean ruleWeight;
+    private Boolean ruleWeight = false;
 
     public StrategyEntity() {
     }
@@ -20,6 +20,10 @@ public class StrategyEntity {
         this.strategyId = strategyId;
         this.strategyDesc = strategyDesc;
         this.ruleModels = ruleModels;
+        checkRuleHasWeight();
+    }
+
+    private void checkRuleHasWeight() {
         for (String rule : ruleModels) {
             if (rule.equals("rule_weight")) {
                 ruleWeight = true;
@@ -50,10 +54,11 @@ public class StrategyEntity {
 
     public void setRuleModels(String[] ruleModels) {
         this.ruleModels = ruleModels;
+        checkRuleHasWeight();
     }
 
     public String getRuleWeight() {
-        return ruleWeight? "rule_weight" : null;
+        return this.ruleWeight? "rule_weight" : null;
     }
 
     @Override

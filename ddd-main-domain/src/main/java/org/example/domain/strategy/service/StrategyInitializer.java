@@ -36,8 +36,8 @@ public class StrategyInitializer implements IStrategyInitializer{
         // 3. 如果该抽奖策略带有累计积分的规则，则生成各累计积分对应的中奖情况
         StrategyEntity strategyEntity = iStrategyRepo.queryStrategyById(strategyId);
         String ruleWeight = strategyEntity.getRuleWeight();
-        // 该策略没有积累积分规则
-        if (ruleWeight != null) return true;
+        // 该策略没有积累积分规则，直接返回即可
+        if (ruleWeight == null) return true;
 
         // 该策略有累计积分规则，生成各累计积分对应的中奖情况并放入redis
         StrategyRuleEntity strategyRuleEntity  = iStrategyRepo.queryStrategyRuleByIdAndName(strategyId, ruleWeight);
