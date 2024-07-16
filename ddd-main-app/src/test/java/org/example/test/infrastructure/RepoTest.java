@@ -18,8 +18,6 @@ public class RepoTest {
     @Resource
     private IStrategyRepo iStrategyRepo;
 
-
-
     @Test
     public void queryStrategyTest() {
         log.info(iStrategyRepo.queryStrategyById(100001L).toString());

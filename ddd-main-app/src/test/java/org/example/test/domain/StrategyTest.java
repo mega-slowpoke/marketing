@@ -27,6 +27,7 @@ public class StrategyTest {
 
     @Test
     public void TestStrategyAward() {
+
         iStrategyInitializer.initializeStrategy(100001L);
     }
 
