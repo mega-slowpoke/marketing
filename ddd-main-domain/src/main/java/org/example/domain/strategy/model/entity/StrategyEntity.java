@@ -52,8 +52,8 @@ public class StrategyEntity {
         this.ruleModels = ruleModels;
     }
 
-    public Boolean getRuleWeight() {
-        return ruleWeight;
+    public String getRuleWeight() {
+        return ruleWeight? "rule_weight" : null;
     }
 
     @Override

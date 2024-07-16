@@ -2,6 +2,7 @@ package org.example.domain.strategy.repository;
 
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.entity.StrategyEntity;
+import org.example.domain.strategy.model.entity.StrategyRuleEntity;
 
 import java.util.List;
 import java.util.Map;
@@ -17,4 +18,6 @@ public interface IStrategyRepo {
     Integer getAwardIdFromDistributionMap(Long strategyId, Integer randomIdx);
 
     StrategyEntity queryStrategyById(Long strategyId);
+
+    StrategyRuleEntity queryStrategyRuleByIdAndName(Long strategyId, String ruleWeight);
 }

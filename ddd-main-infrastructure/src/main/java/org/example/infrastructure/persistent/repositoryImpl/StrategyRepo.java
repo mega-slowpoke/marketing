@@ -2,6 +2,7 @@ package org.example.infrastructure.persistent.repositoryImpl;
 
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.entity.StrategyEntity;
+import org.example.domain.strategy.model.entity.StrategyRuleEntity;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.infrastructure.persistent.dao.IStrategyAwardDAO;
 import org.example.infrastructure.persistent.dao.IStrategyDAO;
@@ -98,6 +99,17 @@ public class StrategyRepo implements IStrategyRepo {
         strategyEntity.setRuleModels(strategy.getRuleModels().split(Constants.SPLIT));
         iRedisService.setValue(cacheKey, strategyEntity);
         return strategyEntity;
+    }
+
+    @Override
+    public StrategyRuleEntity queryStrategyRuleByIdAndName(Long strategyId, String ruleName) {
+        StrategyRule strategyRule = iStrategyRuleDAO.queryStrategyRuleByIdAndName(strategyId, ruleName);
+        StrategyRuleEntity strategyRuleEntity = new StrategyRuleEntity();
+        strategyRuleEntity.setStrategyId(strategyRule.getStrategyId());
+        strategyRuleEntity.setRuleModel(strategyRule.getRuleModel());
+        strategyRuleEntity.setRuleValue(strategyRule.getRuleValue());
+        strategyRuleEntity.setRuleDesc(strategyRule.getRuleDesc());
+        return strategyRuleEntity;
     }
 
 }
