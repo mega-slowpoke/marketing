@@ -1,7 +1,7 @@
 package org.example.test.domain;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.domain.strategy.service.ILotteryExecutor;
+import org.example.domain.strategy.service.executor.ILotteryExecutor;
 import org.example.domain.strategy.service.initializer.IStrategyInitializer;
 import org.junit.Test;
 import org.junit.runner.RunWith;

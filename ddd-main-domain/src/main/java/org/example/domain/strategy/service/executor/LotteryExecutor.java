@@ -1,4 +1,4 @@
-package org.example.domain.strategy.service;
+package org.example.domain.strategy.service.executor;
 
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.types.common.Constants;
