@@ -1,4 +1,4 @@
-package org.example.domain.strategy.service;
+package org.example.domain.strategy.service.initializer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
@@ -18,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 @Service
-public class StrategyInitializer implements IStrategyInitializer{
+public class StrategyInitializer implements IStrategyInitializer {
 
     @Resource
     private IStrategyRepo iStrategyRepo;

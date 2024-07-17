@@ -1,4 +1,4 @@
-package org.example.domain.strategy.service;
+package org.example.domain.strategy.service.initializer;
 
 public interface IStrategyInitializer {
 
