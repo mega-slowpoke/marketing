@@ -5,12 +5,12 @@ import org.example.domain.strategy.model.entity.FilterConditionEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
 import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
-import org.example.domain.strategy.service.filter.ILogicFilter;
+import org.example.domain.strategy.service.filter.IFilter;
 import org.example.types.common.Constants;
 
 import javax.annotation.Resource;
 
-public class BlackListLogicFilter implements ILogicFilter<RuleActionEntity.RaffleBeforeEntity> {
+public class BlackListFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity> {
 
     @Resource
     private IStrategyRepo iStrategyRepo;

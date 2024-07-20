@@ -5,14 +5,14 @@ import org.example.domain.strategy.model.entity.FilterConditionEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
 import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
-import org.example.domain.strategy.service.filter.ILogicFilter;
+import org.example.domain.strategy.service.filter.IFilter;
 import org.example.types.common.Constants;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
-public class WeightLogicFilter implements ILogicFilter<RuleActionEntity.RaffleBeforeEntity> {
+public class WeightFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity> {
 
     @Resource
     private IStrategyRepo iStrategyRepo;
