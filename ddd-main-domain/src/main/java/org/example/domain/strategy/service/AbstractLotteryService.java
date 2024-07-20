@@ -54,7 +54,7 @@ public abstract class AbstractLotteryService implements ILotteryService {
 
 
     // filter before lottery
-    protected abstract RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> checkRaffleBeforeLogic(LotteryReqEntity lotteryReq, String... logics);
+    protected abstract RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> checkRaffleBeforeLogic(LotteryReqEntity lotteryReq, String... ruleModels);
 
 
     // filter in the middle of lottery
