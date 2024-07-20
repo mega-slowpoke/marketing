@@ -19,7 +19,7 @@ public class Constants {
 
     public static class RuleName {
         // "【抽奖前规则】根据抽奖权重返回可抽奖范围KEY"
-        public static String RULE_WIGHT = "rule_weight";
+        public static String RULE_WEIGHT = "rule_weight";
         // 【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回"
         public static String RULE_BLACKLIST = "rule_blacklist";
 

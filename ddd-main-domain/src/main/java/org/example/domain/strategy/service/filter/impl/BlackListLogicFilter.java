@@ -34,7 +34,7 @@ public class BlackListLogicFilter implements ILogicFilter<RuleActionEntity.Raffl
                 return RuleActionEntity.<RuleActionEntity.RaffleBeforeEntity>builder()
                         .ruleModel(Constants.RuleName.RULE_BLACKLIST)
                         .data(RuleActionEntity.RaffleBeforeEntity.builder()
-                                .strategyId(strategyId)
+                                .strategyId(strategyId)   // !!!!! 注意这里缺少了awardId
                                 .build())
                         .code(RuleLogicCheckTypeVO.TAKE_OVER.getCode())
                         .info(RuleLogicCheckTypeVO.TAKE_OVER.getInfo())
