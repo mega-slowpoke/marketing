@@ -19,5 +19,5 @@ public interface IStrategyRepo {
 
     StrategyEntity queryStrategyById(Long strategyId);
 
-    StrategyRuleEntity queryStrategyRuleByIdAndName(Long strategyId, String ruleWeight);
+    StrategyRuleEntity queryStrategyRuleByIdAndName(Long strategyId, String ruleName);
 }

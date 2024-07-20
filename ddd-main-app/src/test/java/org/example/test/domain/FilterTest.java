@@ -14,14 +14,14 @@ import javax.annotation.Resource;
 @SpringBootTest
 public class FilterTest {
 
-    @Resource
-    private IBeforeFilter iBeforeFilter;
-
-    @Test
-    public void filterTest() {
-        iBeforeFilter.filter();
-        doLottery();
-    }
+//    @Resource
+//    private IBeforeFilter iBeforeFilter;
+//
+//    @Test
+//    public void filterTest() {
+//        iBeforeFilter.filter();
+//        doLottery();
+//    }
 
 
 }

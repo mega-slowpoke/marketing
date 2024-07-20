@@ -29,7 +29,7 @@ public abstract class AbstractLotteryService implements ILotteryService {
 
         StrategyEntity strategyEntity = iStrategyRepo.queryStrategyById(strategyId);
 
-
+        // 检测策略是否有特殊规则
         RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> beforeEntityRuleActionEntity = checkRaffleBeforeLogic(lotteryRequestEntity, strategyEntity.getRuleModels());
 
         // 如果策略有特殊规则，执行特殊规则
