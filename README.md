@@ -9,4 +9,5 @@ There must be a constructor without parameter
 
 ### NullPointer when dependency injection @Resource / @Autowire in @Component
 
-In spring, @Resource / @Autowire happens before @Component, so it will cause NullPointer error
+In spring, manually initializing BlackListFilter class can cause iStrategyRepo to be NullPointer. 
+When you manually instantiate the class using new BlackListFilter(), Spring's dependency injection mechanism is bypassed, and the iStrategyRepo dependency is not injected.

@@ -29,7 +29,7 @@ public class DefaultLotteryService extends AbstractLotteryService {
         boolean hasBlackListRule = Arrays.stream(ruleModels).anyMatch(ruleModel -> ruleModel.equals(Constants.RuleName.RULE_BLACKLIST));
 
         if (hasBlackListRule) {
-            IFilter<?> blackListFilter = filterFactory.createLFilter(Constants.RuleName.RULE_BLACKLIST);
+            IFilter<?> blackListFilter = filterFactory.getFilter(Constants.RuleName.RULE_BLACKLIST);
             FilterConditionEntity filterConditionEntity = new FilterConditionEntity();
             filterConditionEntity.setStrategyId(strategyId);
             filterConditionEntity.setUserId(userId);
@@ -40,7 +40,7 @@ public class DefaultLotteryService extends AbstractLotteryService {
         RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = null;
         for (String rule : ruleModels) {
             if (rule.equals(Constants.RuleName.RULE_BLACKLIST)) continue;
-            IFilter<?> curFilter = filterFactory.createLFilter(rule);
+            IFilter<?> curFilter = filterFactory.getFilter(rule);
             FilterConditionEntity filterConditionEntity = new FilterConditionEntity();
             filterConditionEntity.setStrategyId(strategyId);
             filterConditionEntity.setUserId(userId);
