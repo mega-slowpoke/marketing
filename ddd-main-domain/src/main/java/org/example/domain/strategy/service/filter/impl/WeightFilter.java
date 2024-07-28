@@ -41,7 +41,7 @@ public class WeightFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity
         if (minPoint != Integer.MAX_VALUE) {
             return RuleActionEntity.<RuleActionEntity.RaffleBeforeEntity>builder()
                     .data(RuleActionEntity.RaffleBeforeEntity.builder()
-                            .strategyId(strategyId)   // !!!!!注意这里缺少了ruleWeightValueKey
+                            .strategyId(strategyId)
                             .weightValue(String.valueOf(minPoint))
                             .build())
                     .ruleModel(Constants.RuleName.RULE_WEIGHT)

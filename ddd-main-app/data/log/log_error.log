@@ -462,3 +462,6 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:750)
+24-07-28.23:09:40.876 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s115ms379µs200ns).
+24-07-28.23:13:04.117 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m23s243ms730µs300ns).
+24-07-28.23:17:49.545 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m25s971ms911µs400ns).

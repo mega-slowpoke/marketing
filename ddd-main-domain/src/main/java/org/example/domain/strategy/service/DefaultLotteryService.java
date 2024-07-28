@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.entity.FilterConditionEntity;
 import org.example.domain.strategy.model.entity.LotteryReqEntity;
 import org.example.domain.strategy.model.entity.RuleActionEntity;
+import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.service.filter.IFilter;
 import org.example.domain.strategy.service.filter.factory.FilterFactory;
 import org.example.types.common.Constants;
@@ -28,16 +29,21 @@ public class DefaultLotteryService extends AbstractLotteryService {
         // 检查是否存在黑名单规则
         boolean hasBlackListRule = Arrays.stream(ruleModels).anyMatch(ruleModel -> ruleModel.equals(Constants.RuleName.RULE_BLACKLIST));
 
+        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = null;
         if (hasBlackListRule) {
             IFilter<?> blackListFilter = filterFactory.getFilter(Constants.RuleName.RULE_BLACKLIST);
             FilterConditionEntity filterConditionEntity = new FilterConditionEntity();
             filterConditionEntity.setStrategyId(strategyId);
             filterConditionEntity.setUserId(userId);
-            return (RuleActionEntity<RuleActionEntity.RaffleBeforeEntity>) blackListFilter.filter(filterConditionEntity);
+            ruleActionEntity = (RuleActionEntity<RuleActionEntity.RaffleBeforeEntity>) blackListFilter.filter(filterConditionEntity);
+            // 如果有blackList规则，并且用户属于黑名单用户，则直接返回接管规则
+            if (ruleActionEntity.getCode().equals(RuleLogicCheckTypeVO.TAKE_OVER.getCode())) {
+                return ruleActionEntity;
+            }
+            // 但是如果用户不属于黑名单用户，则继续往后过滤
         }
 
-        // 过滤其他规则
-        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = null;
+        // 过滤其他规则，各个规则互斥，只要有一个接管，就立刻返回
         for (String rule : ruleModels) {
             if (rule.equals(Constants.RuleName.RULE_BLACKLIST)) continue;
             IFilter<?> curFilter = filterFactory.getFilter(rule);
@@ -46,13 +52,12 @@ public class DefaultLotteryService extends AbstractLotteryService {
             filterConditionEntity.setUserId(userId);
             ruleActionEntity = (RuleActionEntity<RuleActionEntity.RaffleBeforeEntity>) curFilter.filter(filterConditionEntity);
             // 非放行结果则顺序过滤
-            log.info("抽奖前规则过滤 userId: {} ruleModel: {} code: {} info: {}", lotteryReq .getUserId(), rule, ruleActionEntity.getCode(), ruleActionEntity.getInfo());
+            if (ruleActionEntity.getCode().equals(RuleLogicCheckTypeVO.TAKE_OVER.getCode())) {
+                log.info("抽奖前规则过滤 userId: {} ruleModel: {} code: {} info: {}", lotteryReq .getUserId(), rule, ruleActionEntity.getCode(), ruleActionEntity.getInfo());
+                return ruleActionEntity;
+            }
         }
 
         return ruleActionEntity;
     }
-
-
-
-
 }

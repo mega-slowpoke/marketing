@@ -25,11 +25,6 @@ public class FilterTest {
     @Resource
     private ILotteryService iLotteryService;
 
-
-    @Resource
-    private WeightFilter ruleWeightLogicFilter;
-
-
     @Test
     public void test_performRaffle() {
         LotteryReqEntity raffleFactorEntity = new LotteryReqEntity();
@@ -41,17 +36,15 @@ public class FilterTest {
         log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
     }
 
-//    @Test
-//    public void test_performRaffle_blacklist() {
-//        RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
-//                .userId("user003")  // 黑名单用户 user001,user002,user003
-//                .strategyId(100001L)
-//                .build();
-//
-//        RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(raffleFactorEntity);
-//
-//        log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
-//        log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
-//    }
+    @Test
+    public void test_performRaffle_blacklist() {
+        LotteryReqEntity raffleFactorEntity = new LotteryReqEntity();
+        raffleFactorEntity.setStrategyId(100001L);
+        raffleFactorEntity.setUserId("black01");
+        LotteryResEntity raffleAwardEntity = iLotteryService.performLottery(raffleFactorEntity);
+
+        log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
+        log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
+    }
 
 }

@@ -546,3 +546,84 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 24-07-28.23:01:13.969 [main            ] INFO  FilterTest             - 测试结果：{"strategyId":100001}
 24-07-28.23:01:13.994 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 24-07-28.23:01:14.024 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-28.23:07:48.293 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 133332 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.23:07:48.294 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.23:07:49.574 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.23:07:49.580 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.23:07:49.630 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+24-07-28.23:07:51.654 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.23:07:52.700 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:07:52.816 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:07:55.268 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.23:07:55.370 [main            ] INFO  FilterTest             - Started FilterTest in 7.684 seconds (JVM running for 8.991)
+24-07-28.23:07:56.067 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-28.23:07:56.558 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-28.23:07:57.052 [main            ] INFO  FilterTest             - 请求参数：{"strategyId":100001,"userId":"xiaofuge"}
+24-07-28.23:07:57.057 [main            ] INFO  FilterTest             - 测试结果：{"strategyId":100001}
+24-07-28.23:07:57.081 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-28.23:07:57.114 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-28.23:08:23.765 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 133164 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.23:08:23.800 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.23:08:24.979 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.23:08:24.984 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.23:08:25.026 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+24-07-28.23:08:26.811 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.23:08:27.756 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:08:27.883 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:08:30.462 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.23:08:30.573 [main            ] INFO  FilterTest             - Started FilterTest in 7.434 seconds (JVM running for 8.761)
+24-07-28.23:08:47.976 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-28.23:08:49.655 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-28.23:09:40.876 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s115ms379µs200ns).
+24-07-28.23:13:04.117 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m23s243ms730µs300ns).
+24-07-28.23:13:04.219 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-28.23:13:04.266 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-28.23:13:11.499 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 112408 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.23:13:11.501 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.23:13:12.641 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.23:13:12.646 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.23:13:12.683 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+24-07-28.23:13:14.476 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.23:13:15.360 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:13:15.498 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:13:18.108 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.23:13:18.208 [main            ] INFO  FilterTest             - Started FilterTest in 7.324 seconds (JVM running for 8.576)
+24-07-28.23:14:13.750 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-28.23:14:15.390 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-28.23:15:41.431 [main            ] INFO  DefaultLotteryService  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-07-28.23:17:49.545 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m25s971ms911µs400ns).
+24-07-28.23:17:49.608 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-28.23:17:49.647 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-28.23:17:56.542 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 136856 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.23:17:56.544 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.23:17:57.579 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.23:17:57.585 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.23:17:57.618 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-07-28.23:17:59.331 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.23:18:00.214 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:18:00.328 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:18:02.727 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.23:18:02.840 [main            ] INFO  FilterTest             - Started FilterTest in 6.84 seconds (JVM running for 7.981)
+24-07-28.23:18:03.458 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-28.23:18:03.866 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-28.23:18:03.924 [main            ] INFO  DefaultLotteryService  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-07-28.23:18:04.170 [main            ] INFO  FilterTest             - 请求参数：{"strategyId":100001,"userId":"xiaofuge"}
+24-07-28.23:18:04.177 [main            ] INFO  FilterTest             - 测试结果：{"awardId":105,"strategyId":100001}
+24-07-28.23:18:04.206 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-28.23:18:04.244 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-28.23:19:40.228 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 134696 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.23:19:40.230 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.23:19:41.309 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.23:19:41.313 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.23:19:41.340 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-07-28.23:19:42.974 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.23:19:43.857 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:19:43.988 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.23:19:46.280 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.23:19:46.370 [main            ] INFO  FilterTest             - Started FilterTest in 6.655 seconds (JVM running for 7.735)
+24-07-28.23:19:46.948 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-28.23:19:47.360 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-28.23:19:47.673 [main            ] INFO  FilterTest             - 请求参数：{"strategyId":100001,"userId":"black01"}
+24-07-28.23:19:47.679 [main            ] INFO  FilterTest             - 测试结果：{"awardId":100,"strategyId":100001}
+24-07-28.23:19:47.704 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-28.23:19:47.738 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
