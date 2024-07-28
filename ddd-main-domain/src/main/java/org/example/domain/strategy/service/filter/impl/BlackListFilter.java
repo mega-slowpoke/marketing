@@ -7,24 +7,27 @@ import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.domain.strategy.service.filter.IFilter;
 import org.example.types.common.Constants;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
+@Component
 public class BlackListFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity> {
 
     @Resource
     private IStrategyRepo iStrategyRepo;
+
 
     @Override
     public RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> filter(FilterConditionEntity filterConditionEntity) {
         String userId = filterConditionEntity.getUserId();
         Long strategyId = filterConditionEntity.getStrategyId();
 
-        // 获取strategyEntity, 并且拿到其中的ruleValue,
+        // 获取strategyEntity, 并且拿到其中的ruleValue
         StrategyRuleEntity strategyRuleEntity = iStrategyRepo.queryStrategyRuleByIdAndName(strategyId, Constants.RuleName.RULE_BLACKLIST);
         String ruleValue = strategyRuleEntity.getRuleValue();
 
-        String awardId = ruleValue.split(Constants.COLON)[0];
+        String blackListAwardId = ruleValue.split(Constants.COLON)[0];
         String blockedUserIdStr = ruleValue.split(Constants.COLON)[1];
 
         String[] blockedUserIds = blockedUserIdStr.split(Constants.COMMA);
@@ -35,6 +38,7 @@ public class BlackListFilter implements IFilter<RuleActionEntity.RaffleBeforeEnt
                         .ruleModel(Constants.RuleName.RULE_BLACKLIST)
                         .data(RuleActionEntity.RaffleBeforeEntity.builder()
                                 .strategyId(strategyId)   // !!!!! 注意这里缺少了awardId
+                                .blackListAwardId(Integer.parseInt(blackListAwardId))
                                 .build())
                         .code(RuleLogicCheckTypeVO.TAKE_OVER.getCode())
                         .info(RuleLogicCheckTypeVO.TAKE_OVER.getInfo())

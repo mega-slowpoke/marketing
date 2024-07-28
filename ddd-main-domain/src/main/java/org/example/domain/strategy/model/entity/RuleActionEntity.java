@@ -39,14 +39,14 @@ public class RuleActionEntity<T extends RuleActionEntity.RaffleEntity> {
         private Long strategyId;
 
         /**
-         * 权重值Key；用于抽奖时可以选择权重抽奖。
+         * 权重值，用于权重抽奖时的权重。
          */
-        private String ruleWeightValueKey;
+        private String weightValue;
 
         /**
-         * 奖品ID；
+         * 如果是黑名单，设置默认黑名单奖品ID；
          */
-        private Integer awardId;
+        private Integer blackListAwardId;
     }
 
     // 抽奖之中

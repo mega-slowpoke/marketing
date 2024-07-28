@@ -7,11 +7,14 @@ import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.domain.strategy.service.filter.IFilter;
 import org.example.types.common.Constants;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
+@Component
 public class WeightFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity> {
 
     @Resource
@@ -39,6 +42,7 @@ public class WeightFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity
             return RuleActionEntity.<RuleActionEntity.RaffleBeforeEntity>builder()
                     .data(RuleActionEntity.RaffleBeforeEntity.builder()
                             .strategyId(strategyId)   // !!!!!注意这里缺少了ruleWeightValueKey
+                            .weightValue(String.valueOf(minPoint))
                             .build())
                     .ruleModel(Constants.RuleName.RULE_WEIGHT)
                     .code(RuleLogicCheckTypeVO.TAKE_OVER.getCode())

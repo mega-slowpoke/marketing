@@ -1,15 +1,15 @@
-24-07-16.13:25:01.861 [main            ] INFO  DAOTest                - Starting DAOTest using Java 1.8.0_402 on MECHREVO with PID 427252 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.13:25:01.862 [main            ] INFO  DAOTest                - The following 1 profile is active: "dev"
-24-07-16.13:25:02.797 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.13:25:02.801 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.13:25:02.826 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.13:25:04.322 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.13:25:17.642 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lotteryExecutor': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
-24-07-16.13:25:17.673 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+24-07-28.22:20:14.906 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 106124 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.22:20:14.908 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.22:20:16.315 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.22:20:16.319 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.22:20:16.364 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+24-07-28.22:20:18.438 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.22:20:32.255 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+24-07-28.22:20:32.308 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-24-07-16.13:25:17.706 [main            ] ERROR SpringApplication      - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lotteryExecutor': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+24-07-28.22:20:32.367 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
@@ -54,44 +54,6 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 43 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 59 common frames omitted
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
@@ -112,11 +74,11 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 75 common frames omitted
+	... 43 common frames omitted
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 93 common frames omitted
+	... 61 common frames omitted
 Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
 	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$0(ConnectionPool.java:132)
 	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
@@ -130,8 +92,10 @@ Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Re
 	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
 	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
 	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:257)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask$$$capture(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java)
 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
@@ -143,7 +107,7 @@ Caused by: java.util.concurrent.CompletionException: io.netty.channel.AbstractCh
 	at java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:338)
 	at java.util.concurrent.CompletableFuture.uniRelay(CompletableFuture.java:925)
 	at java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:913)
-	... 11 common frames omitted
+	... 13 common frames omitted
 Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
 Caused by: java.net.ConnectException: Connection refused: no further information
 	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
@@ -158,7 +122,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:750)
-24-07-16.13:25:17.709 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7d20d0b] to prepare test instance [org.example.test.infrastructure.DAOTest@6da4feeb]
+24-07-28.22:20:32.374 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@ae13544] to prepare test instance [org.example.test.domain.FilterTest@6d672bd4]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
@@ -188,7 +152,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lotteryExecutor': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
@@ -207,44 +171,6 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
 	... 27 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 43 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 59 common frames omitted
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
@@ -265,11 +191,11 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 75 common frames omitted
+	... 43 common frames omitted
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 93 common frames omitted
+	... 61 common frames omitted
 Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
 	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$0(ConnectionPool.java:132)
 	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
@@ -283,8 +209,10 @@ Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Re
 	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
 	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
 	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:257)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask$$$capture(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java)
 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
@@ -296,7 +224,7 @@ Caused by: java.util.concurrent.CompletionException: io.netty.channel.AbstractCh
 	at java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:338)
 	at java.util.concurrent.CompletableFuture.uniRelay(CompletableFuture.java:925)
 	at java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:913)
-	... 11 common frames omitted
+	... 13 common frames omitted
 Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
 Caused by: java.net.ConnectException: Connection refused: no further information
 	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
@@ -311,433 +239,44 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:750)
-24-07-16.13:25:17.821 [main            ] INFO  DAOTest                - Starting DAOTest using Java 1.8.0_402 on MECHREVO with PID 427252 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.13:25:17.821 [main            ] INFO  DAOTest                - The following 1 profile is active: "dev"
-24-07-16.13:25:18.125 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.13:25:18.125 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.13:25:18.131 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-24-07-16.13:25:18.559 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.13:25:22.191 [redisson-netty-5-10] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:25:22.274 [redisson-netty-5-25] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:25:24.663 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.13:25:24.728 [main            ] INFO  DAOTest                - Started DAOTest in 6.956 seconds (JVM running for 24.02)
-24-07-16.13:25:25.212 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.13:25:25.812 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.13:25:26.159 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.13:25:26.201 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.13:25:38.137 [main            ] INFO  DAOTest                - Starting DAOTest using Java 1.8.0_402 on MECHREVO with PID 427492 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.13:25:38.137 [main            ] INFO  DAOTest                - The following 1 profile is active: "dev"
-24-07-16.13:25:38.862 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.13:25:38.864 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.13:25:38.887 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-24-07-16.13:25:40.325 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.13:25:40.923 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:25:41.007 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:25:42.484 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.13:25:42.550 [main            ] INFO  DAOTest                - Started DAOTest in 4.743 seconds (JVM running for 5.503)
-24-07-16.13:25:42.961 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.13:25:43.293 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.13:25:43.480 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.13:25:43.490 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.13:26:09.264 [main            ] INFO  DAOTest                - Starting DAOTest using Java 1.8.0_402 on MECHREVO with PID 422436 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.13:26:09.265 [main            ] INFO  DAOTest                - The following 1 profile is active: "dev"
-24-07-16.13:26:09.980 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.13:26:09.982 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.13:26:10.005 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.13:26:11.476 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.13:26:12.173 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:26:12.240 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:26:13.731 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.13:26:13.784 [main            ] INFO  DAOTest                - Started DAOTest in 4.913 seconds (JVM running for 5.701)
-24-07-16.13:26:14.148 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.13:26:14.458 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.13:26:14.553 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.13:26:14.556 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.13:28:39.078 [main            ] INFO  DAOTest                - Starting DAOTest using Java 1.8.0_402 on MECHREVO with PID 425936 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.13:28:39.079 [main            ] INFO  DAOTest                - The following 1 profile is active: "dev"
-24-07-16.13:28:39.812 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.13:28:39.815 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.13:28:39.841 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-24-07-16.13:28:42.151 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.13:28:42.460 [main            ] INFO  RepoTest               - Starting RepoTest using Java 1.8.0_402 on MECHREVO with PID 429040 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.13:28:42.461 [main            ] INFO  RepoTest               - The following 1 profile is active: "dev"
-24-07-16.13:28:43.067 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:28:43.192 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:28:43.721 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.13:28:43.746 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.13:28:43.887 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 0 Redis repository interfaces.
-24-07-16.13:28:46.380 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.13:28:46.446 [main            ] INFO  DAOTest                - Started DAOTest in 7.7 seconds (JVM running for 8.497)
-24-07-16.13:28:46.767 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.13:28:46.860 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.13:28:47.239 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.13:28:47.352 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.13:28:47.377 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.13:28:47.437 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:28:47.523 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:28:49.111 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.13:28:49.159 [main            ] INFO  RepoTest               - Started RepoTest in 6.983 seconds (JVM running for 7.696)
-24-07-16.13:28:49.486 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.13:28:49.760 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.13:28:49.797 [main            ] INFO  RepoTest               - StrategyRuleEntity{strategyId=100001, ruleModel='null', ruleValue='6000:102,103,104,105,106,107,108,109', ruleDesc='null'}
-24-07-16.13:28:49.827 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.13:28:49.831 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.13:29:29.920 [main            ] INFO  RepoTest               - Starting RepoTest using Java 1.8.0_402 on MECHREVO with PID 431384 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.13:29:29.921 [main            ] INFO  RepoTest               - The following 1 profile is active: "dev"
-24-07-16.13:29:30.627 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.13:29:30.630 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.13:29:30.653 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.13:29:32.129 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.13:29:32.791 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:29:32.864 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:29:34.249 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.13:29:34.301 [main            ] INFO  RepoTest               - Started RepoTest in 4.806 seconds (JVM running for 5.454)
-24-07-16.13:29:34.652 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.13:29:35.008 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.13:29:35.049 [main            ] INFO  RepoTest               - StrategyRuleEntity{strategyId=100001, ruleModel='rule_weight', ruleValue='6000:102,103,104,105,106,107,108,109', ruleDesc='消耗6000分，必中奖范围'}
-24-07-16.13:29:35.086 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.13:29:35.090 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.13:33:03.265 [main            ] INFO  RepoTest               - Starting RepoTest using Java 1.8.0_402 on MECHREVO with PID 427572 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.13:33:03.266 [main            ] INFO  RepoTest               - The following 1 profile is active: "dev"
-24-07-16.13:33:04.058 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.13:33:04.061 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.13:33:04.089 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.13:33:05.289 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.13:33:05.884 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:33:05.962 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.13:33:07.610 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.13:33:07.661 [main            ] INFO  RepoTest               - Started RepoTest in 4.929 seconds (JVM running for 5.885)
-24-07-16.13:33:08.017 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.13:33:08.371 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.13:33:08.416 [main            ] INFO  RepoTest               - StrategyRuleEntity{strategyId=100001, ruleModel='rule_weight', ruleValue='6000:102,103,104,105,106,107,108,109', ruleDesc='消耗6000分，必中奖范围'}
-24-07-16.13:33:08.429 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.13:33:08.432 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:07:54.584 [main            ] INFO  DAOTest                - Starting DAOTest using Java 1.8.0_402 on MECHREVO with PID 452208 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:07:54.586 [main            ] INFO  DAOTest                - The following 1 profile is active: "dev"
-24-07-16.14:07:56.192 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:07:56.198 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:07:56.240 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-24-07-16.14:07:58.378 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:07:59.458 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:07:59.578 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:08:02.215 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:08:02.301 [main            ] INFO  DAOTest                - Started DAOTest in 8.602 seconds (JVM running for 10.193)
-24-07-16.14:08:02.900 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:08:03.757 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:08:03.946 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:08:03.956 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:08:17.123 [main            ] INFO  RedisTest              - Starting RedisTest using Java 1.8.0_402 on MECHREVO with PID 451928 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:08:17.124 [main            ] INFO  RedisTest              - The following 1 profile is active: "dev"
-24-07-16.14:08:18.623 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:08:18.629 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:08:18.677 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-24-07-16.14:08:20.945 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:08:22.217 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:08:22.378 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:08:26.565 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:08:27.049 [main            ] INFO  RedisTest              - Started RedisTest in 10.81 seconds (JVM running for 12.495)
-24-07-16.14:11:59.206 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 449244 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:11:59.207 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:12:00.044 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:12:00.047 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:12:00.074 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:12:01.449 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:12:02.105 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:12:02.209 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:12:03.931 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:12:03.990 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.235 seconds (JVM running for 6.412)
-24-07-16.14:12:04.461 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:12:04.897 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:12:05.197 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:12:05.210 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:12:18.371 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 456036 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:12:18.372 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:12:19.145 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:12:19.150 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:12:19.178 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.14:12:20.395 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:12:21.104 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:12:21.197 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:12:23.343 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:12:23.406 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.561 seconds (JVM running for 9.513)
-24-07-16.14:13:07.973 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:13:18.008 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 441988 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:13:18.009 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:13:18.976 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:13:18.981 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:13:19.007 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.14:13:20.151 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:13:20.729 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:13:20.815 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:13:22.807 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:13:22.860 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.39 seconds (JVM running for 7.197)
-24-07-16.14:13:31.515 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:13:32.554 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:13:45.911 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:13:46.020 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:13:52.932 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 455988 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:13:52.934 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:13:53.839 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:13:53.842 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:13:53.868 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:13:55.117 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:13:55.726 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:13:55.823 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:13:57.998 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:13:58.055 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.651 seconds (JVM running for 7.185)
-24-07-16.14:14:02.650 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:14:03.705 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:15:45.048 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m41s233ms714µs900ns).
-24-07-16.14:15:45.322 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:15:45.389 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:15:54.098 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 436052 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:15:54.100 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:15:54.944 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:15:54.948 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:15:54.973 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:15:56.139 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:15:56.808 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:15:56.891 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:15:58.730 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:15:58.787 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.17 seconds (JVM running for 6.276)
-24-07-16.14:17:10.021 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 451720 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:17:10.022 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:17:10.810 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:17:10.813 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:17:10.837 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:17:12.263 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:17:12.889 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:17:13.077 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:17:15.478 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:17:15.528 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.083 seconds (JVM running for 7.437)
-24-07-16.14:17:40.656 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 457632 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:17:40.657 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:17:41.516 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:17:41.519 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:17:41.543 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:17:42.712 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:17:43.298 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:17:43.378 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:17:45.188 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:17:45.250 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.085 seconds (JVM running for 6.24)
-24-07-16.14:17:46.822 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:17:47.201 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:19:13.686 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s369ms540µs800ns).
-24-07-16.14:19:13.748 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:19:13.767 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:19:20.304 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 444964 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:19:20.305 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:19:21.141 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:19:21.144 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:19:21.168 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:19:22.342 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:19:22.963 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:19:23.063 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:19:24.931 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:19:24.996 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.147 seconds (JVM running for 6.212)
-24-07-16.14:19:27.678 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:19:28.044 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:20:38.921 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:20:38.940 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:20:45.448 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 458928 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:20:45.449 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:20:46.270 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:20:46.273 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:20:46.303 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-24-07-16.14:20:47.558 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:20:48.139 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:20:48.209 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:20:50.125 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:20:50.183 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.15 seconds (JVM running for 6.149)
-24-07-16.14:21:34.584 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:21:42.806 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 341540 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:21:42.807 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:21:43.624 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:21:43.627 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:21:43.649 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:21:44.783 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:21:45.416 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:21:45.523 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:21:48.014 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:21:48.065 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.749 seconds (JVM running for 6.732)
-24-07-16.14:21:52.298 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:21:53.269 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:23:16.840 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s603ms128µs300ns).
-24-07-16.14:23:16.887 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:23:16.910 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:23:24.183 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 460268 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:23:24.184 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:23:25.000 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:23:25.003 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:23:25.033 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-24-07-16.14:23:26.373 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:23:27.084 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:23:27.191 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:23:29.149 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:23:29.205 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.452 seconds (JVM running for 6.445)
-24-07-16.14:23:47.988 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:23:49.111 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:23:59.371 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:23:59.394 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:24:18.327 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 461452 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:24:18.329 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:24:19.206 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:24:19.208 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:24:19.232 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:24:20.569 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:24:21.290 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:24:21.401 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:24:23.671 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:24:23.726 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.973 seconds (JVM running for 7.743)
-24-07-16.14:24:28.010 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:24:28.967 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:24:43.035 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:24:43.054 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:24:49.122 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 461136 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:24:49.124 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:24:49.841 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:24:49.843 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:24:49.891 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.14:24:51.187 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:24:52.006 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:24:52.163 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:24:56.410 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:24:56.490 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.889 seconds (JVM running for 9.04)
-24-07-16.14:25:08.071 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:25:08.539 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:25:08.618 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:25:08.623 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:25:46.193 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 462204 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:25:46.194 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:25:47.033 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:25:47.037 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:25:47.064 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.14:25:48.343 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:25:48.959 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:25:49.051 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:25:50.948 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:25:50.995 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.306 seconds (JVM running for 7.22)
-24-07-16.14:26:43.226 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:26:43.647 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:26:43.706 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:26:43.713 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:27:36.761 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 455476 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:27:36.762 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:27:37.794 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:27:37.796 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:27:37.824 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-24-07-16.14:27:39.077 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:27:39.695 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:27:39.785 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:27:41.715 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:27:41.765 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.522 seconds (JVM running for 7.551)
-24-07-16.14:27:45.699 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:27:46.028 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:28:11.142 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:28:11.157 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:28:18.063 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 462404 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:28:18.064 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:28:18.886 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:28:18.890 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:28:18.923 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-24-07-16.14:28:20.079 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:28:20.635 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:28:20.702 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:28:22.716 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:28:22.765 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.197 seconds (JVM running for 6.188)
-24-07-16.14:28:49.466 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:28:49.818 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:29:50.932 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s5ms950µs700ns).
-24-07-16.14:29:51.064 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:29:51.083 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:29:56.516 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 454572 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:29:56.517 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:29:57.364 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:29:57.368 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:29:57.394 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:29:58.637 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:29:59.249 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:29:59.326 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:30:01.327 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:30:01.384 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.447 seconds (JVM running for 6.889)
-24-07-16.14:30:03.249 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:30:03.591 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:33:32.942 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m29s242ms261µs500ns).
-24-07-16.14:33:33.040 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:33:33.054 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:33:38.401 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 462876 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:33:38.402 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:33:39.242 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:33:39.246 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:33:39.273 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-24-07-16.14:33:40.496 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:33:41.086 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:33:41.152 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:33:43.013 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:33:43.070 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.221 seconds (JVM running for 6.67)
-24-07-16.14:33:52.476 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:33:53.455 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:34:22.213 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:34:22.233 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:34:22.236 [main            ] WARN  ProxyConnection        - HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@5d3634c8 marked as broken because of SQLSTATE(08S01), ErrorCode(0)
-com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+24-07-28.22:21:07.112 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 103736 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.22:21:07.114 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.22:21:08.560 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.22:21:08.567 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.22:21:08.631 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+24-07-28.22:21:10.697 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.22:21:24.404 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+24-07-28.22:21:24.424 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
 
-The last packet successfully received from the server was 25,807 milliseconds ago. The last packet sent successfully to the server was 25,808 milliseconds ago.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy91.selectOne(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy94.queryStrategyRuleByIdAndName(Unknown Source)
-	at org.example.infrastructure.persistent.repositoryImpl.StrategyRepo.queryStrategyRuleByIdAndName(StrategyRepo.java:106)
-	at org.example.infrastructure.persistent.repositoryImpl.StrategyRepo$$FastClassBySpringCGLIB$$3198694f.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
-	at org.example.infrastructure.persistent.repositoryImpl.StrategyRepo$$EnhancerBySpringCGLIB$$3659fa09.queryStrategyRuleByIdAndName(<generated>)
-	at org.example.domain.strategy.service.initializer.StrategyInitializer.initializeStrategy(StrategyInitializer.java:43)
-	at org.example.test.domain.StrategyTest.TestStrategyAward(StrategyTest.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-07-28.22:21:24.473 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
-	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
-	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
-	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
 	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
@@ -756,126 +295,86 @@ The last packet successfully received from the server was 25,807 milliseconds ag
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet successfully received from the server was 25,807 milliseconds ago. The last packet sent successfully to the server was 25,808 milliseconds ago.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:544)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:708)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:647)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:946)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
-	... 70 common frames omitted
-Caused by: javax.net.ssl.SSLException: Socket closed
-	at sun.security.ssl.Alert.createSSLException(Alert.java:127)
-	at sun.security.ssl.TransportContext.fatal(TransportContext.java:331)
-	at sun.security.ssl.TransportContext.fatal(TransportContext.java:274)
-	at sun.security.ssl.TransportContext.fatal(TransportContext.java:269)
-	at sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1572)
-	at sun.security.ssl.SSLSocketImpl.access$400(SSLSocketImpl.java:73)
-	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:982)
-	at java.io.FilterInputStream.read(FilterInputStream.java:133)
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:538)
-	... 75 common frames omitted
-Caused by: java.net.SocketException: Socket closed
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:171)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:464)
-	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:68)
-	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1350)
-	at sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:73)
-	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:966)
-	... 84 common frames omitted
-24-07-16.14:34:26.169 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 467856 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:34:26.170 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:34:26.889 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:34:26.893 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:34:26.919 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.14:34:28.062 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:34:28.638 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:34:28.696 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:34:30.509 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:34:30.580 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.878 seconds (JVM running for 5.803)
-24-07-16.14:34:41.325 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:34:41.617 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:35:09.351 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:35:09.379 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:35:09.379 [main            ] WARN  ProxyConnection        - HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@cb318ac marked as broken because of SQLSTATE(08S01), ErrorCode(0)
-com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet successfully received from the server was 27,746 milliseconds ago. The last packet sent successfully to the server was 27,746 milliseconds ago.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy91.selectOne(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy94.queryStrategyRuleByIdAndName(Unknown Source)
-	at org.example.infrastructure.persistent.repositoryImpl.StrategyRepo.queryStrategyRuleByIdAndName(StrategyRepo.java:106)
-	at org.example.infrastructure.persistent.repositoryImpl.StrategyRepo$$FastClassBySpringCGLIB$$3198694f.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
-	at org.example.infrastructure.persistent.repositoryImpl.StrategyRepo$$EnhancerBySpringCGLIB$$3659fa09.queryStrategyRuleByIdAndName(<generated>)
-	at org.example.domain.strategy.service.initializer.StrategyInitializer.initializeStrategy(StrategyInitializer.java:43)
-	at org.example.test.domain.StrategyTest.TestStrategyAward(StrategyTest.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$0(ConnectionPool.java:132)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:294)
+	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$6(ConnectionPool.java:253)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:257)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask$$$capture(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.util.concurrent.CompletionException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+	at java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:326)
+	at java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:338)
+	at java.util.concurrent.CompletableFuture.uniRelay(CompletableFuture.java:925)
+	at java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:913)
+	... 13 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-28.22:21:24.478 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@ae13544] to prepare test instance [org.example.test.domain.FilterTest@6d672bd4]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
-	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
-	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
-	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
 	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
@@ -894,428 +393,140 @@ The last packet successfully received from the server was 27,746 milliseconds ag
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet successfully received from the server was 27,746 milliseconds ago. The last packet sent successfully to the server was 27,746 milliseconds ago.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:544)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:708)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:647)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:946)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
-	... 70 common frames omitted
-Caused by: javax.net.ssl.SSLException: Socket closed
-	at sun.security.ssl.Alert.createSSLException(Alert.java:127)
-	at sun.security.ssl.TransportContext.fatal(TransportContext.java:331)
-	at sun.security.ssl.TransportContext.fatal(TransportContext.java:274)
-	at sun.security.ssl.TransportContext.fatal(TransportContext.java:269)
-	at sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1572)
-	at sun.security.ssl.SSLSocketImpl.access$400(SSLSocketImpl.java:73)
-	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:982)
-	at java.io.FilterInputStream.read(FilterInputStream.java:133)
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:538)
-	... 75 common frames omitted
-Caused by: java.net.SocketException: Socket closed
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:171)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:464)
-	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:68)
-	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1350)
-	at sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:73)
-	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:966)
-	... 84 common frames omitted
-24-07-16.14:43:29.382 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 17260 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:43:29.383 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:43:30.219 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:43:30.222 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:43:30.251 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:43:31.484 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:43:32.055 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:43:32.117 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:43:33.997 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:43:34.046 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.173 seconds (JVM running for 6.862)
-24-07-16.14:43:39.346 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:43:39.755 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:45:05.754 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s256ms262µs1ns).
-24-07-16.14:45:05.779 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:45:05.796 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:45:20.291 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 13996 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:45:20.292 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:45:20.953 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:45:20.955 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:45:20.974 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.14:45:21.886 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:45:22.359 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:45:22.417 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:45:24.089 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:45:24.137 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.199 seconds (JVM running for 4.985)
-24-07-16.14:45:27.108 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:45:27.357 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:48:11.112 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m41s119ms757µs400ns).
-24-07-16.14:48:11.133 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:48:11.142 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.14:48:19.909 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 26192 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.14:48:19.910 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.14:48:20.562 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.14:48:20.565 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.14:48:20.584 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.14:48:21.513 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.14:48:21.991 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:48:22.049 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.14:48:23.610 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.14:48:23.658 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.105 seconds (JVM running for 6.143)
-24-07-16.14:48:26.224 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.14:48:26.503 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.14:48:36.851 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.14:48:36.867 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.18:36:59.679 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 24864 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:36:59.680 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:37:00.542 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:37:00.545 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:37:00.571 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.18:37:01.599 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:37:02.118 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:02.168 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:03.672 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:37:03.712 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.381 seconds (JVM running for 5.144)
-24-07-16.18:37:04.102 [main            ] INFO  StrategyTest           - lottery1: get awardId102
-24-07-16.18:37:04.105 [main            ] INFO  StrategyTest           - lottery2: get awardId102
-24-07-16.18:37:04.108 [main            ] INFO  StrategyTest           - lottery3: get awardId104
-24-07-16.18:37:22.966 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 37548 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:37:22.967 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:37:23.542 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:37:23.544 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:37:23.558 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-24-07-16.18:37:24.394 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:37:24.843 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:24.897 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:26.331 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:37:26.376 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.72 seconds (JVM running for 4.36)
-24-07-16.18:37:26.695 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-16.18:37:26.698 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:37:26.699 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-16.18:37:31.941 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 25812 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:37:31.942 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:37:32.526 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:37:32.528 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:37:32.547 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.18:37:33.441 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:37:33.888 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:33.937 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:35.359 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:37:35.420 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.771 seconds (JVM running for 4.398)
-24-07-16.18:37:35.729 [main            ] INFO  StrategyTest           - lottery1: get awardId102
-24-07-16.18:37:35.732 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:37:35.734 [main            ] INFO  StrategyTest           - lottery3: get awardId104
-24-07-16.18:37:40.060 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 37948 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:37:40.060 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:37:40.678 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:37:40.680 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:37:40.697 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.18:37:41.564 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:37:42.002 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:42.054 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:43.425 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:37:43.487 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.718 seconds (JVM running for 4.343)
-24-07-16.18:37:43.797 [main            ] INFO  StrategyTest           - lottery1: get awardId105
-24-07-16.18:37:43.800 [main            ] INFO  StrategyTest           - lottery2: get awardId104
-24-07-16.18:37:43.803 [main            ] INFO  StrategyTest           - lottery3: get awardId103
-24-07-16.18:37:48.271 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 38784 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:37:48.272 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:37:48.888 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:37:48.892 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:37:48.912 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.18:37:49.845 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:37:50.347 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:50.414 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:37:52.125 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:37:52.179 [main            ] INFO  StrategyTest           - Started StrategyTest in 4.224 seconds (JVM running for 4.86)
-24-07-16.18:37:52.490 [main            ] INFO  StrategyTest           - lottery1: get awardId104
-24-07-16.18:37:52.493 [main            ] INFO  StrategyTest           - lottery2: get awardId102
-24-07-16.18:37:52.496 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-16.18:38:21.595 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 33112 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:38:21.596 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:38:22.167 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:38:22.169 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:38:22.186 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-24-07-16.18:38:23.116 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:38:23.592 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:38:23.647 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:38:25.046 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:38:25.089 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.801 seconds (JVM running for 4.422)
-24-07-16.18:38:25.381 [main            ] INFO  StrategyTest           - lottery1: get awardId104
-24-07-16.18:38:25.383 [main            ] INFO  StrategyTest           - lottery2: get awardId102
-24-07-16.18:38:25.385 [main            ] INFO  StrategyTest           - lottery3: get awardId104
-24-07-16.18:38:25.386 [main            ] INFO  StrategyTest           - lottery1: get awardId107
-24-07-16.18:38:25.388 [main            ] INFO  StrategyTest           - lottery2: get awardId104
-24-07-16.18:38:25.391 [main            ] INFO  StrategyTest           - lottery3: get awardId103
-24-07-16.18:38:25.393 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-16.18:38:25.395 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:38:25.397 [main            ] INFO  StrategyTest           - lottery3: get awardId105
-24-07-16.18:38:49.952 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 26256 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:38:49.952 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:38:50.542 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:38:50.544 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:38:50.559 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-24-07-16.18:38:51.385 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:38:51.828 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:38:51.879 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:38:53.256 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:38:53.299 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.647 seconds (JVM running for 4.271)
-24-07-16.18:38:53.611 [main            ] INFO  StrategyTest           - lottery1: get awardId104
-24-07-16.18:38:53.614 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:38:53.616 [main            ] INFO  StrategyTest           - lottery3: get awardId103
-24-07-16.18:38:53.616 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:38:53.618 [main            ] INFO  StrategyTest           - lottery1: get awardId105
-24-07-16.18:38:53.620 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:38:53.622 [main            ] INFO  StrategyTest           - lottery3: get awardId105
-24-07-16.18:38:53.622 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:38:53.624 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-16.18:38:53.626 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:38:53.628 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-16.18:39:05.557 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 35004 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:39:05.557 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:39:06.143 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:39:06.145 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:39:06.160 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-24-07-16.18:39:06.989 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:39:07.421 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:39:07.473 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:39:08.846 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:39:08.892 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.628 seconds (JVM running for 4.276)
-24-07-16.18:39:09.205 [main            ] INFO  StrategyTest           - lottery1: get awardId105
-24-07-16.18:39:09.207 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:39:09.209 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-16.18:39:09.209 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:39:09.211 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-16.18:39:09.213 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:39:09.215 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-16.18:39:09.215 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:39:09.217 [main            ] INFO  StrategyTest           - lottery1: get awardId102
-24-07-16.18:39:09.222 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:39:09.224 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-16.18:39:45.321 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 37344 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:39:45.322 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:39:45.886 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:39:45.888 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:39:45.904 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-24-07-16.18:39:46.752 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:39:47.222 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:39:47.274 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:39:48.687 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:39:48.732 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.708 seconds (JVM running for 4.32)
-24-07-16.18:39:49.066 [main            ] INFO  StrategyTest           - lottery1: get awardId102
-24-07-16.18:39:49.068 [main            ] INFO  StrategyTest           - lottery2: get awardId102
-24-07-16.18:39:49.071 [main            ] INFO  StrategyTest           - lottery3: get awardId104
-24-07-16.18:39:49.071 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:39:49.073 [main            ] INFO  StrategyTest           - lottery1: get awardId104
-24-07-16.18:39:49.076 [main            ] INFO  StrategyTest           - lottery2: get awardId102
-24-07-16.18:39:49.078 [main            ] INFO  StrategyTest           - lottery3: get awardId103
-24-07-16.18:39:49.078 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:39:49.081 [main            ] INFO  StrategyTest           - lottery1: get awardId104
-24-07-16.18:39:49.083 [main            ] INFO  StrategyTest           - lottery2: get awardId104
-24-07-16.18:39:49.085 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-16.18:40:05.635 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 39176 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:40:05.636 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:40:06.223 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:40:06.225 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:40:06.242 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-24-07-16.18:40:07.108 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:40:07.551 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:40:07.598 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:40:08.966 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:40:09.009 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.685 seconds (JVM running for 4.325)
-24-07-16.18:40:59.028 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 39748 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:40:59.029 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:40:59.630 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:40:59.633 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:40:59.651 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-24-07-16.18:41:00.568 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:41:01.035 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:41:01.082 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:41:06.000 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 34832 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:41:06.001 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:41:06.585 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:41:06.588 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:41:06.607 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-24-07-16.18:41:07.477 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:41:07.903 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:41:07.951 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:41:09.354 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:41:09.411 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.732 seconds (JVM running for 4.395)
-24-07-16.18:41:09.703 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.18:41:10.052 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.18:41:10.228 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.18:41:10.239 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.18:41:29.676 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 38044 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:41:29.676 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:41:30.240 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:41:30.242 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:41:30.257 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-24-07-16.18:41:31.130 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:41:31.608 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:41:31.664 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:41:33.061 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:41:33.113 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.742 seconds (JVM running for 4.36)
-24-07-16.18:41:33.498 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-16.18:41:33.730 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-16.18:41:33.788 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-16.18:41:33.791 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-16.18:41:41.242 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 38488 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:41:41.243 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:41:41.826 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:41:41.829 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:41:41.846 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-24-07-16.18:41:42.693 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:41:43.147 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:41:43.193 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:41:44.642 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:41:44.695 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.754 seconds (JVM running for 4.463)
-24-07-16.18:41:45.004 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-16.18:41:45.006 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:41:45.008 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-16.18:41:45.008 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:41:45.011 [main            ] INFO  StrategyTest           - lottery1: get awardId104
-24-07-16.18:41:45.013 [main            ] INFO  StrategyTest           - lottery2: get awardId106
-24-07-16.18:41:45.015 [main            ] INFO  StrategyTest           - lottery3: get awardId106
-24-07-16.18:41:45.015 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:41:45.017 [main            ] INFO  StrategyTest           - lottery1: get awardId104
-24-07-16.18:41:45.019 [main            ] INFO  StrategyTest           - lottery2: get awardId107
-24-07-16.18:41:45.021 [main            ] INFO  StrategyTest           - lottery3: get awardId107
-24-07-16.18:41:58.177 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 35472 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-16.18:41:58.179 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-16.18:41:58.799 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-16.18:41:58.801 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-16.18:41:58.820 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-24-07-16.18:41:59.701 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-16.18:42:00.144 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:42:00.189 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-16.18:42:01.627 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-16.18:42:01.672 [main            ] INFO  StrategyTest           - Started StrategyTest in 3.809 seconds (JVM running for 4.458)
-24-07-16.18:42:01.960 [main            ] INFO  StrategyTest           - lottery1: get awardId102
-24-07-16.18:42:01.962 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:42:01.964 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-16.18:42:01.964 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:42:01.966 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-16.18:42:01.968 [main            ] INFO  StrategyTest           - lottery2: get awardId103
-24-07-16.18:42:01.971 [main            ] INFO  StrategyTest           - lottery3: get awardId107
-24-07-16.18:42:01.971 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-16.18:42:01.973 [main            ] INFO  StrategyTest           - lottery1: get awardId106
-24-07-16.18:42:01.976 [main            ] INFO  StrategyTest           - lottery2: get awardId104
-24-07-16.18:42:01.978 [main            ] INFO  StrategyTest           - lottery3: get awardId105
-24-07-17.16:31:16.159 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 94900 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-17.16:31:16.161 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-17.16:31:17.460 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-17.16:31:17.465 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-17.16:31:17.505 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-07-17.16:31:19.343 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-17.16:31:20.252 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-17.16:31:20.365 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-17.16:31:22.906 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-17.16:31:22.980 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.512 seconds (JVM running for 8.947)
-24-07-17.16:31:23.634 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-17.16:31:23.639 [main            ] INFO  StrategyTest           - lottery2: get awardId102
-24-07-17.16:31:23.644 [main            ] INFO  StrategyTest           - lottery3: get awardId103
-24-07-17.16:31:23.644 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-17.16:31:23.649 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-17.16:31:23.654 [main            ] INFO  StrategyTest           - lottery2: get awardId106
-24-07-17.16:31:23.662 [main            ] INFO  StrategyTest           - lottery3: get awardId107
-24-07-17.16:31:23.662 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-17.16:31:23.668 [main            ] INFO  StrategyTest           - lottery1: get awardId104
-24-07-17.16:31:23.673 [main            ] INFO  StrategyTest           - lottery2: get awardId105
-24-07-17.16:31:23.677 [main            ] INFO  StrategyTest           - lottery3: get awardId105
-24-07-17.16:31:23.892 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-17.16:31:24.505 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-17.16:31:24.721 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-17.16:31:24.732 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-17.16:33:51.347 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 92524 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-17.16:33:51.349 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-17.16:33:52.569 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-17.16:33:52.574 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-17.16:33:52.611 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-24-07-17.16:33:54.342 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-17.16:33:55.213 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-17.16:33:55.375 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-17.16:33:58.091 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-17.16:33:58.179 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.547 seconds (JVM running for 8.966)
-24-07-17.16:33:58.728 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-17.16:33:58.732 [main            ] INFO  StrategyTest           - lottery2: get awardId102
-24-07-17.16:33:58.736 [main            ] INFO  StrategyTest           - lottery3: get awardId105
-24-07-17.16:33:58.736 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-17.16:33:58.739 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-17.16:33:58.743 [main            ] INFO  StrategyTest           - lottery2: get awardId104
-24-07-17.16:33:58.746 [main            ] INFO  StrategyTest           - lottery3: get awardId103
-24-07-17.16:33:58.746 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-17.16:33:58.750 [main            ] INFO  StrategyTest           - lottery1: get awardId108
-24-07-17.16:33:58.753 [main            ] INFO  StrategyTest           - lottery2: get awardId104
-24-07-17.16:33:58.757 [main            ] INFO  StrategyTest           - lottery3: get awardId105
-24-07-17.16:33:58.964 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-17.16:33:59.425 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-17.16:33:59.521 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-17.16:33:59.528 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-17.16:34:06.587 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 95456 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-17.16:34:06.589 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-17.16:34:07.777 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-17.16:34:07.781 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-17.16:34:07.812 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-24-07-17.16:34:09.611 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-17.16:34:10.465 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-17.16:34:10.602 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-17.16:34:13.280 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-17.16:34:13.382 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.464 seconds (JVM running for 8.854)
-24-07-17.16:34:14.003 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-17.16:34:14.008 [main            ] INFO  StrategyTest           - lottery2: get awardId102
-24-07-17.16:34:14.012 [main            ] INFO  StrategyTest           - lottery3: get awardId103
-24-07-17.16:34:14.012 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-17.16:34:14.015 [main            ] INFO  StrategyTest           - lottery1: get awardId104
-24-07-17.16:34:14.019 [main            ] INFO  StrategyTest           - lottery2: get awardId105
-24-07-17.16:34:14.022 [main            ] INFO  StrategyTest           - lottery3: get awardId106
-24-07-17.16:34:14.022 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-17.16:34:14.028 [main            ] INFO  StrategyTest           - lottery1: get awardId105
-24-07-17.16:34:14.031 [main            ] INFO  StrategyTest           - lottery2: get awardId105
-24-07-17.16:34:14.035 [main            ] INFO  StrategyTest           - lottery3: get awardId104
-24-07-17.16:35:10.081 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 96016 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
-24-07-17.16:35:10.119 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-07-17.16:35:11.271 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-17.16:35:11.277 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-17.16:35:11.316 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-24-07-17.16:35:13.091 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-17.16:35:13.968 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-07-17.16:35:14.113 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-07-17.16:35:16.804 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-17.16:35:16.884 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.459 seconds (JVM running for 8.796)
-24-07-17.16:35:17.452 [main            ] INFO  StrategyTest           - lottery1: get awardId102
-24-07-17.16:35:17.456 [main            ] INFO  StrategyTest           - lottery2: get awardId102
-24-07-17.16:35:17.459 [main            ] INFO  StrategyTest           - lottery3: get awardId102
-24-07-17.16:35:17.459 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-17.16:35:17.463 [main            ] INFO  StrategyTest           - lottery1: get awardId103
-24-07-17.16:35:17.467 [main            ] INFO  StrategyTest           - lottery2: get awardId104
-24-07-17.16:35:17.470 [main            ] INFO  StrategyTest           - lottery3: get awardId104
-24-07-17.16:35:17.470 [main            ] INFO  StrategyTest           - -------------------------------------------------------------------
-24-07-17.16:35:17.476 [main            ] INFO  StrategyTest           - lottery1: get awardId105
-24-07-17.16:35:17.479 [main            ] INFO  StrategyTest           - lottery2: get awardId105
-24-07-17.16:35:17.483 [main            ] INFO  StrategyTest           - lottery3: get awardId107
-24-07-17.16:35:20.696 [main            ] INFO  StrategyTest           - lottery1: get awardIdnull
-24-07-17.16:35:20.700 [main            ] INFO  StrategyTest           - lottery2: get awardIdnull
-24-07-17.16:35:20.704 [main            ] INFO  StrategyTest           - lottery3: get awardIdnull
-24-07-17.16:35:20.942 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-17.16:35:21.448 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-17.16:35:21.554 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-17.16:35:21.565 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$0(ConnectionPool.java:132)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:294)
+	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$6(ConnectionPool.java:253)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:257)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask$$$capture(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.util.concurrent.CompletionException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+	at java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:326)
+	at java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:338)
+	at java.util.concurrent.CompletableFuture.uniRelay(CompletableFuture.java:925)
+	at java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:913)
+	... 13 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+24-07-28.22:22:06.734 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 84088 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.22:22:06.735 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.22:22:07.881 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.22:22:07.887 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.22:22:07.921 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-07-28.22:22:09.542 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.22:22:10.519 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:22:10.673 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:22:13.576 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.22:22:13.661 [main            ] INFO  FilterTest             - Started FilterTest in 7.541 seconds (JVM running for 8.867)
+24-07-28.22:22:32.459 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 106904 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.22:22:32.460 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.22:22:33.504 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.22:22:33.508 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.22:22:33.542 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-07-28.22:22:35.212 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.22:22:36.141 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:22:36.267 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:22:38.792 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.22:22:38.886 [main            ] INFO  FilterTest             - Started FilterTest in 6.955 seconds (JVM running for 8.237)
+24-07-28.22:22:46.643 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 103724 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.22:22:46.644 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.22:22:47.752 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.22:22:47.756 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.22:22:47.787 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-07-28.22:22:49.450 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.22:22:50.406 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:22:50.565 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:22:53.024 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.22:22:53.116 [main            ] INFO  FilterTest             - Started FilterTest in 7.099 seconds (JVM running for 8.388)
+24-07-28.22:23:32.025 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 103776 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.22:23:32.056 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.22:23:33.085 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.22:23:33.089 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.22:23:33.127 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-07-28.22:23:34.877 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.22:23:35.827 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:23:35.950 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:23:38.729 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.22:23:38.830 [main            ] INFO  FilterTest             - Started FilterTest in 7.386 seconds (JVM running for 8.681)
+24-07-28.22:23:56.776 [main            ] INFO  FilterTest             - Starting FilterTest using Java 1.8.0_402 on MECHREVO with PID 107424 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-07-28.22:23:56.778 [main            ] INFO  FilterTest             - The following 1 profile is active: "dev"
+24-07-28.22:23:57.927 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-28.22:23:57.931 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-28.22:23:57.961 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+24-07-28.22:23:59.689 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-28.22:24:00.706 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:24:00.838 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-07-28.22:24:03.327 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-28.22:24:03.468 [main            ] INFO  FilterTest             - Started FilterTest in 7.322 seconds (JVM running for 8.64)

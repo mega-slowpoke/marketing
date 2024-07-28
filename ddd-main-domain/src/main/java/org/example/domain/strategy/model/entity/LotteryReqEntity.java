@@ -28,4 +28,6 @@ public class LotteryReqEntity {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
+
 }
