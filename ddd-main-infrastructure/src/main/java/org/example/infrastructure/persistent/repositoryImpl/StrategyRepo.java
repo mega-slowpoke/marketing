@@ -119,6 +119,13 @@ public class StrategyRepo implements IStrategyRepo {
     @Override
     public AwardRuleEntity queryAwardRuleByIdAndName(Long strategyId, Long awardId, String ruleName) {
         AwardRule awardRule = iAwardRuleDAO.queryAwardRuleByIdAndName(strategyId, awardId, ruleName);
+        AwardRuleEntity awardRuleEntity = new AwardRuleEntity();
+        awardRuleEntity.setStrategyId(awardRule.getStrategyId());
+        awardRuleEntity.setAwardId(awardRule.getAwardId());
+        awardRuleEntity.setRuleModel(awardRule.getRuleModel());
+        awardRuleEntity.setRuleValue(awardRule.getRuleValue());
+        awardRuleEntity.setRuleDesc(awardRule.getRuleDesc());
+        return awardRuleEntity;
     }
 
 }
