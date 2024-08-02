@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 @Component
-public class BlackListFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity> {
+public class BlackListFilter implements IFilter<RuleActionEntity.BeforeLotteryEntity> {
 
     @Resource
     private IStrategyRepo iStrategyRepo;
 
 
     @Override
-    public RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> filter(FilterConditionEntity filterConditionEntity) {
+    public RuleActionEntity<RuleActionEntity.BeforeLotteryEntity> filter(FilterConditionEntity filterConditionEntity) {
         String userId = filterConditionEntity.getUserId();
         Long strategyId = filterConditionEntity.getStrategyId();
 
@@ -34,9 +34,9 @@ public class BlackListFilter implements IFilter<RuleActionEntity.RaffleBeforeEnt
         for (String blockedUserId : blockedUserIds) {
             // 如果是用户在黑名单，就返回一个Takeover(表示有特殊规则)的为BlackList的RuleAction
             if (blockedUserId.equals(userId)) {
-                return RuleActionEntity.<RuleActionEntity.RaffleBeforeEntity>builder()
+                return RuleActionEntity.<RuleActionEntity.BeforeLotteryEntity>builder()
                         .ruleModel(Constants.RuleName.RULE_BLACKLIST)
-                        .data(RuleActionEntity.RaffleBeforeEntity.builder()
+                        .data(RuleActionEntity.BeforeLotteryEntity.builder()
                                 .strategyId(strategyId)   // !!!!! 注意这里缺少了awardId
                                 .blackListAwardId(Integer.parseInt(blackListAwardId))
                                 .build())
@@ -47,7 +47,7 @@ public class BlackListFilter implements IFilter<RuleActionEntity.RaffleBeforeEnt
         }
 
         // 否则返回一个普通的没有特殊规则的RuleAction
-        return RuleActionEntity.<RuleActionEntity.RaffleBeforeEntity>builder()
+        return RuleActionEntity.<RuleActionEntity.BeforeLotteryEntity>builder()
                 .code(RuleLogicCheckTypeVO.ALLOW.getCode())
                 .info(RuleLogicCheckTypeVO.ALLOW.getInfo())
                 .build();

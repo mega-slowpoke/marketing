@@ -8,20 +8,19 @@ import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.domain.strategy.service.filter.IFilter;
 import org.example.types.common.Constants;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
 @Component
-public class WeightFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity> {
+public class WeightFilter implements IFilter<RuleActionEntity.BeforeLotteryEntity> {
 
     @Resource
     private IStrategyRepo iStrategyRepo;
 
     @Override
-    public RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> filter(FilterConditionEntity filterConditionEntity) {
+    public RuleActionEntity<RuleActionEntity.BeforeLotteryEntity> filter(FilterConditionEntity filterConditionEntity) {
         String userId = filterConditionEntity.getUserId();
         Long strategyId = filterConditionEntity.getStrategyId();
 
@@ -39,8 +38,8 @@ public class WeightFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity
 
         // 达到了最小积分要求，按照特殊规则处理
         if (minPoint != Integer.MAX_VALUE) {
-            return RuleActionEntity.<RuleActionEntity.RaffleBeforeEntity>builder()
-                    .data(RuleActionEntity.RaffleBeforeEntity.builder()
+            return RuleActionEntity.<RuleActionEntity.BeforeLotteryEntity>builder()
+                    .data(RuleActionEntity.BeforeLotteryEntity.builder()
                             .strategyId(strategyId)
                             .weightValue(String.valueOf(minPoint))
                             .build())
@@ -50,7 +49,7 @@ public class WeightFilter implements IFilter<RuleActionEntity.RaffleBeforeEntity
                     .build();
         }
 
-        return RuleActionEntity.<RuleActionEntity.RaffleBeforeEntity>builder()
+        return RuleActionEntity.<RuleActionEntity.BeforeLotteryEntity>builder()
                 .code(RuleLogicCheckTypeVO.ALLOW.getCode())
                 .info(RuleLogicCheckTypeVO.ALLOW.getInfo())
                 .build();

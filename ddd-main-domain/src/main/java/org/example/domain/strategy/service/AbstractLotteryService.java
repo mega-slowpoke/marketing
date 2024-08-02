@@ -28,7 +28,7 @@ public abstract class AbstractLotteryService implements ILotteryService {
         StrategyEntity strategyEntity = iStrategyRepo.queryStrategyById(strategyId);
 
         // 检测策略是否有特殊规则
-        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> action = checkRaffleBeforeLogic(lotteryRequestEntity, strategyEntity.getRuleModels());
+        RuleActionEntity<RuleActionEntity.BeforeLotteryEntity> action = beforeLotteryFilter(lotteryRequestEntity, strategyEntity.getRuleModels());
 
         // 初始化返回结果
         LotteryResEntity res =  new LotteryResEntity();
@@ -59,11 +59,11 @@ public abstract class AbstractLotteryService implements ILotteryService {
 
 
     // filter before lottery
-    protected abstract RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> checkRaffleBeforeLogic(LotteryReqEntity lotteryReq, String... ruleModels);
+    protected abstract RuleActionEntity<RuleActionEntity.BeforeLotteryEntity> beforeLotteryFilter(LotteryReqEntity lotteryReq, String... ruleModels);
 
 
     // filter in the middle of lottery
-
+    protected abstract RuleActionEntity<RuleActionEntity.DuringLotteryEntity> duringLotteryFilter(LotteryReqEntity lotteryReq, String... ruleModes);
 
     // filter after the lottery
 
