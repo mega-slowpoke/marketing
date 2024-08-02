@@ -59,4 +59,15 @@ public class AwardRuleEntity {
     public void setRuleDesc(String ruleDesc) {
         this.ruleDesc = ruleDesc;
     }
+
+    @Override
+    public String toString() {
+        return "AwardRuleEntity{" +
+                "strategyId=" + strategyId +
+                ", awardId=" + awardId +
+                ", ruleModel='" + ruleModel + '\'' +
+                ", ruleValue='" + ruleValue + '\'' +
+                ", ruleDesc='" + ruleDesc + '\'' +
+                '}';
+    }
 }

@@ -16,7 +16,7 @@
     <select id="queryAwardRuleByIdAndName" resultMap="CaseMap">
         SELECT strategy_id, award_id, rule_model, rule_value, rule_desc
         FROM award_rule
-        WHERE strategy_id = #{strategyId} AND award_id = #{awardId} AND rule_model = #{ruleModel}
+        WHERE strategy_id = #{strategyId} AND award_id = #{awardId} AND rule_model = #{ruleName}
     </select>
 
 </mapper>

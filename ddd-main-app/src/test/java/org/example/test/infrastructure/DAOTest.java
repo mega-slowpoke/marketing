@@ -67,4 +67,10 @@ public class DAOTest {
         Strategy strategy = iStrategyDAO.queryStrategyById(100001L);
         System.out.println(strategy);
     }
+
+    @Test
+    public void queryStrategyRuleTest() {
+        StrategyRule strategy = iStrategyRuleDAO.queryStrategyRuleByIdAndName(100001L, "rule_weight");
+        log.info(strategy.toString());
+    }
 }
