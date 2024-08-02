@@ -22,6 +22,9 @@ public class Constants {
         public static String RULE_WEIGHT = "rule_weight";
         // 【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回"
         public static String RULE_BLACKLIST = "rule_blacklist";
+        public static String RULE_LOCK = "rule_lock";
+        public static String RULE_LUCK_AWARD = "rule_luck_award";
+
 
     }
 

@@ -1,12 +1,15 @@
 package org.example.infrastructure.persistent.repositoryImpl;
 
+import org.example.domain.strategy.model.entity.AwardRuleEntity;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
 import org.example.domain.strategy.repository.IStrategyRepo;
+import org.example.infrastructure.persistent.dao.IAwardRuleDAO;
 import org.example.infrastructure.persistent.dao.IStrategyAwardDAO;
 import org.example.infrastructure.persistent.dao.IStrategyDAO;
 import org.example.infrastructure.persistent.dao.IStrategyRuleDAO;
+import org.example.infrastructure.persistent.po.AwardRule;
 import org.example.infrastructure.persistent.po.Strategy;
 import org.example.infrastructure.persistent.po.StrategyAward;
 import org.example.infrastructure.persistent.po.StrategyRule;
@@ -31,6 +34,9 @@ public class StrategyRepo implements IStrategyRepo {
 
     @Resource
     private IStrategyRuleDAO iStrategyRuleDAO;
+
+    @Resource
+    private IAwardRuleDAO iAwardRuleDAO;
 
     @Resource
     private IRedisService iRedisService;
@@ -108,6 +114,11 @@ public class StrategyRepo implements IStrategyRepo {
         strategyRuleEntity.setRuleValue(strategyRule.getRuleValue());
         strategyRuleEntity.setRuleDesc(strategyRule.getRuleDesc());
         return strategyRuleEntity;
+    }
+
+    @Override
+    public AwardRuleEntity queryAwardRuleByIdAndName(Long strategyId, Long awardId, String ruleName) {
+        AwardRule awardRule = iAwardRuleDAO.queryAwardRuleByIdAndName(strategyId, awardId, ruleName);
     }
 
 }

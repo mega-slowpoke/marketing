@@ -1,5 +1,6 @@
 package org.example.domain.strategy.repository;
 
+import org.example.domain.strategy.model.entity.AwardRuleEntity;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
@@ -20,4 +21,6 @@ public interface IStrategyRepo {
     StrategyEntity queryStrategyById(Long strategyId);
 
     StrategyRuleEntity queryStrategyRuleByIdAndName(Long strategyId, String ruleName);
+
+    AwardRuleEntity queryAwardRuleByIdAndName(Long strategyId, Long awardId, String ruleName);
 }

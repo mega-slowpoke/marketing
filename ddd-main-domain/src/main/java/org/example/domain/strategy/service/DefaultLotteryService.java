@@ -60,4 +60,11 @@ public class DefaultLotteryService extends AbstractLotteryService {
 
         return ruleActionEntity;
     }
+
+    @Override
+    protected RuleActionEntity<RuleActionEntity.DuringLotteryEntity> duringLotteryFilter(LotteryReqEntity lotteryReq, String... ruleModes) {
+        return null;
+    }
+
+
 }
