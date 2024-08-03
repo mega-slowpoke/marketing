@@ -3,6 +3,7 @@ package org.example.domain.strategy.service;
 import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.entity.FilterConditionEntity;
 import org.example.domain.strategy.model.entity.LotteryReqEntity;
+import org.example.domain.strategy.model.entity.LotteryResEntity;
 import org.example.domain.strategy.model.entity.RuleActionEntity;
 import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.service.filter.IFilter;
@@ -62,9 +63,15 @@ public class DefaultLotteryService extends AbstractLotteryService {
     }
 
     @Override
-    protected RuleActionEntity<RuleActionEntity.DuringLotteryEntity> duringLotteryFilter(LotteryReqEntity lotteryReq, String... ruleModes) {
+    protected RuleActionEntity<RuleActionEntity.DuringLotteryEntity> duringLotteryFilter(LotteryResEntity lotteryRes, String... ruleModels) {
+        for (String rule : ruleModels) {
+            IFilter<?> curFilter = filterFactory.getFilter(rule);
+            FilterConditionEntity filterConditionEntity = new FilterConditionEntity();
+            filterConditionEntity.setStrategyId(lotteryRes.getStrategyId());
+            filterConditionEntity.setUserId(lotteryRes.getUserId());
+            RuleActionEntity<RuleActionEntity.DuringLotteryEntity> action = (RuleActionEntity<RuleActionEntity.DuringLotteryEntity>) curFilter.filter(filterConditionEntity);
+            if (action.getCode().equals(RuleLogicCheckTypeVO.TAKE_OVER.getCode())) return action;
+        }
         return null;
     }
-
-
 }

@@ -89,4 +89,18 @@ public class AwardRule {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
+    @Override
+    public String toString() {
+        return "AwardRule{" +
+                "id=" + id +
+                ", strategyId=" + strategyId +
+                ", awardId=" + awardId +
+                ", ruleModel='" + ruleModel + '\'' +
+                ", ruleValue='" + ruleValue + '\'' +
+                ", ruleDesc='" + ruleDesc + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }

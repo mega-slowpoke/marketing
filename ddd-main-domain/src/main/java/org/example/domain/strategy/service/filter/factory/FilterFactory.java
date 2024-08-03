@@ -3,6 +3,7 @@ package org.example.domain.strategy.service.filter.factory;
 import org.example.domain.strategy.model.entity.RuleActionEntity;
 import org.example.domain.strategy.service.filter.IFilter;
 import org.example.domain.strategy.service.filter.impl.BlackListFilter;
+import org.example.domain.strategy.service.filter.impl.LotteryCountFilter;
 import org.example.domain.strategy.service.filter.impl.WeightFilter;
 import org.example.types.common.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ public class FilterFactory {
     public void initializeFilters() {
         addNewFilter(Constants.RuleName.RULE_BLACKLIST, BlackListFilter.class);
         addNewFilter(Constants.RuleName.RULE_WEIGHT, WeightFilter.class);
+        addNewFilter(Constants.RuleName.RULE_LOCK, LotteryCountFilter.class);
     }
 
     public void addNewFilter(String ruleName, Class<? extends IFilter<?>> filterClass) {

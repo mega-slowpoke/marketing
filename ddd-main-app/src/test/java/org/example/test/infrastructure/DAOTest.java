@@ -1,14 +1,12 @@
 package org.example.test.infrastructure;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.infrastructure.persistent.dao.IAwardDAO;
-import org.example.infrastructure.persistent.dao.IStrategyAwardDAO;
-import org.example.infrastructure.persistent.dao.IStrategyDAO;
-import org.example.infrastructure.persistent.dao.IStrategyRuleDAO;
+import org.example.infrastructure.persistent.dao.*;
 import org.example.infrastructure.persistent.po.Award;
 import org.example.infrastructure.persistent.po.Strategy;
 import org.example.infrastructure.persistent.po.StrategyAward;
 import org.example.infrastructure.persistent.po.StrategyRule;
+import org.example.types.common.Constants;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,6 +27,9 @@ public class DAOTest {
     private IStrategyAwardDAO iStrategyAwardDAO;
     @Resource
     private IStrategyRuleDAO iStrategyRuleDAO;
+
+    @Resource
+    private IAwardRuleDAO iAwardRuleDAO;
 
     @Test
     public void testIStrategyDAO() {
@@ -72,5 +73,15 @@ public class DAOTest {
     public void queryStrategyRuleTest() {
         StrategyRule strategy = iStrategyRuleDAO.queryStrategyRuleByIdAndName(100001L, "rule_weight");
         log.info(strategy.toString());
+    }
+
+    @Test
+    public void queryAwardRuleListTest() {
+        System.out.println(iAwardRuleDAO.queryAwardRulesById(100001L, 107));
+    }
+
+    @Test
+    public void queryAwardRuleTest() {
+        System.out.println(iAwardRuleDAO.queryAwardRuleByIdAndName(100001L, 107, Constants.RuleName.RULE_LUCK_AWARD));
     }
 }

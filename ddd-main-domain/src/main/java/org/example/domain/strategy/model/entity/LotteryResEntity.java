@@ -2,6 +2,7 @@ package org.example.domain.strategy.model.entity;
 
 public class LotteryResEntity {
 
+    private String userId;
     /** 策略ID */
     private Long strategyId;
     /** 奖品ID */
@@ -16,12 +17,21 @@ public class LotteryResEntity {
     public LotteryResEntity() {
     }
 
-    public LotteryResEntity(Long strategyId, Integer awardId, String awardKey, String awardConfig, String awardDesc) {
+    public LotteryResEntity(String userId, Long strategyId, Integer awardId, String awardKey, String awardConfig, String awardDesc) {
+        this.userId = userId;
         this.strategyId = strategyId;
         this.awardId = awardId;
         this.awardKey = awardKey;
         this.awardConfig = awardConfig;
         this.awardDesc = awardDesc;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public Long getStrategyId() {
