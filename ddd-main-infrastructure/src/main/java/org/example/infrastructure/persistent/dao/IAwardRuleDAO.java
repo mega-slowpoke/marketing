@@ -9,8 +9,5 @@ import java.util.List;
 @Mapper
 public interface IAwardRuleDAO {
     AwardRule queryAwardRuleByIdAndName(@Param("strategyId") Long strategyId, @Param("awardId") Integer awardId, @Param("ruleName") String ruleName);
-
     List<AwardRule> queryAwardRulesById(@Param("strategyId") Long strategyId, @Param("awardId") Integer awardId);
-
-
 }

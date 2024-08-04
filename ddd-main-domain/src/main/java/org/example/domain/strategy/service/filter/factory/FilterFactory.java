@@ -17,7 +17,9 @@ import java.util.concurrent.ConcurrentHashMap;
 @Service
 public class FilterFactory {
 
-    private Map<String, IFilter<?>> filterMap = new ConcurrentHashMap<>();
+    private static Map<String, IFilter<?>> filterMap = new ConcurrentHashMap<>();
+
+    private static Map<String, String> filterType = new ConcurrentHashMap<>();
 
     @Autowired
     private ApplicationContext context;
@@ -27,6 +29,11 @@ public class FilterFactory {
         addNewFilter(Constants.RuleName.RULE_BLACKLIST, BlackListFilter.class);
         addNewFilter(Constants.RuleName.RULE_WEIGHT, WeightFilter.class);
         addNewFilter(Constants.RuleName.RULE_LOCK, LotteryCountFilter.class);
+
+        filterType.put(Constants.RuleName.RULE_BLACKLIST, Constants.RuleType.BEFORE_RULE);
+        filterType.put(Constants.RuleName.RULE_WEIGHT, Constants.RuleType.BEFORE_RULE);
+        filterType.put(Constants.RuleName.RULE_LOCK, Constants.RuleType.DURING_RULE);
+        filterType.put(Constants.RuleName.RULE_LUCK_AWARD, Constants.RuleType.AFTER_RULE);
     }
 
     public void addNewFilter(String ruleName, Class<? extends IFilter<?>> filterClass) {
@@ -38,4 +45,11 @@ public class FilterFactory {
         return filterMap.get(ruleName);
     }
 
+    public static boolean isAfterRule(String ruleName) {
+        return Constants.RuleType.AFTER_RULE.equals(filterType.get(ruleName));
+    }
+
+    public static boolean isDuringRule(String ruleName) {
+        return Constants.RuleType.DURING_RULE.equals(filterType.get(ruleName));
+    }
 }

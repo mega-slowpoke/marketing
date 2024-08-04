@@ -24,8 +24,12 @@ public class Constants {
         public static String RULE_BLACKLIST = "rule_blacklist";
         public static String RULE_LOCK = "rule_lock";
         public static String RULE_LUCK_AWARD = "rule_luck_award";
-
-
     }
 
+    public static class RuleType {
+        public static String BEFORE_RULE = "before";
+
+        public static String DURING_RULE = "during";
+        public static String AFTER_RULE = "after";
+    }
 }

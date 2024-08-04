@@ -17,7 +17,8 @@ public class LotteryExecutor implements ILotteryExecutor {
     public Integer doLottery(Long strategyId) {
         Integer totalBucket = iStrategyRepo.getRange(Constants.RedisKey.STRATEGY_TOTAL_BUCKET_KEY + strategyId);
         int randomIdx = new SecureRandom().nextInt(totalBucket);
-        return iStrategyRepo.getAwardIdFromDistributionMap(String.valueOf(strategyId), randomIdx);
+        String awardKey = Constants.RedisKey.AWARD_DISTRIBUTION_KEY + strategyId;
+        return iStrategyRepo.getAwardIdFromDistributionMap(awardKey, randomIdx);
     }
 
     @Override

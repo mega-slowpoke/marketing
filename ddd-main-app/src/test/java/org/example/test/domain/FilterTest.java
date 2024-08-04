@@ -47,4 +47,14 @@ public class FilterTest {
         log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
     }
 
+    @Test
+    public void test_raffle_center_rule_lock(){
+        LotteryReqEntity raffleFactorEntity = new LotteryReqEntity();
+        raffleFactorEntity.setStrategyId(100003L);
+        raffleFactorEntity.setUserId("xiaofuge");
+        LotteryResEntity raffleAwardEntity = iLotteryService.performLottery(raffleFactorEntity);
+        log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
+        log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
+    }
+
 }

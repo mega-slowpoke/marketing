@@ -23,19 +23,20 @@ public class StrategyTest {
 
 
     @Test
-    public void TestStrategyAward() {
+    public void TestStrategyAward100001() {
         iStrategyInitializer.initializeStrategy(100001L);
+//        iStrategyInitializer.initializeStrategy(100003L);
     }
 
     @Test
-    public void LotteryTest1() {
+    public void LotteryTest100001() {
         log.info("lottery1: get awardId" + iLotteryExecutor.doLottery(100001L));
         log.info("lottery2: get awardId" + iLotteryExecutor.doLottery(100001L));
         log.info("lottery3: get awardId" + iLotteryExecutor.doLottery(100001L));
     }
 
     @Test
-    public void LotteryTest() {
+    public void LotteryTest100001Weight() {
         log.info("lottery1: get awardId" + iLotteryExecutor.doLottery(100001L, "4000"));
         log.info("lottery2: get awardId" + iLotteryExecutor.doLottery(100001L, "4000"));
         log.info("lottery3: get awardId" + iLotteryExecutor.doLottery(100001L, "4000"));
@@ -51,5 +52,10 @@ public class StrategyTest {
         log.info("lottery1: get awardId" + iLotteryExecutor.doLottery(100001L, "6000"));
         log.info("lottery2: get awardId" + iLotteryExecutor.doLottery(100001L, "6000"));
         log.info("lottery3: get awardId" + iLotteryExecutor.doLottery(100001L, "6000"));
+    }
+
+    @Test
+    public void TestStrategyAward100003() {
+        iStrategyInitializer.initializeStrategy(100003L);
     }
 }

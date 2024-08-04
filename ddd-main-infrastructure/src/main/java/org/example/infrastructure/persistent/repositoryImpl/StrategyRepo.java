@@ -4,6 +4,7 @@ import org.example.domain.strategy.model.entity.AwardRuleEntity;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
+import org.example.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.infrastructure.persistent.dao.IAwardRuleDAO;
 import org.example.infrastructure.persistent.dao.IStrategyAwardDAO;
@@ -90,7 +91,6 @@ public class StrategyRepo implements IStrategyRepo {
     }
 
 
-
     @Override
     public StrategyEntity queryStrategyById(Long strategyId) {
         String cacheKey = Constants.RedisKey.STRATEGY_KEY + strategyId;
@@ -100,7 +100,7 @@ public class StrategyRepo implements IStrategyRepo {
         strategyEntity = new StrategyEntity();
         strategyEntity.setStrategyId(strategy.getStrategyId());
         strategyEntity.setStrategyDesc(strategy.getStrategyDesc());
-        strategyEntity.setRuleModels(strategy.getRuleModels().split(Constants.COMMA));
+        strategyEntity.setRuleModels(strategy.getRuleModels());
         iRedisService.setValue(cacheKey, strategyEntity);
         return strategyEntity;
     }
@@ -116,10 +116,14 @@ public class StrategyRepo implements IStrategyRepo {
         return strategyRuleEntity;
     }
 
+
     @Override
-    public Map<String, AwardRuleEntity> queryAwardRulesById(Long strategyId, Integer awardId) {
-        List<AwardRule> awardRuleList = iAwardRuleDAO.queryAwardRulesById(strategyId, awardId);
-        return null;
+    public StrategyAwardRuleModelVO queryDuringAndAfterRuleModels(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = iStrategyAwardDAO.queryStrategyAwardRuleModels(strategyAward);
+        return new StrategyAwardRuleModelVO(ruleModels);
     }
 
     @Override

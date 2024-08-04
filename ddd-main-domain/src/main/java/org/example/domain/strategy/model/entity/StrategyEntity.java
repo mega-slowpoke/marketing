@@ -1,5 +1,8 @@
 package org.example.domain.strategy.model.entity;
 
+import org.apache.tomcat.util.bcel.classfile.Constant;
+import org.example.types.common.Constants;
+
 import java.util.Arrays;
 
 public class StrategyEntity {
@@ -52,8 +55,13 @@ public class StrategyEntity {
         return ruleModels;
     }
 
-    public void setRuleModels(String[] ruleModels) {
-        this.ruleModels = ruleModels;
+    public void setRuleModels(String ruleModelStr) {
+        if (ruleModelStr == null) {
+            this.ruleModels = null;
+            return;
+        }
+
+        this.ruleModels = ruleModelStr.split(Constants.COMMA);
         checkRuleHasWeight();
     }
 

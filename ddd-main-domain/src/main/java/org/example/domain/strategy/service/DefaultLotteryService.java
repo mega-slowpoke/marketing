@@ -23,6 +23,11 @@ public class DefaultLotteryService extends AbstractLotteryService {
 
     @Override
     protected RuleActionEntity<RuleActionEntity.BeforeLotteryEntity> beforeLotteryFilter(LotteryReqEntity lotteryReq, String... ruleModels) {
+        if (ruleModels == null || 0 == ruleModels.length) return RuleActionEntity.<RuleActionEntity.BeforeLotteryEntity>builder()
+                .code(RuleLogicCheckTypeVO.ALLOW.getCode())
+                .info(RuleLogicCheckTypeVO.ALLOW.getInfo())
+                .build();
+
         Long strategyId = lotteryReq.getStrategyId();
         String userId = lotteryReq.getUserId();
 
@@ -64,11 +69,17 @@ public class DefaultLotteryService extends AbstractLotteryService {
 
     @Override
     protected RuleActionEntity<RuleActionEntity.DuringLotteryEntity> duringLotteryFilter(LotteryResEntity lotteryRes, String... ruleModels) {
+        if (ruleModels == null || 0 == ruleModels.length) return RuleActionEntity.<RuleActionEntity.DuringLotteryEntity>builder()
+                .code(RuleLogicCheckTypeVO.ALLOW.getCode())
+                .info(RuleLogicCheckTypeVO.ALLOW.getInfo())
+                .build();
+
         for (String rule : ruleModels) {
             IFilter<?> curFilter = filterFactory.getFilter(rule);
             FilterConditionEntity filterConditionEntity = new FilterConditionEntity();
             filterConditionEntity.setStrategyId(lotteryRes.getStrategyId());
             filterConditionEntity.setUserId(lotteryRes.getUserId());
+            filterConditionEntity.setAwardId(lotteryRes.getAwardId());
             RuleActionEntity<RuleActionEntity.DuringLotteryEntity> action = (RuleActionEntity<RuleActionEntity.DuringLotteryEntity>) curFilter.filter(filterConditionEntity);
             if (action.getCode().equals(RuleLogicCheckTypeVO.TAKE_OVER.getCode())) return action;
         }

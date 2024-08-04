@@ -4,6 +4,7 @@ import org.example.domain.strategy.model.entity.AwardRuleEntity;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
+import org.example.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 
 import java.util.List;
 import java.util.Map;
@@ -22,7 +23,7 @@ public interface IStrategyRepo {
 
     StrategyRuleEntity queryStrategyRuleByIdAndName(Long strategyId, String ruleName);
 
-    Map<String, AwardRuleEntity> queryAwardRulesById(Long strategyId, Integer awardId);
-
     AwardRuleEntity queryAwardRuleByIdAndName(Long strategyId, Integer awardId, String ruleName);
+
+    StrategyAwardRuleModelVO queryDuringAndAfterRuleModels(Long strategyId, Integer awardId);
 }
