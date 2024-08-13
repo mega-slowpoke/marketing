@@ -4,8 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.example.domain.strategy.model.entity.AwardRuleEntity;
-import org.example.domain.strategy.service.filter.factory.FilterFactory;
+import org.example.domain.strategy.service.filter.afterFilter.factory.AfterFilterFactory;
 import org.example.types.common.Constants;
 
 import java.util.ArrayList;
@@ -36,9 +35,9 @@ public class StrategyAwardRuleModelVO {
         List<String> afterRuleModelList = new ArrayList<>();
         String[] ruleModelValues = ruleModels.split(Constants.COMMA);
         for (String ruleModelValue : ruleModelValues) {
-            if (FilterFactory.isDuringRule(ruleModelValue)) {
+            if (AfterFilterFactory.isDuringRule(ruleModelValue)) {
                 duringRuleModelList.add(ruleModelValue);
-            } else if (FilterFactory.isAfterRule(ruleModelValue)) {
+            } else if (AfterFilterFactory.isAfterRule(ruleModelValue)) {
                 afterRuleModelList.add(ruleModelValue);
             }
         }

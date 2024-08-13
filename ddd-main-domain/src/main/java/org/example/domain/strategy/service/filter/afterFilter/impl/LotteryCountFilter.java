@@ -1,4 +1,4 @@
-package org.example.domain.strategy.service.filter.impl;
+package org.example.domain.strategy.service.filter.afterFilter.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.entity.AwardRuleEntity;
@@ -6,7 +6,7 @@ import org.example.domain.strategy.model.entity.FilterConditionEntity;
 import org.example.domain.strategy.model.entity.RuleActionEntity;
 import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
-import org.example.domain.strategy.service.filter.IFilter;
+import org.example.domain.strategy.service.filter.afterFilter.IAfterFilter;
 import org.example.types.common.Constants;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 
 @Slf4j
 @Component
-public class LotteryCountFilter implements IFilter<RuleActionEntity.DuringLotteryEntity> {
+public class LotteryCountFilter implements IAfterFilter<RuleActionEntity.DuringLotteryEntity> {
 
     @Resource
     private IStrategyRepo iStrategyRepo;

@@ -6,8 +6,8 @@ import org.example.domain.strategy.model.entity.LotteryReqEntity;
 import org.example.domain.strategy.model.entity.LotteryResEntity;
 import org.example.domain.strategy.model.entity.RuleActionEntity;
 import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
-import org.example.domain.strategy.service.filter.IFilter;
-import org.example.domain.strategy.service.filter.factory.FilterFactory;
+import org.example.domain.strategy.service.filter.afterFilter.IAfterFilter;
+import org.example.domain.strategy.service.filter.afterFilter.factory.AfterFilterFactory;
 import org.example.types.common.Constants;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ import java.util.Arrays;
 public class DefaultLotteryService extends AbstractLotteryService {
 
     @Resource
-    private FilterFactory filterFactory;
+    private AfterFilterFactory afterFilterFactory;
 
     @Override
     protected RuleActionEntity<RuleActionEntity.BeforeLotteryEntity> beforeLotteryFilter(LotteryReqEntity lotteryReq, String... ruleModels) {
@@ -37,7 +37,7 @@ public class DefaultLotteryService extends AbstractLotteryService {
 
         RuleActionEntity<RuleActionEntity.BeforeLotteryEntity> ruleActionEntity = null;
         if (hasBlackListRule) {
-            IFilter<?> blackListFilter = filterFactory.getFilter(Constants.RuleName.RULE_BLACKLIST);
+            IAfterFilter<?> blackListFilter = afterFilterFactory.getFilter(Constants.RuleName.RULE_BLACKLIST);
             FilterConditionEntity filterConditionEntity = new FilterConditionEntity();
             filterConditionEntity.setStrategyId(strategyId);
             filterConditionEntity.setUserId(userId);
@@ -52,7 +52,7 @@ public class DefaultLotteryService extends AbstractLotteryService {
         // 过滤其他规则，各个规则互斥，只要有一个接管，就立刻返回
         for (String rule : ruleModels) {
             if (rule.equals(Constants.RuleName.RULE_BLACKLIST)) continue;
-            IFilter<?> curFilter = filterFactory.getFilter(rule);
+            IAfterFilter<?> curFilter = afterFilterFactory.getFilter(rule);
             FilterConditionEntity filterConditionEntity = new FilterConditionEntity();
             filterConditionEntity.setStrategyId(strategyId);
             filterConditionEntity.setUserId(userId);
@@ -75,7 +75,7 @@ public class DefaultLotteryService extends AbstractLotteryService {
                 .build();
 
         for (String rule : ruleModels) {
-            IFilter<?> curFilter = filterFactory.getFilter(rule);
+            IAfterFilter<?> curFilter = afterFilterFactory.getFilter(rule);
             FilterConditionEntity filterConditionEntity = new FilterConditionEntity();
             filterConditionEntity.setStrategyId(lotteryRes.getStrategyId());
             filterConditionEntity.setUserId(lotteryRes.getUserId());

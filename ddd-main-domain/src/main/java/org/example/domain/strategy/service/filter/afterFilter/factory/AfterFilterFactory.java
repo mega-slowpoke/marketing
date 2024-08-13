@@ -1,10 +1,9 @@
-package org.example.domain.strategy.service.filter.factory;
+package org.example.domain.strategy.service.filter.afterFilter.factory;
 
-import org.example.domain.strategy.model.entity.RuleActionEntity;
-import org.example.domain.strategy.service.filter.IFilter;
-import org.example.domain.strategy.service.filter.impl.BlackListFilter;
-import org.example.domain.strategy.service.filter.impl.LotteryCountFilter;
-import org.example.domain.strategy.service.filter.impl.WeightFilter;
+import org.example.domain.strategy.service.filter.afterFilter.IAfterFilter;
+import org.example.domain.strategy.service.filter.afterFilter.impl.BlackListFilter;
+import org.example.domain.strategy.service.filter.afterFilter.impl.LotteryCountFilter;
+import org.example.domain.strategy.service.filter.afterFilter.impl.WeightFilter;
 import org.example.types.common.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -15,9 +14,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
-public class FilterFactory {
+public class AfterFilterFactory {
 
-    private static Map<String, IFilter<?>> filterMap = new ConcurrentHashMap<>();
+    private static Map<String, IAfterFilter<?>> filterMap = new ConcurrentHashMap<>();
 
     private static Map<String, String> filterType = new ConcurrentHashMap<>();
 
@@ -26,22 +25,18 @@ public class FilterFactory {
 
     @PostConstruct
     public void initializeFilters() {
-        addNewFilter(Constants.RuleName.RULE_BLACKLIST, BlackListFilter.class);
-        addNewFilter(Constants.RuleName.RULE_WEIGHT, WeightFilter.class);
         addNewFilter(Constants.RuleName.RULE_LOCK, LotteryCountFilter.class);
 
-        filterType.put(Constants.RuleName.RULE_BLACKLIST, Constants.RuleType.BEFORE_RULE);
-        filterType.put(Constants.RuleName.RULE_WEIGHT, Constants.RuleType.BEFORE_RULE);
         filterType.put(Constants.RuleName.RULE_LOCK, Constants.RuleType.DURING_RULE);
         filterType.put(Constants.RuleName.RULE_LUCK_AWARD, Constants.RuleType.AFTER_RULE);
     }
 
-    public void addNewFilter(String ruleName, Class<? extends IFilter<?>> filterClass) {
-        IFilter<?> filter = context.getBean(filterClass);
+    public void addNewFilter(String ruleName, Class<? extends IAfterFilter<?>> filterClass) {
+        IAfterFilter<?> filter = context.getBean(filterClass);
         filterMap.put(ruleName, filter);
     }
 
-    public IFilter<?> getFilter(String ruleName) {
+    public IAfterFilter<?> getFilter(String ruleName) {
         return filterMap.get(ruleName);
     }
 

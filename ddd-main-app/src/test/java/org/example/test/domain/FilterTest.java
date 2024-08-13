@@ -6,14 +6,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.entity.LotteryReqEntity;
 import org.example.domain.strategy.model.entity.LotteryResEntity;
 import org.example.domain.strategy.service.ILotteryService;
-import org.example.domain.strategy.service.filter.IFilter;
-import org.example.domain.strategy.service.filter.impl.WeightFilter;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.util.ReflectionTestUtils;
 
 import javax.annotation.Resource;
 

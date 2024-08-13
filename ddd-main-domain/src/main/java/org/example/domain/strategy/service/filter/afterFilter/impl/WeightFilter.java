@@ -1,11 +1,11 @@
-package org.example.domain.strategy.service.filter.impl;
+package org.example.domain.strategy.service.filter.afterFilter.impl;
 
 import org.example.domain.strategy.model.entity.RuleActionEntity;
 import org.example.domain.strategy.model.entity.FilterConditionEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
 import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
-import org.example.domain.strategy.service.filter.IFilter;
+import org.example.domain.strategy.service.filter.afterFilter.IAfterFilter;
 import org.example.types.common.Constants;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @Component
-public class WeightFilter implements IFilter<RuleActionEntity.BeforeLotteryEntity> {
+public class WeightFilter implements IAfterFilter<RuleActionEntity.BeforeLotteryEntity> {
 
     @Resource
     private IStrategyRepo iStrategyRepo;

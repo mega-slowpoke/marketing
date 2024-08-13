@@ -23,9 +23,10 @@ public class StrategyTest {
 
 
     @Test
-    public void TestStrategyAward100001() {
+    public void TestInitializeStrategy() {
         iStrategyInitializer.initializeStrategy(100001L);
-//        iStrategyInitializer.initializeStrategy(100003L);
+        iStrategyInitializer.initializeStrategy(100002L);
+        iStrategyInitializer.initializeStrategy(100003L);
     }
 
     @Test
