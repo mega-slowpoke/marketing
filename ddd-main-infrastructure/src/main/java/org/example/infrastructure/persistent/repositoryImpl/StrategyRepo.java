@@ -1,12 +1,16 @@
 package org.example.infrastructure.persistent.repositoryImpl;
 
+import org.example.domain.strategy.model.entity.AwardRuleEntity;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
+import org.example.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
+import org.example.infrastructure.persistent.dao.IAwardRuleDAO;
 import org.example.infrastructure.persistent.dao.IStrategyAwardDAO;
 import org.example.infrastructure.persistent.dao.IStrategyDAO;
 import org.example.infrastructure.persistent.dao.IStrategyRuleDAO;
+import org.example.infrastructure.persistent.po.AwardRule;
 import org.example.infrastructure.persistent.po.Strategy;
 import org.example.infrastructure.persistent.po.StrategyAward;
 import org.example.infrastructure.persistent.po.StrategyRule;
@@ -31,6 +35,9 @@ public class StrategyRepo implements IStrategyRepo {
 
     @Resource
     private IStrategyRuleDAO iStrategyRuleDAO;
+
+    @Resource
+    private IAwardRuleDAO iAwardRuleDAO;
 
     @Resource
     private IRedisService iRedisService;
@@ -84,7 +91,6 @@ public class StrategyRepo implements IStrategyRepo {
     }
 
 
-
     @Override
     public StrategyEntity queryStrategyById(Long strategyId) {
         String cacheKey = Constants.RedisKey.STRATEGY_KEY + strategyId;
@@ -94,7 +100,7 @@ public class StrategyRepo implements IStrategyRepo {
         strategyEntity = new StrategyEntity();
         strategyEntity.setStrategyId(strategy.getStrategyId());
         strategyEntity.setStrategyDesc(strategy.getStrategyDesc());
-        strategyEntity.setRuleModels(strategy.getRuleModels().split(Constants.COMMA));
+        strategyEntity.setRuleModels(strategy.getRuleModels());
         iRedisService.setValue(cacheKey, strategyEntity);
         return strategyEntity;
     }
@@ -108,6 +114,28 @@ public class StrategyRepo implements IStrategyRepo {
         strategyRuleEntity.setRuleValue(strategyRule.getRuleValue());
         strategyRuleEntity.setRuleDesc(strategyRule.getRuleDesc());
         return strategyRuleEntity;
+    }
+
+
+    @Override
+    public StrategyAwardRuleModelVO queryDuringAndAfterRuleModels(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = iStrategyAwardDAO.queryStrategyAwardRuleModels(strategyAward);
+        return new StrategyAwardRuleModelVO(ruleModels);
+    }
+
+    @Override
+    public AwardRuleEntity queryAwardRuleByIdAndName(Long strategyId, Integer awardId, String ruleName) {
+        AwardRule awardRule = iAwardRuleDAO.queryAwardRuleByIdAndName(strategyId, awardId, ruleName);
+        AwardRuleEntity awardRuleEntity = new AwardRuleEntity();
+        awardRuleEntity.setStrategyId(awardRule.getStrategyId());
+        awardRuleEntity.setAwardId(awardRule.getAwardId());
+        awardRuleEntity.setRuleModel(awardRule.getRuleModel());
+        awardRuleEntity.setRuleValue(awardRule.getRuleValue());
+        awardRuleEntity.setRuleDesc(awardRule.getRuleDesc());
+        return awardRuleEntity;
     }
 
 }

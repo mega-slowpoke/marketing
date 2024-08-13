@@ -21,7 +21,9 @@ public class StrategyRuleEntity {
         this.ruleModel = ruleModel;
         this.ruleValue = ruleValue;
         this.ruleDesc = ruleDesc;
-        this.ruleWeightMap = buildRuleWeightMap(ruleValue);
+        if (ruleModel.equals(Constants.RuleName.RULE_WEIGHT)) {
+            this.ruleWeightMap = buildRuleWeightMap(ruleValue);
+        }
     }
 
     private Map<Integer, List<Integer>> buildRuleWeightMap(String ruleValue) {
@@ -67,7 +69,9 @@ public class StrategyRuleEntity {
 
     public void setRuleValue(String ruleValue) {
         this.ruleValue = ruleValue;
-        this.ruleWeightMap = buildRuleWeightMap(ruleValue);
+        if (ruleModel.equals(Constants.RuleName.RULE_WEIGHT)) {
+            this.ruleWeightMap = buildRuleWeightMap(ruleValue);
+        }
     }
 
     public String getRuleDesc() {

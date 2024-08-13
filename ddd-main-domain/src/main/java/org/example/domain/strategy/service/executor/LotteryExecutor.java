@@ -1,4 +1,4 @@
-package org.example.domain.strategy.service;
+package org.example.domain.strategy.service.executor;
 
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.types.common.Constants;
@@ -15,9 +15,10 @@ public class LotteryExecutor implements ILotteryExecutor {
 
     @Override
     public Integer doLottery(Long strategyId) {
-        Integer totalBucket = iStrategyRepo.getRange(String.valueOf(strategyId));
+        Integer totalBucket = iStrategyRepo.getRange(Constants.RedisKey.STRATEGY_TOTAL_BUCKET_KEY + strategyId);
         int randomIdx = new SecureRandom().nextInt(totalBucket);
-        return iStrategyRepo.getAwardIdFromDistributionMap(String.valueOf(strategyId), randomIdx);
+        String awardKey = Constants.RedisKey.AWARD_DISTRIBUTION_KEY + strategyId;
+        return iStrategyRepo.getAwardIdFromDistributionMap(awardKey, randomIdx);
     }
 
     @Override

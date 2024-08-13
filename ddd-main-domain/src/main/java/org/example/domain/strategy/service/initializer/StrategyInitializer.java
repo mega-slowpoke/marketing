@@ -1,4 +1,4 @@
-package org.example.domain.strategy.service;
+package org.example.domain.strategy.service.initializer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
@@ -18,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 @Service
-public class StrategyInitializer implements IStrategyInitializer{
+public class StrategyInitializer implements IStrategyInitializer {
 
     @Resource
     private IStrategyRepo iStrategyRepo;
@@ -50,11 +50,11 @@ public class StrategyInitializer implements IStrategyInitializer{
             // 拿到累计对应积分允许获得的award list
             List<Integer> awardList = ruleEntry.getValue();
             // 先做一个copy
-            List<StrategyAwardEntity> strategyAwardEntitiyListClone = new ArrayList<>(strategyAwardEntityList);
+            List<StrategyAwardEntity> strategyAwardEntityListClone = new ArrayList<>(strategyAwardEntityList);
             // 如果没有包含在award list中，就移除其中的奖品
-            strategyAwardEntitiyListClone.removeIf((award) -> !awardList.contains(award.getAwardId()));
+            strategyAwardEntityListClone.removeIf((award) -> !awardList.contains(award.getAwardId()));
             // 生成移除之后的奖品分布
-            generateAwardDistribution(strategyId+ "_" + ruleEntry.getKey(), strategyAwardEntitiyListClone);
+            generateAwardDistribution(strategyId+ "_" + ruleEntry.getKey(), strategyAwardEntityListClone);
         }
 
         return true;

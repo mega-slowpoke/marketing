@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.infrastructure.persistent.dao.IAwardRuleDAO">
+
+    <resultMap id="CaseMap" type="org.example.infrastructure.persistent.po.AwardRule">
+        <id column="id" property="id"/>
+        <result column="strategy_id" property="strategyId"/>
+        <result column="award_id" property="awardId"/>
+        <result column="rule_model" property="ruleModel"/>
+        <result column="rule_value" property="ruleValue"/>
+        <result column="rule_desc" property="ruleDesc"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <select id="queryAwardRuleByIdAndName" resultMap="CaseMap">
+        SELECT strategy_id, award_id, rule_model, rule_value, rule_desc
+        FROM award_rule
+        WHERE strategy_id = #{strategyId} AND award_id = #{awardId} AND rule_model = #{ruleName}
+    </select>
+
+    <select id="queryAwardRulesById" resultMap="CaseMap">
+        SELECT strategy_id, award_id, rule_model, rule_value, rule_desc
+        FROM award_rule
+        WHERE strategy_id = #{strategyId} AND award_id = #{awardId}
+    </select>
+
+</mapper>
