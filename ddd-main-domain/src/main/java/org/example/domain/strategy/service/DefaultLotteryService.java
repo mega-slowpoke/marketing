@@ -7,11 +7,13 @@ import org.example.domain.strategy.model.entity.LotteryResEntity;
 import org.example.domain.strategy.model.entity.RuleActionEntity;
 import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.model.valobj.RuleTreeVO;
+import org.example.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import org.example.domain.strategy.service.filter.afterFilter.IAfterFilter;
 import org.example.domain.strategy.service.filter.afterFilter.factory.AfterFilterFactory;
 import org.example.domain.strategy.service.filter.beforeFilter.IBeforeFilter;
 import org.example.domain.strategy.service.filter.beforeFilter.factory.BeforeFilterFactory;
 import org.example.domain.strategy.service.filter.treeFilter.factory.DefaultTreeFactory;
+import org.example.domain.strategy.service.filter.treeFilter.factory.engine.IDecisionTreeEngine;
 import org.example.types.common.Constants;
 import org.springframework.stereotype.Service;
 
@@ -36,10 +38,19 @@ public class DefaultLotteryService extends AbstractLotteryService {
 
     @Override
     public DefaultTreeFactory.StrategyAwardVO afterTreeFilter(String userId, Long strategyId, Integer awardId) {
-//        RuleTreeVO ruleTreeVO = iStrategyRepo.query
-//
-//        IAfterFilter treeFilter = afterFilterFactory.openLogicTree().
-        return null;
+        DefaultTreeFactory.StrategyAwardVO strategyAwardVO = new DefaultTreeFactory.StrategyAwardVO();
+
+        StrategyAwardRuleModelVO strategyAwardRuleModelVO = iStrategyRepo.queryStrategyAwardRuleModels(strategyId, awardId);
+        // 如果没有after的过滤条件，就可以直接返回奖品了
+        if (strategyAwardRuleModelVO == null) {
+            strategyAwardVO.setAwardId(awardId);
+            return strategyAwardVO;
+        }
+
+        String treeId = strategyAwardRuleModelVO.getRuleModels();
+        RuleTreeVO ruleTreeVO = iStrategyRepo.queryRuleTreeVOByTreeId(treeId);
+        IDecisionTreeEngine iDecisionTreeEngine = afterFilterFactory.openLogicTree(ruleTreeVO);
+        return iDecisionTreeEngine.process(userId, strategyId, awardId);
     }
 
 }
