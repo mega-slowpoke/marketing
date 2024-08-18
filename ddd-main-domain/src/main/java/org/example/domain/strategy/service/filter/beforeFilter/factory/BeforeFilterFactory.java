@@ -1,5 +1,9 @@
 package org.example.domain.strategy.service.filter.beforeFilter.factory;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.domain.strategy.service.filter.beforeFilter.AbstractBeforeFilter;
@@ -69,5 +73,16 @@ public class BeforeFilterFactory {
         current.appendNext(filterMap.get(Constants.RuleName.DEFAULT_RULE));
 
         return filterChainHead;
+    }
+
+    @Data
+    @Builder
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class StrategyAwardVO {
+        /** 抽奖奖品ID - 内部流转使用 */
+        private Integer awardId;
+        /**  */
+        private String ruleModel;
     }
 }

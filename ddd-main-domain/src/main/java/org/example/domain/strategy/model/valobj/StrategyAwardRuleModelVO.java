@@ -21,46 +21,6 @@ import java.util.List;
 @NoArgsConstructor
 public class StrategyAwardRuleModelVO {
 
-    private String[] duringRuleModels = null;
-
-    private String[] afterRuleModels = null;
-
-
-    public StrategyAwardRuleModelVO(String ruleModels) {
-        if (ruleModels == null) {
-            return;
-        }
-
-        List<String> duringRuleModelList = new ArrayList<>();
-        List<String> afterRuleModelList = new ArrayList<>();
-        String[] ruleModelValues = ruleModels.split(Constants.COMMA);
-        for (String ruleModelValue : ruleModelValues) {
-            if (AfterFilterFactory.isDuringRule(ruleModelValue)) {
-                duringRuleModelList.add(ruleModelValue);
-            } else if (AfterFilterFactory.isAfterRule(ruleModelValue)) {
-                afterRuleModelList.add(ruleModelValue);
-            }
-        }
-        duringRuleModels = duringRuleModelList.toArray(new String[0]);
-        afterRuleModels = afterRuleModelList.toArray(new String[0]);
-    }
-
-    /**
-     * 获取抽奖中规则；或者使用 lambda 表达式
-     * <p>
-     * List<String> ruleModelList = Arrays.stream(ruleModels.split(Constants.SPLIT))
-     * .filter(DefaultLogicFactory.LogicModel::isCenter)
-     * .collect(Collectors.toList());
-     * return ruleModelList;
-     * <p>
-     * List<String> collect = Arrays.stream(ruleModelValues).filter(DefaultLogicFactory.LogicModel::isCenter).collect(Collectors.toList());
-     */
-    public String[] duringRuleModels() {
-        return duringRuleModels;
-    }
-
-    public String[] afterRuleModels() {
-        return afterRuleModels;
-    }
+    private String ruleModels;
 
 }

@@ -3,6 +3,7 @@ package org.example.domain.strategy.service.filter.beforeFilter.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
 import org.example.domain.strategy.service.filter.beforeFilter.AbstractBeforeFilter;
+import org.example.domain.strategy.service.filter.beforeFilter.factory.BeforeFilterFactory;
 import org.example.types.common.Constants;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +12,9 @@ import org.springframework.stereotype.Component;
 public class BlackListBeforeFilter extends AbstractBeforeFilter {
 
     @Override
-    public Integer processBeforeFilterAndGetAwardId(String userId, Long strategyId) {
+    public BeforeFilterFactory.StrategyAwardVO processBeforeFilterAndGetAwardId(String userId, Long strategyId) {
+        BeforeFilterFactory.StrategyAwardVO strategyAwardVO = new BeforeFilterFactory.StrategyAwardVO();
+
         // 获取strategyEntity, 并且拿到其中的ruleValue
         StrategyRuleEntity strategyRuleEntity = iStrategyRepo.queryStrategyRuleByIdAndName(strategyId, Constants.RuleName.RULE_BLACKLIST);
         String ruleValue = strategyRuleEntity.getRuleValue();
@@ -24,7 +27,9 @@ public class BlackListBeforeFilter extends AbstractBeforeFilter {
             // 如果是用户在黑名单，就返回一个Takeover(表示有特殊规则)的为BlackList的RuleAction
             if (blockedUserId.equals(userId)) {
                 log.info("抽奖责任链-黑名单接管 userId: {} strategyId: {} ruleModel: {} awardId: {}", userId, strategyId, Constants.RuleName.RULE_BLACKLIST, blackListAwardId);
-                return blackListAwardId;
+                strategyAwardVO.setAwardId(blackListAwardId);
+                strategyAwardVO.setRuleModel(Constants.RuleName.RULE_BLACKLIST);
+                return strategyAwardVO;
             }
         }
 

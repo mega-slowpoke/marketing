@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class FilterTest {
+public class LotteryServiceTest {
 
     @Resource
     private ILotteryService iLotteryService;
@@ -48,6 +48,17 @@ public class FilterTest {
         LotteryReqEntity raffleFactorEntity = new LotteryReqEntity();
         raffleFactorEntity.setStrategyId(100003L);
         raffleFactorEntity.setUserId("xiaofuge");
+        LotteryResEntity raffleAwardEntity = iLotteryService.performLottery(raffleFactorEntity);
+        log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
+        log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
+    }
+
+    @Test
+    public void TestLottery100006L() {
+        LotteryReqEntity raffleFactorEntity = new LotteryReqEntity();
+        raffleFactorEntity.setStrategyId(100006L);
+        raffleFactorEntity.setUserId("xiaofuge");
+
         LotteryResEntity raffleAwardEntity = iLotteryService.performLottery(raffleFactorEntity);
         log.info("请求参数：{}", JSON.toJSONString(raffleFactorEntity));
         log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));

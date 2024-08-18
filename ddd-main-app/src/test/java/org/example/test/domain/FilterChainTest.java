@@ -27,8 +27,8 @@ public class FilterChainTest {
     @Test
     public void test_LogicChain_rule_blacklist() {
         IBeforeFilter logicChain = beforeFilterFactory.createFilterChain(100003L);
-        Integer awardId = logicChain.processBeforeFilterAndGetAwardId("black02", 100003L);
-        log.info("测试结果：{}", awardId);
+        BeforeFilterFactory.StrategyAwardVO strategyAwardVO = logicChain.processBeforeFilterAndGetAwardId("black02", 100003L);
+        log.info("测试结果：{}, {}", strategyAwardVO.getAwardId(), strategyAwardVO.getRuleModel());
     }
 
     @Test
@@ -37,15 +37,15 @@ public class FilterChainTest {
         ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", 4900);
 
         IBeforeFilter logicChain = beforeFilterFactory.createFilterChain(100001L);
-        Integer awardId = logicChain.processBeforeFilterAndGetAwardId("xiaofuge", 100001L);
-        log.info("测试结果：{}", awardId);
+        BeforeFilterFactory.StrategyAwardVO strategyAwardVO = logicChain.processBeforeFilterAndGetAwardId("xiaofuge", 100001L);
+        log.info("测试结果：{}, {}", strategyAwardVO.getAwardId(), strategyAwardVO.getRuleModel());
     }
 
     @Test
     public void test_LogicChain_rule_default() {
         IBeforeFilter logicChain = beforeFilterFactory.createFilterChain(100001L);
-        Integer awardId = logicChain.processBeforeFilterAndGetAwardId("xiaofuge", 100001L);
-        log.info("测试结果：{}", awardId);
+        BeforeFilterFactory.StrategyAwardVO strategyAwardVO = logicChain.processBeforeFilterAndGetAwardId("xiaofuge", 100001L);
+        log.info("测试结果：{}, {}", strategyAwardVO.getAwardId(), strategyAwardVO.getRuleModel());
     }
 
 }
