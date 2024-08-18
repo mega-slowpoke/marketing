@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 兜底奖励节点
+ * @description 兜底奖励节点 Last resort
  * @create 2024-01-27 11:23
  */
 @Slf4j
@@ -20,7 +20,7 @@ public class RuleLuckAwardLogicTreeNode implements ILogicTreeNode {
     public DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId) {
         return DefaultTreeFactory.TreeActionEntity.builder()
                 .ruleLogicCheckType(RuleLogicCheckTypeVO.TAKE_OVER)
-                .strategyAwardData(DefaultTreeFactory.StrategyAwardData.builder()
+                .strategyAwardVO(DefaultTreeFactory.StrategyAwardVO.builder()
                         .awardId(101)
                         .awardRuleValue("1,100")
                         .build())

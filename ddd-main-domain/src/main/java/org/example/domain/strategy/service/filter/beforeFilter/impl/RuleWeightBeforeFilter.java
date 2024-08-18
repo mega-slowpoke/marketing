@@ -1,8 +1,10 @@
 package org.example.domain.strategy.service.filter.beforeFilter.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.tomcat.util.bcel.Const;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
 import org.example.domain.strategy.service.filter.beforeFilter.AbstractBeforeFilter;
+import org.example.domain.strategy.service.filter.beforeFilter.factory.BeforeFilterFactory;
 import org.example.types.common.Constants;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +18,9 @@ public class RuleWeightBeforeFilter extends AbstractBeforeFilter {
     private Integer userScore = 4800;
 
     @Override
-    public Integer processBeforeFilterAndGetAwardId(String userId, Long strategyId) {
+    public BeforeFilterFactory.StrategyAwardVO processBeforeFilterAndGetAwardId(String userId, Long strategyId) {
+        BeforeFilterFactory.StrategyAwardVO strategyAwardVO = new BeforeFilterFactory.StrategyAwardVO();
+
         StrategyRuleEntity strategyRuleEntity = iStrategyRepo.queryStrategyRuleByIdAndName(strategyId, Constants.RuleName.RULE_WEIGHT);
         Map<Integer, List<Integer>> ruleWeightMap = strategyRuleEntity.getRuleWeightMap();
 
@@ -32,7 +36,9 @@ public class RuleWeightBeforeFilter extends AbstractBeforeFilter {
         if (minPoint != Integer.MAX_VALUE) {
             Integer awardId = iLotteryExecutor.doLottery(strategyId, String.valueOf(minPoint));
             log.info("抽奖责任链-权重接管 userId: {} strategyId: {} ruleModel: {} awardId: {}", userId, strategyId, Constants.RuleName.RULE_WEIGHT, awardId);
-            return awardId;
+            strategyAwardVO.setAwardId(awardId);
+            strategyAwardVO.setRuleModel(Constants.RuleName.RULE_WEIGHT);
+            return strategyAwardVO;
         }
 
         // 5. 过滤其他责任链

@@ -10,6 +10,6 @@ import org.example.domain.strategy.service.filter.treeFilter.factory.DefaultTree
  */
 public interface IDecisionTreeEngine {
 
-    DefaultTreeFactory.StrategyAwardData process(String userId, Long strategyId, Integer awardId);
+    DefaultTreeFactory.StrategyAwardVO process(String userId, Long strategyId, Integer awardId);
 
 }

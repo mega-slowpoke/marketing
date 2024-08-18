@@ -1,14 +1,21 @@
 package org.example.domain.strategy.service;
 
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.example.domain.strategy.model.entity.*;
 import org.example.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.domain.strategy.service.executor.ILotteryExecutor;
+import org.example.domain.strategy.service.filter.beforeFilter.factory.BeforeFilterFactory;
+import org.example.domain.strategy.service.filter.treeFilter.factory.DefaultTreeFactory;
 import org.example.types.common.Constants;
+import org.example.types.enums.ResponseCode;
+import org.example.types.exception.AppException;
 
 import javax.annotation.Resource;
 
+@Slf4j
 public abstract class AbstractLotteryService implements ILotteryService {
 
     @Resource
@@ -23,53 +30,45 @@ public abstract class AbstractLotteryService implements ILotteryService {
         Long strategyId = lotteryRequestEntity.getStrategyId();
         String userId = lotteryRequestEntity.getUserId();
 
-        // 初始化返回结果
-        LotteryResEntity lotteryRes =  new LotteryResEntity();
-        lotteryRes.setUserId(userId);
-        lotteryRes.setStrategyId(strategyId);
+        // 初始化最终结果
+        LotteryResEntity lotteryRes = new LotteryResEntity();
 
-        StrategyEntity strategyEntity = iStrategyRepo.queryStrategyById(strategyId);
-        // 检测抽奖前策略是否有特殊规则
-        RuleActionEntity<RuleActionEntity.BeforeLotteryEntity> beforeAction = beforeLotteryFilter(lotteryRequestEntity, strategyEntity.getRuleModels());
-        // 如果策略有特殊规则，执行特殊规则
-        if (beforeAction.getCode().equals(RuleLogicCheckTypeVO.TAKE_OVER.getCode())) {
-            // 用户要么是black_list，要么是权重抽奖
-            if (beforeAction.getRuleModel().equals(Constants.RuleName.RULE_BLACKLIST)) {
-                lotteryRes.setAwardId(beforeAction.getData().getBlackListAwardId());
-                return lotteryRes;
-            }
-            // 权重抽奖
-            if (beforeAction.getRuleModel().equals(Constants.RuleName.RULE_WEIGHT)) {
-                Integer awardId = iLotteryExecutor.doLottery(strategyId, beforeAction.getData().getWeightValue());
-                lotteryRes.setAwardId(awardId);
-                return lotteryRes;
-            }
+        // 1. 检查
+        if (null == strategyId || StringUtils.isBlank(userId)) {
+            throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(), ResponseCode.ILLEGAL_PARAMETER.getInfo());
         }
 
-        // 如果抽奖前没有被特殊规则拦截，正常进行抽奖
-        Integer awardId = iLotteryExecutor.doLottery(strategyId);
-        lotteryRes.setAwardId(awardId);
-        // 抽奖完毕后，查询奖品规则，检测是否抽中了未解锁奖品，进行过滤
-        StrategyAwardRuleModelVO awardRuleEntities = iStrategyRepo.queryDuringAndAfterRuleModels(strategyId, awardId);
-
-        RuleActionEntity<RuleActionEntity.DuringLotteryEntity> duringAction = duringLotteryFilter(lotteryRes, awardRuleEntities.duringRuleModels());
-        if (duringAction.getCode().equals(RuleLogicCheckTypeVO.TAKE_OVER.getCode())) {
-            // 待处理
-            return new LotteryResEntity();
+        // 2. 责任链抽奖计算【这步拿到的是初步的抽奖ID，之后需要根据ID处理抽奖】注意；黑名单、权重等非默认抽奖的直接返回抽奖结果
+        BeforeFilterFactory.StrategyAwardVO chainStrategyAwardVO = beforeChainFilter(userId, strategyId);
+        log.info("抽奖策略计算-责任链 {} {} {} {}", userId, strategyId, chainStrategyAwardVO.getAwardId(), chainStrategyAwardVO.getRuleModel());
+        if (!Constants.RuleName.DEFAULT_RULE.equals(chainStrategyAwardVO.getRuleModel())) {
+            // 如果有黑名单或者权重，黑名单和权重抽奖会返回奖品id
+            lotteryRes.setAwardId(chainStrategyAwardVO.getAwardId());
+            return lotteryRes;
         }
 
+        // 3. 抽奖完毕，进行抽奖后规则树过滤【奖品ID，会根据抽奖次数判断、库存判断、兜底兜里返回最终的可获得奖品信息】
+        DefaultTreeFactory.StrategyAwardVO treeStrategyAwardVO = afterTreeFilter(userId, strategyId, chainStrategyAwardVO.getAwardId());
+        log.info("抽奖策略计算-规则树 {} {} {} {}", userId, strategyId, treeStrategyAwardVO.getAwardId(), treeStrategyAwardVO.getAwardRuleValue());
+
+        lotteryRes.setAwardId(treeStrategyAwardVO.getAwardId());
+        lotteryRes.setAwardConfig(treeStrategyAwardVO.getAwardRuleValue());
+
+        // 4. 返回抽奖结果
         return lotteryRes;
     }
 
 
 
-    // filter before lottery
-    protected abstract RuleActionEntity<RuleActionEntity.BeforeLotteryEntity> beforeLotteryFilter(LotteryReqEntity lotteryReq, String... ruleModels);
+    public abstract BeforeFilterFactory.StrategyAwardVO beforeChainFilter(String userId, Long strategyId);
 
-
-    // filter in the middle of lottery (after getting the reward)
-    protected abstract RuleActionEntity<RuleActionEntity.DuringLotteryEntity> duringLotteryFilter(LotteryResEntity lotteryReq, String... ruleModes);
-
-    // filter after the lottery
-//    protected
+    /**
+     * 抽奖结果过滤，决策树抽象方法
+     *
+     * @param userId     用户ID
+     * @param strategyId 策略ID
+     * @param awardId    奖品ID
+     * @return 过滤结果【奖品ID，会根据抽奖次数判断、库存判断、兜底兜里返回最终的可获得奖品信息】
+     */
+    public abstract DefaultTreeFactory.StrategyAwardVO afterTreeFilter(String userId, Long strategyId, Integer awardId);
 }

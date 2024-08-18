@@ -1,5 +1,9 @@
 package org.example.domain.strategy.service.filter.afterFilter.factory;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.example.domain.strategy.service.filter.afterFilter.IAfterFilter;
 import org.example.domain.strategy.service.filter.afterFilter.impl.BlackListFilter;
 import org.example.domain.strategy.service.filter.afterFilter.impl.LotteryCountFilter;
@@ -47,4 +51,6 @@ public class AfterFilterFactory {
     public static boolean isDuringRule(String ruleName) {
         return Constants.RuleType.DURING_RULE.equals(filterType.get(ruleName));
     }
+
+
 }
