@@ -23,15 +23,4 @@ public class StrategyAwardRuleModelVO {
 
     private String ruleModels;
 
-    public StrategyAwardRuleModelVO(String ruleModels) {
-        this.ruleModels = ruleModels;
-    }
-
-    public String getRuleModels() {
-        return ruleModels;
-    }
-
-    public void setRuleModels(String ruleModels) {
-        this.ruleModels = ruleModels;
-    }
 }
