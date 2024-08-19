@@ -46,6 +46,17 @@ public class RedissonService implements IRedisService {
         return redissonClient.getDelayedQueue(rBlockingQueue);
     }
 
+
+    @Override
+    public void setAtomicLong(String key, long value) {
+        redissonClient.getAtomicLong(key).set(value);
+    }
+
+    @Override
+    public Long getAtomicLong(String key) {
+        return redissonClient.getAtomicLong(key).get();
+    }
+
     @Override
     public long incr(String key) {
         return redissonClient.getAtomicLong(key).incrementAndGet();
@@ -159,6 +170,11 @@ public class RedissonService implements IRedisService {
     @Override
     public void clearAllKeys() {
         redissonClient.getKeys().flushdb();
+    }
+
+    @Override
+    public Boolean setNx(String lockKey) {
+        return redissonClient.getBucket(lockKey).trySet("lock");
     }
 
 

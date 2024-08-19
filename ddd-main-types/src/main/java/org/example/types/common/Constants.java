@@ -8,6 +8,8 @@ public class Constants {
 
     public final static String COLON = ":";
 
+    public final static String UNDERLINE = "_";
+
 
     public static class RedisKey {
         public static String STRATEGY_KEY = "strategy_key_";
@@ -15,6 +17,10 @@ public class Constants {
         public static String AWARD_DISTRIBUTION_KEY = "strategy_award_distribution_key_";
         public static String STRATEGY_TOTAL_BUCKET_KEY = "strategy_total_bucket_key_";
         public static String RULE_TREE_VO_KEY = "rule_tree_vo_key_";
+
+        public static String STRATEGY_AWARD_COUNT_KEY = "strategy_award_count_key_";
+
+        public static String STRATEGY_AWARD_COUNT_QUERY_KEY = "strategy_award_count_query_key";
     }
 
 
