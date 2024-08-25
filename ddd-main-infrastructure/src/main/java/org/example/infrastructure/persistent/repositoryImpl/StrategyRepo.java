@@ -201,7 +201,7 @@ public class StrategyRepo implements IStrategyRepo {
     }
 
     @Override
-    public Boolean decrAwardStock(String cacheKey) {
+    public Boolean decrRedisAwardCountByOne(String cacheKey) {
         long remaining = iRedisService.decr(cacheKey);
         // 如果扣减为0.扣减失败
         if (remaining < 0) {
@@ -220,6 +220,7 @@ public class StrategyRepo implements IStrategyRepo {
 
     }
 
+
     @Override
     public void awardStockConsumeSendQueue(StrategyAwardStockKeyVO strategyAwardStockKeyVO) {
         String cacheKey = Constants.RedisKey.STRATEGY_AWARD_REMAINING_KEY;
@@ -235,4 +236,18 @@ public class StrategyRepo implements IStrategyRepo {
         if (iRedisService.isExists(totalAwardKey)) return;
         iRedisService.setAtomicLong(totalAwardKey, awardCount);
     }
+
+    @Override
+    public StrategyAwardStockKeyVO getNextConsumedAwardFromQueue() {
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_REMAINING_KEY;
+        RBlockingQueue<StrategyAwardStockKeyVO> blockingQueue = iRedisService.getBlockingQueue(cacheKey);
+        return blockingQueue.poll();
+    }
+
+    @Override
+    public void decrDBAwardCountByOne(Long strategyId, Integer awardId) {
+        iStrategyAwardDAO.decrAwardCount(strategyId, awardId, 1);
+    }
+
+
 }

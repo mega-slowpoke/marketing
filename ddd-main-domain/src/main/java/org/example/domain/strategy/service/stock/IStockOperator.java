@@ -5,5 +5,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface IStockOperator {
 
-    Boolean decrAwardStock(Long strategyId, Integer awardId);
+    Boolean decrRedisAwardCount(Long strategyId, Integer awardId);
 }

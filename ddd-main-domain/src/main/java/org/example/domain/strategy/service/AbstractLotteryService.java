@@ -16,7 +16,7 @@ import org.example.types.exception.AppException;
 import javax.annotation.Resource;
 
 @Slf4j
-public abstract class AbstractLotteryService implements ILotteryService {
+public abstract class AbstractLotteryService implements ILotteryService, IStockService {
 
     @Resource
     protected IStrategyRepo iStrategyRepo;

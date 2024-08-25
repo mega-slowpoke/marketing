@@ -11,8 +11,8 @@ public class StockOperator implements IStockOperator{
     private IStrategyRepo iStrategyRepo;
 
     @Override
-    public Boolean decrAwardStock(Long strategyId, Integer awardId) {
+    public Boolean decrRedisAwardCount(Long strategyId, Integer awardId) {
         String cacheKey = Constants.RedisKey.STRATEGY_AWARD_TOTAL_KEY + strategyId + Constants.UNDERLINE + awardId;
-        return iStrategyRepo.decrAwardStock(cacheKey);
+        return iStrategyRepo.decrRedisAwardCountByOne(cacheKey);
     }
 }

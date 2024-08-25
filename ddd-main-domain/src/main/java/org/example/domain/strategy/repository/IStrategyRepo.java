@@ -10,7 +10,6 @@ import org.example.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 public interface IStrategyRepo {
 
@@ -33,10 +32,13 @@ public interface IStrategyRepo {
 
     RuleTreeVO queryRuleTreeVOByTreeId(String treeId);
 
-    Boolean decrAwardStock(String cacheKey);
-
     void awardStockConsumeSendQueue(StrategyAwardStockKeyVO strategyAwardStockKeyVO);
 
     void cacheStrategyAwardCount(Long strategyId, Integer awardId, Integer awardCount);
 
+    StrategyAwardStockKeyVO getNextConsumedAwardFromQueue();
+
+    Boolean decrRedisAwardCountByOne(String cacheKey);
+
+    void decrDBAwardCountByOne(Long strategyId, Integer awardId);
 }
