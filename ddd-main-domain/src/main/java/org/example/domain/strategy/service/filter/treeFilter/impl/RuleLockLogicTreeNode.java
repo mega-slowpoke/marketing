@@ -29,8 +29,7 @@ public class RuleLockLogicTreeNode implements ILogicTreeNode {
     public DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue) {
         log.info("规则过滤-次数锁 userId:{} strategyId:{} ruleModel:{}", userId, strategyId, Constants.RuleName.RULE_LOCK);
 
-        AwardRuleEntity awardRuleEntity = iStrategyRepo.queryAwardRuleByIdAndName(strategyId, awardId, Constants.RuleName.RULE_LOCK);
-        int awardUnlockThreshold = Integer.parseInt(awardRuleEntity.getRuleValue());
+        int awardUnlockThreshold = Integer.parseInt(ruleValue);
 
         // 用户抽奖次数大于规则限定值，规则放行
         if (userLotteryCount >= awardUnlockThreshold) {

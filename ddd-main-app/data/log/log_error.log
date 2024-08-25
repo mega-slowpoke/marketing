@@ -228,3 +228,7 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
 	... 76 common frames omitted
+24-08-25.17:08:00.784 [main            ] WARN  RuleStockLogicTreeNode - 规则过滤-库存扣减-告警，库存不足。userId:xiaofuge strategyId:100006 awardId:102
+24-08-25.17:18:11.427 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m8s47ms288µs400ns).
+24-08-25.17:19:02.178 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s752ms308µs900ns).
+24-08-25.17:21:43.436 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s845ms236µs400ns).
