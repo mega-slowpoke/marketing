@@ -340,3 +340,20 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 24-08-24.21:47:19.639 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
 24-08-24.21:47:19.681 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 24-08-24.21:47:19.684 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-24.21:59:18.327 [main            ] INFO  LotteryServiceTest     - Starting LotteryServiceTest using Java 1.8.0_402 on MECHREVO with PID 161108 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-08-24.21:59:18.328 [main            ] INFO  LotteryServiceTest     - The following 1 profile is active: "dev"
+24-08-24.21:59:19.002 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-24.21:59:19.005 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-24.21:59:19.028 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+24-08-24.21:59:20.232 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-24.21:59:20.730 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-24.21:59:20.783 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-24.21:59:22.151 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-24.21:59:22.201 [main            ] INFO  LotteryServiceTest     - Started LotteryServiceTest in 4.201 seconds (JVM running for 4.85)
+24-08-24.21:59:22.578 [main            ] INFO  DefaultLotteryFilter   - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: default_rule awardId: 102
+24-08-24.21:59:22.578 [main            ] INFO  AbstractLotteryService - 抽奖策略计算-责任链 xiaofuge 100006 102 default_rule
+24-08-24.21:59:22.595 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-24.21:59:22.847 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-24.21:59:22.882 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:xiaofuge strategyId:100006 ruleModel:rule_lock
+24-08-24.21:59:22.934 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-24.21:59:22.936 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
