@@ -29,7 +29,7 @@
         where strategy_id = #{strategyId} and award_id = #{awardId}
     </select>
 
-    <update id="updateStrategyAwardStock" parameterType="org.example.infrastructure.persistent.po.StrategyAward">
+    <update id="decrAwardCount" parameterType="org.example.infrastructure.persistent.po.StrategyAward">
         update strategy_award
         set award_count_surplus = award_count_surplus - #{decrAmount}
         where strategy_id = #{strategyId} and award_id = #{awardId} and award_count_surplus > 0
