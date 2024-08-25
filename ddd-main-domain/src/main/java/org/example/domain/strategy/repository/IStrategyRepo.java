@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public interface IStrategyRepo {
 
+
     List<StrategyAwardEntity> queryStrategyAwardEntityList(Long strategyId);
 
     void putAwardDistributionToRedis(String strategyKey, Integer totalBucket, Map<Integer, Integer> awardDistribution);
@@ -35,5 +36,7 @@ public interface IStrategyRepo {
     Boolean decrAwardStock(String cacheKey);
 
     void awardStockConsumeSendQueue(StrategyAwardStockKeyVO strategyAwardStockKeyVO);
+
+    void cacheStrategyAwardCount(Long strategyId, Integer awardId, Integer awardCount);
 
 }

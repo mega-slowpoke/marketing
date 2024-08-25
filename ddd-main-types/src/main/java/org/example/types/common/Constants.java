@@ -18,9 +18,9 @@ public class Constants {
         public static String STRATEGY_TOTAL_BUCKET_KEY = "strategy_total_bucket_key_";
         public static String RULE_TREE_VO_KEY = "rule_tree_vo_key_";
 
-        public static String STRATEGY_AWARD_COUNT_KEY = "strategy_award_count_key_";
+        public static String STRATEGY_AWARD_TOTAL_KEY = "strategy_award_total_key_";
 
-        public static String STRATEGY_AWARD_COUNT_QUERY_KEY = "strategy_award_count_query_key";
+        public static String STRATEGY_AWARD_REMAINING_KEY = "strategy_award_remaining_key";
     }
 
 

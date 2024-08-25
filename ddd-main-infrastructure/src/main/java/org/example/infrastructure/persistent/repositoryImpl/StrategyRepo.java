@@ -222,9 +222,17 @@ public class StrategyRepo implements IStrategyRepo {
 
     @Override
     public void awardStockConsumeSendQueue(StrategyAwardStockKeyVO strategyAwardStockKeyVO) {
-        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_COUNT_QUERY_KEY;
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_REMAINING_KEY;
         RBlockingQueue<StrategyAwardStockKeyVO> blockingQueue = iRedisService.getBlockingQueue(cacheKey);
         RDelayedQueue<StrategyAwardStockKeyVO> delayedQueue = iRedisService.getDelayedQueue(blockingQueue);
         delayedQueue.offer(strategyAwardStockKeyVO, 3, TimeUnit.SECONDS);
+    }
+
+    @Override
+    public void cacheStrategyAwardCount(Long strategyId, Integer awardId, Integer awardCount) {
+        String totalAwardKey = Constants.RedisKey.STRATEGY_AWARD_TOTAL_KEY + strategyId + Constants.UNDERLINE + awardId;
+        // 已经设置过对应strategy下的award总数
+        if (iRedisService.isExists(totalAwardKey)) return;
+        iRedisService.setAtomicLong(totalAwardKey, awardCount);
     }
 }
