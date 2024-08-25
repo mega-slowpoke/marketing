@@ -3,7 +3,6 @@ package org.example.domain.strategy.service;
 import org.example.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import org.springframework.stereotype.Service;
 
-@Service
 public interface IStockService {
     /**
      * 获取奖品库存消耗队列

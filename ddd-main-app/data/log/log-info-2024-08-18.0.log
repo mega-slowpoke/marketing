@@ -1,0 +1,84 @@
+24-08-18.10:38:00.356 [main            ] INFO  LotteryServiceTest     - Starting LotteryServiceTest using Java 1.8.0_402 on MECHREVO with PID 21788 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-08-18.10:38:00.358 [main            ] INFO  LotteryServiceTest     - The following 1 profile is active: "dev"
+24-08-18.10:38:01.801 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-18.10:38:01.810 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-18.10:38:01.881 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+24-08-18.10:38:04.161 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-18.10:38:05.283 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-18.10:38:05.422 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-18.10:38:08.676 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-18.10:38:08.787 [main            ] INFO  LotteryServiceTest     - Started LotteryServiceTest in 9.165 seconds (JVM running for 11.338)
+24-08-18.10:38:44.293 [main            ] INFO  DefaultLotteryFilter   - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: default_rule awardId: 102
+24-08-18.10:38:44.293 [main            ] INFO  AbstractLotteryService - 抽奖策略计算-责任链 xiaofuge 100006 102 default_rule
+24-08-18.10:40:18.297 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-18.10:40:20.349 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-18.10:56:51.192 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m50s22ms459µs900ns).
+24-08-18.10:56:53.594 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-08-18.10:57:17.622 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-18.10:57:17.647 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-18.10:57:32.299 [main            ] INFO  LotteryServiceTest     - Starting LotteryServiceTest using Java 1.8.0_402 on MECHREVO with PID 26688 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-08-18.10:57:32.301 [main            ] INFO  LotteryServiceTest     - The following 1 profile is active: "dev"
+24-08-18.10:57:33.616 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-18.10:57:33.620 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-18.10:57:33.663 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+24-08-18.10:57:35.738 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-18.10:57:36.759 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-18.10:57:36.878 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-18.10:57:40.238 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-18.10:57:40.335 [main            ] INFO  LotteryServiceTest     - Started LotteryServiceTest in 8.723 seconds (JVM running for 17.017)
+24-08-18.10:58:08.288 [main            ] INFO  DefaultLotteryFilter   - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: default_rule awardId: 102
+24-08-18.10:58:08.288 [main            ] INFO  AbstractLotteryService - 抽奖策略计算-责任链 xiaofuge 100006 102 default_rule
+24-08-18.10:58:17.683 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-18.10:58:18.863 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-18.10:59:26.447 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s492ms288µs100ns).
+24-08-18.11:00:13.633 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s765ms932µs100ns).
+24-08-18.11:01:01.814 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s181ms679µs800ns).
+24-08-18.11:01:05.986 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-08-18.11:01:33.176 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-18.11:01:35.202 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-18.11:01:45.932 [main            ] INFO  RedisTest              - Starting RedisTest using Java 1.8.0_402 on MECHREVO with PID 12984 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-08-18.11:01:45.933 [main            ] INFO  RedisTest              - The following 1 profile is active: "dev"
+24-08-18.11:01:46.945 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-18.11:01:46.949 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-18.11:01:46.984 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+24-08-18.11:01:48.726 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-18.11:01:49.611 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-18.11:01:49.725 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-18.11:01:52.130 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-18.11:01:52.206 [main            ] INFO  RedisTest              - Started RedisTest in 6.826 seconds (JVM running for 7.965)
+24-08-18.11:01:56.709 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_402 on MECHREVO with PID 2424 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-08-18.11:01:56.710 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-08-18.11:01:57.804 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-18.11:01:57.808 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-18.11:01:57.852 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+24-08-18.11:01:59.604 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-18.11:02:00.451 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-18.11:02:00.585 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-18.11:02:03.184 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-18.11:02:03.266 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.088 seconds (JVM running for 8.177)
+24-08-18.11:02:03.806 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-18.11:02:04.212 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-18.11:02:04.633 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-18.11:02:04.652 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-18.11:02:11.103 [main            ] INFO  LotteryServiceTest     - Starting LotteryServiceTest using Java 1.8.0_402 on MECHREVO with PID 3156 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-08-18.11:02:11.104 [main            ] INFO  LotteryServiceTest     - The following 1 profile is active: "dev"
+24-08-18.11:02:12.153 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-18.11:02:12.158 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-18.11:02:12.201 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+24-08-18.11:02:13.743 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-18.11:02:14.669 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-18.11:02:14.813 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-18.11:02:17.533 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-18.11:02:17.626 [main            ] INFO  LotteryServiceTest     - Started LotteryServiceTest in 7.032 seconds (JVM running for 8.226)
+24-08-18.11:02:18.306 [main            ] INFO  DefaultLotteryFilter   - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: default_rule awardId: 102
+24-08-18.11:02:18.306 [main            ] INFO  AbstractLotteryService - 抽奖策略计算-责任链 xiaofuge 100006 102 default_rule
+24-08-18.11:02:18.331 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-18.11:02:18.785 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-18.11:02:18.861 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-08-18.11:02:18.862 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+24-08-18.11:02:18.863 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_luck_award code:0001
+24-08-18.11:02:18.863 [main            ] INFO  AbstractLotteryService - 抽奖策略计算-规则树 xiaofuge 100006 101 1,100
+24-08-18.11:02:19.163 [main            ] INFO  LotteryServiceTest     - 请求参数：{"strategyId":100006,"userId":"xiaofuge"}
+24-08-18.11:02:19.167 [main            ] INFO  LotteryServiceTest     - 测试结果：{"awardConfig":"1,100","awardId":101}
+24-08-18.11:02:19.186 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-18.11:02:19.207 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

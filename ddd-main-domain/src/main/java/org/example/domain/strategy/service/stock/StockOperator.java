@@ -2,9 +2,11 @@ package org.example.domain.strategy.service.stock;
 
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.types.common.Constants;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
+@Service
 public class StockOperator implements IStockOperator{
 
     @Resource
