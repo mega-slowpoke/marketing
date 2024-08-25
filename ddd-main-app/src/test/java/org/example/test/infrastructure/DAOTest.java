@@ -84,4 +84,9 @@ public class DAOTest {
     public void queryAwardRuleTest() {
         System.out.println(iAwardRuleDAO.queryAwardRuleByIdAndName(100001L, 107, Constants.RuleName.RULE_LUCK_AWARD));
     }
+
+    @Test
+    public void decrStockTest() {
+        iStrategyAwardDAO.decrAwardCount(100006L, 102, 10);
+    }
 }

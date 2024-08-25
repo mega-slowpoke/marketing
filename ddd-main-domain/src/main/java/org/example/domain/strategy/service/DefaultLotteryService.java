@@ -3,6 +3,7 @@ package org.example.domain.strategy.service;
 import lombok.extern.slf4j.Slf4j;
 import org.example.domain.strategy.model.valobj.RuleTreeVO;
 import org.example.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
+import org.example.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import org.example.domain.strategy.service.filter.beforeFilter.IBeforeFilter;
 import org.example.domain.strategy.service.filter.beforeFilter.factory.BeforeFilterFactory;
 import org.example.domain.strategy.service.filter.treeFilter.factory.DefaultTreeFactory;
@@ -44,4 +45,13 @@ public class DefaultLotteryService extends AbstractLotteryService {
         return iDecisionTreeEngine.process(userId, strategyId, awardId);
     }
 
+    @Override
+    public StrategyAwardStockKeyVO getNextConsumedAwardFromQueue() throws InterruptedException {
+        return iStrategyRepo.getNextConsumedAwardFromQueue();
+    }
+
+    @Override
+    public void decrDBAwardCountByOne(Long strategyId, Integer awardId) {
+        iStrategyRepo.decrDBAwardCountByOne(strategyId, awardId);
+    }
 }

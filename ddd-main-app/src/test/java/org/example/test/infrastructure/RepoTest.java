@@ -33,4 +33,9 @@ public class RepoTest {
     public void queryAwardRuleTest() {
         log.info(iStrategyRepo.queryAwardRuleByIdAndName(100001L, 107, Constants.RuleName.RULE_LOCK).toString());
     }
+
+    @Test
+    public void decrStockTest() {
+        iStrategyRepo.decrDBAwardCountByOne(100006L, 102);
+    }
 }
