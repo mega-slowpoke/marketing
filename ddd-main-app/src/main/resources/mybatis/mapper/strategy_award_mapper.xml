@@ -23,7 +23,7 @@
     </select>
 
     <select id="queryStrategyAwardListById" resultMap="CaseMap">
-        SELECT id, strategy_id, award_id, award_total, award_remaning, award_rate,  rule_model,create_time, update_time
+        SELECT id, strategy_id, award_id, award_total, award_remaining, award_rate,  rule_model,create_time, update_time
         FROM strategy_award
         WHERE strategy_id = #{strategyId}
     </select>

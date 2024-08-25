@@ -69,6 +69,8 @@ public class LotteryServiceTest {
     @Test
     public void test_LotteryWithStockSystem() throws InterruptedException {
         for (int i = 0; i < 3; i++) {
+            log.info("第{}次抽奖 -----------------------------------------------------------", i);
+
             LotteryReqEntity raffleFactorEntity = new LotteryReqEntity();
             raffleFactorEntity.setStrategyId(100006L);
             raffleFactorEntity.setUserId("xiaofuge");
@@ -80,5 +82,4 @@ public class LotteryServiceTest {
         // 等待 UpdateAwardStockJob 消费队列
         new CountDownLatch(1).await();
     }
-
 }
