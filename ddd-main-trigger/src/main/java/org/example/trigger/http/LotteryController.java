@@ -69,7 +69,7 @@ public class LotteryController implements IControllerService {
             List<StrategyAwardEntity> strategyAwardEntities = iAwardService.getAwardList(awardRequest.getStrategyId());
             List<AwardResponseDTO> raffleAwardListResponseDTOS = new ArrayList<>(strategyAwardEntities.size());
             for (StrategyAwardEntity strategyAward : strategyAwardEntities) {
-                raffleAwardListResponseDTOS.add(AwardRequestDTO.builder()
+                raffleAwardListResponseDTOS.add(AwardResponseDTO.builder()
                         .awardId(strategyAward.getAwardId())
                         .awardTitle(strategyAward.getAwardTitle())
                         .awardSubtitle(strategyAward.getAwardSubtitle())
