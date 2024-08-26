@@ -13,14 +13,14 @@ public class StrategyAward {
     private String awardTitle;
     private String awardSubtitle;
     private String ruleModel;
-    private String sortOrder;
+    private Integer sortOrder;
     private Date createTime;
     private Date updateTime;
 
     public StrategyAward() {
     }
 
-    public StrategyAward(Long id, Long strategyId, Integer awardId, Integer awardTotal, Integer awardRemaining, BigDecimal awardRate, String awardTitle, String awardSubtitle, String ruleModel, String sortOrder, Date createTime, Date updateTime) {
+    public StrategyAward(Long id, Long strategyId, Integer awardId, Integer awardTotal, Integer awardRemaining, BigDecimal awardRate, String awardTitle, String awardSubtitle, String ruleModel, Integer sortOrder, Date createTime, Date updateTime) {
         this.id = id;
         StrategyId = strategyId;
         this.awardId = awardId;
@@ -107,11 +107,11 @@ public class StrategyAward {
         this.ruleModel = ruleModel;
     }
 
-    public String getSortOrder() {
+    public Integer getSortOrder() {
         return sortOrder;
     }
 
-    public void setSortOrder(String sortOrder) {
+    public void setSortOrder(Integer sortOrder) {
         this.sortOrder = sortOrder;
     }
 

@@ -15,13 +15,6 @@
 
     </resultMap>
 
-
-    <select id="queryStrategyAwardList" resultMap="CaseMap">
-        SELECT id, strategy_id, award_id, create_time, update_time
-        FROM strategy_award
-        LIMIT 10
-    </select>
-
     <select id="queryStrategyAwardListById" resultMap="CaseMap">
         SELECT id, strategy_id, award_id, award_total, award_remaining, award_rate,  rule_model,create_time, update_time
         FROM strategy_award

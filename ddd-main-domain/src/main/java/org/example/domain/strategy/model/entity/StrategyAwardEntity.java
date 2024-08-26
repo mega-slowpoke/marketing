@@ -4,32 +4,30 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class StrategyAwardEntity {
-    private Long id;
     private Long StrategyId;
+    private String awardTitle;
+    private String awardSubtitle;
     private Integer awardId;
     private Integer awardTotal;
     private Integer awardRemaining;
     private BigDecimal awardRate;
+    private Integer sortOrder;
+
 
     public StrategyAwardEntity() {
     }
 
-    public StrategyAwardEntity(Long id, Long strategyId, Integer awardId, String awardDesc, Integer awardTotal, Integer awardRemaining, BigDecimal awardRate, String awardTitle, String awardSubtitle, String ruleModel) {
-        this.id = id;
+    public StrategyAwardEntity(Long strategyId, String awardTitle, String awardSubtitle, Integer awardId, Integer awardTotal, Integer awardRemaining, BigDecimal awardRate, String ruleModel, Integer sortOrder) {
         StrategyId = strategyId;
+        this.awardTitle = awardTitle;
+        this.awardSubtitle = awardSubtitle;
         this.awardId = awardId;
         this.awardTotal = awardTotal;
         this.awardRemaining = awardRemaining;
         this.awardRate = awardRate;
+        this.sortOrder = sortOrder;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public Long getStrategyId() {
         return StrategyId;
@@ -37,6 +35,22 @@ public class StrategyAwardEntity {
 
     public void setStrategyId(Long strategyId) {
         StrategyId = strategyId;
+    }
+
+    public String getAwardTitle() {
+        return awardTitle;
+    }
+
+    public void setAwardTitle(String awardTitle) {
+        this.awardTitle = awardTitle;
+    }
+
+    public String getAwardSubtitle() {
+        return awardSubtitle;
+    }
+
+    public void setAwardSubtitle(String awardSubtitle) {
+        this.awardSubtitle = awardSubtitle;
     }
 
     public Integer getAwardId() {
@@ -69,5 +83,13 @@ public class StrategyAwardEntity {
 
     public void setAwardRate(BigDecimal awardRate) {
         this.awardRate = awardRate;
+    }
+
+    public Integer getSortOrder() {
+        return sortOrder;
+    }
+
+    public void setSortOrder(Integer sortOrder) {
+        this.sortOrder = sortOrder;
     }
 }

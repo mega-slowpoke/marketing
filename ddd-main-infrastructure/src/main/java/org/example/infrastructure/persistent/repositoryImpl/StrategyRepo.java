@@ -64,12 +64,14 @@ public class StrategyRepo implements IStrategyRepo {
         List<StrategyAwardEntity> res = new ArrayList<>();
         for (StrategyAward strategyAward : strategyAwardList) {
             StrategyAwardEntity strategyAwardEntity = new StrategyAwardEntity();
-            strategyAwardEntity.setId(strategyAward.getId());
             strategyAwardEntity.setStrategyId(strategyAward.getStrategyId());
+            strategyAwardEntity.setAwardTitle(strategyAward.getAwardTitle());
+            strategyAwardEntity.setAwardSubtitle(strategyAward.getAwardSubtitle());
             strategyAwardEntity.setAwardId(strategyAward.getAwardId());
             strategyAwardEntity.setAwardTotal(strategyAward.getAwardTotal());
             strategyAwardEntity.setAwardRemaining(strategyAward.getAwardRemaining());
             strategyAwardEntity.setAwardRate(strategyAward.getAwardRate());
+            strategyAwardEntity.setSortOrder(strategyAward.getSortOrder());
             res.add(strategyAwardEntity);
         }
 

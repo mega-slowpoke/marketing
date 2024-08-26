@@ -8,7 +8,7 @@ import org.example.types.common.Response;
 
 import java.util.List;
 
-public interface IService {
+public interface IControllerService {
 
     Response<Boolean> initializeStrategy(Long strategyId);
 
