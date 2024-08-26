@@ -976,3 +976,35 @@ java.lang.NullPointerException: null
 24-08-26.18:55:55.396 [http-nio-8091-exec-2] INFO  LotteryController      - 抽奖策略装配完成 strategyId：100006 response: {"code":"0000","data":true,"info":"调用成功"}
 24-08-26.18:55:59.107 [http-nio-8091-exec-4] INFO  LotteryController      - 查询抽奖奖品列表配开始 strategyId：100006
 24-08-26.18:55:59.108 [http-nio-8091-exec-4] INFO  LotteryController      - 查询抽奖奖品列表配置完成 strategyId：100006 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分","sort":1},{"awardId":102,"awardTitle":"随机积分","sort":1}],"info":"调用成功"}
+24-08-26.18:57:02.799 [http-nio-8091-exec-9] INFO  LotteryController      - 随机抽奖开始 strategyId: 100006
+24-08-26.18:57:02.810 [http-nio-8091-exec-9] INFO  DefaultLotteryFilter   - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: default_rule awardId: 102
+24-08-26.18:57:02.810 [http-nio-8091-exec-9] INFO  AbstractLotteryService - 抽奖策略计算-责任链 xiaofuge 100006 102 default_rule
+24-08-26.18:57:02.835 [http-nio-8091-exec-9] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:xiaofuge strategyId:100006 ruleModel:rule_lock
+24-08-26.18:57:02.836 [http-nio-8091-exec-9] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-08-26.18:57:02.836 [http-nio-8091-exec-9] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:xiaofuge strategyId:100006 awardId:102
+24-08-26.18:57:02.839 [http-nio-8091-exec-9] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:xiaofuge strategyId:100006 awardId:102
+24-08-26.18:57:02.863 [http-nio-8091-exec-9] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+24-08-26.18:57:02.863 [http-nio-8091-exec-9] INFO  AbstractLotteryService - 抽奖策略计算-规则树 xiaofuge 100006 102 null
+24-08-26.18:57:02.872 [http-nio-8091-exec-9] INFO  LotteryController      - 随机抽奖完成 strategyId: 100006 response: {"code":"0000","data":{"awardId":102,"awardIndex":1},"info":"调用成功"}
+24-08-26.18:57:07.937 [http-nio-8091-exec-8] INFO  LotteryController      - 随机抽奖开始 strategyId: 100006
+24-08-26.18:57:07.942 [http-nio-8091-exec-8] INFO  DefaultLotteryFilter   - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: default_rule awardId: 102
+24-08-26.18:57:07.942 [http-nio-8091-exec-8] INFO  AbstractLotteryService - 抽奖策略计算-责任链 xiaofuge 100006 102 default_rule
+24-08-26.18:57:07.946 [http-nio-8091-exec-8] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:xiaofuge strategyId:100006 ruleModel:rule_lock
+24-08-26.18:57:07.946 [http-nio-8091-exec-8] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-08-26.18:57:07.946 [http-nio-8091-exec-8] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:xiaofuge strategyId:100006 awardId:102
+24-08-26.18:57:07.949 [http-nio-8091-exec-8] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:xiaofuge strategyId:100006 awardId:102
+24-08-26.18:57:07.950 [http-nio-8091-exec-8] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+24-08-26.18:57:07.950 [http-nio-8091-exec-8] INFO  AbstractLotteryService - 抽奖策略计算-规则树 xiaofuge 100006 102 null
+24-08-26.18:57:07.951 [http-nio-8091-exec-8] INFO  LotteryController      - 随机抽奖完成 strategyId: 100006 response: {"code":"0000","data":{"awardId":102,"awardIndex":1},"info":"调用成功"}
+24-08-26.18:57:09.028 [http-nio-8091-exec-10] INFO  LotteryController      - 随机抽奖开始 strategyId: 100006
+24-08-26.18:57:09.032 [http-nio-8091-exec-10] INFO  DefaultLotteryFilter   - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: default_rule awardId: 101
+24-08-26.18:57:09.032 [http-nio-8091-exec-10] INFO  AbstractLotteryService - 抽奖策略计算-责任链 xiaofuge 100006 101 default_rule
+24-08-26.18:57:09.036 [http-nio-8091-exec-10] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:xiaofuge strategyId:100006 ruleModel:rule_lock
+24-08-26.18:57:09.038 [http-nio-8091-exec-10] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-08-26.18:57:09.038 [http-nio-8091-exec-10] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:xiaofuge strategyId:100006 awardId:101
+24-08-26.18:57:09.040 [http-nio-8091-exec-10] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:xiaofuge strategyId:100006 awardId:101
+24-08-26.18:57:09.042 [http-nio-8091-exec-10] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+24-08-26.18:57:09.042 [http-nio-8091-exec-10] INFO  AbstractLotteryService - 抽奖策略计算-规则树 xiaofuge 100006 101 null
+24-08-26.18:57:09.047 [http-nio-8091-exec-10] INFO  LotteryController      - 随机抽奖完成 strategyId: 100006 response: {"code":"0000","data":{"awardId":101,"awardIndex":1},"info":"调用成功"}
+24-08-26.18:57:10.015 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:102
+24-08-26.18:57:15.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:102
