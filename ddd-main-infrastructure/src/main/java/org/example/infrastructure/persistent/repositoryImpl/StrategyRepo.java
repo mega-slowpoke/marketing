@@ -11,6 +11,7 @@ import org.example.infrastructure.persistent.dao.*;
 import org.example.infrastructure.persistent.po.*;
 import org.example.infrastructure.persistent.redis.IRedisService;
 import org.example.types.common.Constants;
+import org.example.types.exception.AppException;
 import org.redisson.api.RBlockingQueue;
 import org.redisson.api.RDelayedQueue;
 import org.redisson.api.RMap;
@@ -22,6 +23,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
+import static org.example.types.enums.ResponseCode.UN_ASSEMBLED_STRATEGY_ARMORY;
 
 @Slf4j
 @Repository
@@ -93,6 +96,10 @@ public class StrategyRepo implements IStrategyRepo {
 
     @Override
     public Integer getRange(String bucketNumberKey) {
+        // 在通过缓存获取抽奖范围值时，如果忘记初始化策略到缓存中会抛异常
+        if (!iRedisService.isExists(bucketNumberKey)) {
+            throw new AppException(UN_ASSEMBLED_STRATEGY_ARMORY.getCode(), bucketNumberKey + Constants.COLON + UN_ASSEMBLED_STRATEGY_ARMORY.getInfo());
+        }
         return iRedisService.getValue(bucketNumberKey);
     }
 
