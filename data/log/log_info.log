@@ -914,3 +914,65 @@ java.lang.NullPointerException: null
 24-08-26.18:51:18.147 [http-nio-8091-exec-1] INFO  LotteryController      - 查询抽奖奖品列表配置完成 strategyId：100006 response: {"code":"0000","data":[{"awardId":101},{"awardId":102}],"info":"调用成功"}
 24-08-26.18:52:32.524 [http-nio-8091-exec-2] INFO  LotteryController      - 抽奖策略装配开始 strategyId：100006
 24-08-26.18:52:32.610 [http-nio-8091-exec-2] INFO  LotteryController      - 抽奖策略装配完成 strategyId：100006 response: {"code":"0000","data":true,"info":"调用成功"}
+24-08-26.18:53:03.691 [http-nio-8091-exec-4] INFO  LotteryController      - 查询抽奖奖品列表配开始 strategyId：100006
+24-08-26.18:53:03.693 [http-nio-8091-exec-4] INFO  LotteryController      - 查询抽奖奖品列表配置完成 strategyId：100006 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分"},{"awardId":102,"awardTitle":"随机积分"}],"info":"调用成功"}
+24-08-26.18:53:07.972 [http-nio-8091-exec-6] INFO  LotteryController      - 查询抽奖奖品列表配开始 strategyId：100006
+24-08-26.18:53:07.974 [http-nio-8091-exec-6] INFO  LotteryController      - 查询抽奖奖品列表配置完成 strategyId：100006 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分"},{"awardId":102,"awardTitle":"随机积分"}],"info":"调用成功"}
+24-08-26.18:54:10.691 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-26.18:54:10.699 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-26.18:54:19.082 [main            ] INFO  Application            - Starting Application using Java 1.8.0_402 on MECHREVO with PID 353204 (E:\projects\big_market\marketing\ddd-main-app\target\classes started by wucha in E:\projects\big_market\marketing)
+24-08-26.18:54:19.084 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-26.18:54:19.626 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-26.18:54:19.627 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-26.18:54:19.648 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-08-26.18:54:19.997 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-26.18:54:20.004 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-26.18:54:20.004 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-26.18:54:20.004 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-26.18:54:20.076 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-26.18:54:20.077 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 970 ms
+24-08-26.18:54:20.470 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-26.18:54:20.883 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-26.18:54:20.935 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-26.18:54:21.508 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-26.18:54:21.531 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-08-26.18:54:21.539 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-08-26.18:54:21.561 [main            ] INFO  Application            - Started Application in 2.745 seconds (JVM running for 3.418)
+24-08-26.18:54:22.135 [RMI TCP Connection(1)-172.27.162.219] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-26.18:54:22.138 [RMI TCP Connection(2)-172.27.162.219] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-08-26.18:54:22.138 [RMI TCP Connection(2)-172.27.162.219] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-08-26.18:54:22.139 [RMI TCP Connection(2)-172.27.162.219] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-08-26.18:54:22.366 [RMI TCP Connection(1)-172.27.162.219] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-26.18:54:29.038 [http-nio-8091-exec-1] INFO  LotteryController      - 查询抽奖奖品列表配开始 strategyId：100006
+24-08-26.18:54:29.155 [http-nio-8091-exec-1] INFO  LotteryController      - 查询抽奖奖品列表配置完成 strategyId：100006 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分"},{"awardId":102,"awardTitle":"随机积分"}],"info":"调用成功"}
+24-08-26.18:54:56.285 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-08-26.18:54:56.294 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-08-26.18:54:59.330 [main            ] INFO  Application            - Starting Application using Java 1.8.0_402 on MECHREVO with PID 353452 (E:\projects\big_market\marketing\ddd-main-app\target\classes started by wucha in E:\projects\big_market\marketing)
+24-08-26.18:54:59.332 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-26.18:54:59.904 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-26.18:54:59.906 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-26.18:54:59.926 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-08-26.18:55:00.278 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-26.18:55:00.284 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-26.18:55:00.285 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-26.18:55:00.285 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-26.18:55:00.358 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-26.18:55:00.358 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1002 ms
+24-08-26.18:55:00.776 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-26.18:55:01.198 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-26.18:55:01.259 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-26.18:55:01.785 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-26.18:55:01.806 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-08-26.18:55:01.812 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-08-26.18:55:01.827 [main            ] INFO  Application            - Started Application in 2.777 seconds (JVM running for 3.579)
+24-08-26.18:55:02.044 [RMI TCP Connection(1)-172.27.162.219] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-08-26.18:55:02.044 [RMI TCP Connection(1)-172.27.162.219] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-08-26.18:55:02.044 [RMI TCP Connection(2)-172.27.162.219] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-08-26.18:55:02.044 [RMI TCP Connection(1)-172.27.162.219] INFO  DispatcherServlet      - Completed initialization in 0 ms
+24-08-26.18:55:02.263 [RMI TCP Connection(2)-172.27.162.219] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-08-26.18:55:05.084 [http-nio-8091-exec-1] INFO  LotteryController      - 查询抽奖奖品列表配开始 strategyId：100006
+24-08-26.18:55:05.182 [http-nio-8091-exec-1] INFO  LotteryController      - 查询抽奖奖品列表配置完成 strategyId：100006 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分"},{"awardId":102,"awardTitle":"随机积分"}],"info":"调用成功"}
+24-08-26.18:55:55.325 [http-nio-8091-exec-2] INFO  LotteryController      - 抽奖策略装配开始 strategyId：100006
+24-08-26.18:55:55.396 [http-nio-8091-exec-2] INFO  LotteryController      - 抽奖策略装配完成 strategyId：100006 response: {"code":"0000","data":true,"info":"调用成功"}
+24-08-26.18:55:59.107 [http-nio-8091-exec-4] INFO  LotteryController      - 查询抽奖奖品列表配开始 strategyId：100006
+24-08-26.18:55:59.108 [http-nio-8091-exec-4] INFO  LotteryController      - 查询抽奖奖品列表配置完成 strategyId：100006 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分","sort":1},{"awardId":102,"awardTitle":"随机积分","sort":1}],"info":"调用成功"}

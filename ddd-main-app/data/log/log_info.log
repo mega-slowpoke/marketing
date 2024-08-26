@@ -59,3 +59,13 @@
 24-08-26.18:52:22.502 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
 24-08-26.18:52:23.844 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
 24-08-26.18:52:23.907 [main            ] INFO  RedisTest              - Started RedisTest in 4.577 seconds (JVM running for 5.29)
+24-08-26.18:55:37.201 [main            ] INFO  RedisTest              - Starting RedisTest using Java 1.8.0_402 on MECHREVO with PID 354508 (started by wucha in E:\projects\big_market\marketing\ddd-main-app)
+24-08-26.18:55:37.202 [main            ] INFO  RedisTest              - The following 1 profile is active: "dev"
+24-08-26.18:55:37.905 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-26.18:55:37.908 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-26.18:55:37.932 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-08-26.18:55:39.544 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-26.18:55:40.144 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-26.18:55:40.206 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-26.18:55:41.773 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-26.18:55:41.822 [main            ] INFO  RedisTest              - Started RedisTest in 4.902 seconds (JVM running for 5.623)
