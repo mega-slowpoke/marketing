@@ -48,14 +48,6 @@ public class DAOTest {
     }
 
     @Test
-    public void testIStrategyAwardDAO() {
-        List<StrategyAward> strategyAwardList = iStrategyAwardDAO.queryStrategyAwardList();
-        for (StrategyAward strategyAward: strategyAwardList) {
-            System.out.println(strategyAward);
-        }
-    }
-
-    @Test
     public void testIStrategyRuleDAO() {
         List<StrategyRule> strategyRules = iStrategyRuleDAO.queryStrategyRuleList();
         for (StrategyRule sr: strategyRules) {

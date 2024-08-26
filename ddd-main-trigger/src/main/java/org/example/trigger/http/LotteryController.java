@@ -104,7 +104,7 @@ public class LotteryController implements IControllerService {
             // 调用抽奖接口
             LotteryReqEntity lotteryReq = new LotteryReqEntity();
             lotteryReq.setStrategyId(lotteryRequestDTO.getStrategyId());
-            lotteryReq.setUserId(lotteryReq.getUserId());
+            lotteryReq.setUserId(lotteryRequestDTO.getUserId());
             LotteryResEntity lotteryRes = iLotteryService.performLottery(lotteryReq);
             // 封装返回结果
             Response<LotteryResponseDTO> response = Response.<LotteryResponseDTO>builder()

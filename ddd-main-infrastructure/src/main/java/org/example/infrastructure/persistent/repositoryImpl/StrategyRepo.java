@@ -267,7 +267,9 @@ public class StrategyRepo implements IStrategyRepo {
         if (null != strategyAwardEntity) return strategyAwardEntity;
         // 查询数据
         StrategyAward strategyAward = iStrategyAwardDAO.queryStrategyAward(strategyId, awardId);
+
         // 转换数据
+        strategyAwardEntity = new StrategyAwardEntity();
         strategyAwardEntity.setStrategyId(strategyAward.getStrategyId());
         strategyAwardEntity.setAwardTitle(strategyAward.getAwardTitle());
         strategyAwardEntity.setAwardSubtitle(strategyAward.getAwardSubtitle());

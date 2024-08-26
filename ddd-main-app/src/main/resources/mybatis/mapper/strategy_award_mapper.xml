@@ -6,6 +6,8 @@
         <id column="id" property="id"/>
         <result column="strategy_id" property="strategyId"/>
         <result column="award_id" property="awardId"/>
+        <result column="award_title" property="awardTitle"/>
+        <result column="award_subtitle" property="awardSubtitle"/>
         <result column="award_total" property="awardTotal"/>
         <result column="award_remaining" property="awardRemaining"/>
         <result column="award_rate" property="awardRate"/>
@@ -16,7 +18,7 @@
     </resultMap>
 
     <select id="queryStrategyAwardListById" resultMap="CaseMap">
-        SELECT id, strategy_id, award_id, award_total, award_remaining, award_rate,  rule_model,create_time, update_time
+        SELECT id, strategy_id, award_id, award_title, award_subtitle, award_total, award_remaining, award_rate, rule_model,create_time, update_time
         FROM strategy_award
         WHERE strategy_id = #{strategyId}
     </select>
@@ -27,7 +29,7 @@
     </select>
 
     <select id="queryStrategyAward"  resultMap="CaseMap">
-        SELECT id, strategy_id, award_id, award_total, award_remaining, award_rate,  rule_model, create_time, update_time
+        SELECT id, strategy_id, award_id, award_title, award_subtitle, award_total, award_remaining, award_rate, rule_model,create_time, update_time
         FROM strategy_award
         where strategy_id = #{strategyId} and award_id = #{awardId}
     </select>

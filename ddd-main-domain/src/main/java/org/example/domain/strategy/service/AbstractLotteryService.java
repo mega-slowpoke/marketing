@@ -3,8 +3,6 @@ package org.example.domain.strategy.service;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.example.domain.strategy.model.entity.*;
-import org.example.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
-import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.domain.strategy.service.executor.ILotteryExecutor;
 import org.example.domain.strategy.service.filter.beforeFilter.factory.BeforeFilterFactory;
@@ -21,8 +19,6 @@ public abstract class AbstractLotteryService implements ILotteryService, IStockS
     @Resource
     protected IStrategyRepo iStrategyRepo;
 
-    @Resource
-    protected ILotteryExecutor iLotteryExecutor;
 
     @Override
     public LotteryResEntity performLottery(LotteryReqEntity lotteryRequestEntity) {
