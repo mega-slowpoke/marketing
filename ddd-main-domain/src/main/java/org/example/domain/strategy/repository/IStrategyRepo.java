@@ -41,4 +41,6 @@ public interface IStrategyRepo {
     Boolean decrRedisAwardCountByOne(String cacheKey);
 
     void decrDBAwardCountByOne(Long strategyId, Integer awardId);
+
+    StrategyAwardEntity queryStrategyAward(Long strategyId, Integer awardId);
 }

@@ -11,6 +11,8 @@ import org.example.api.DTO.AwardResponseDTO;
 import org.example.api.DTO.LotteryRequestDTO;
 import org.example.api.DTO.LotteryResponseDTO;
 import org.example.api.IControllerService;
+import org.example.domain.strategy.model.entity.LotteryReqEntity;
+import org.example.domain.strategy.model.entity.LotteryResEntity;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.service.IAwardService;
 import org.example.domain.strategy.service.ILotteryService;
@@ -67,26 +69,26 @@ public class LotteryController implements IControllerService {
             log.info("查询抽奖奖品列表配开始 strategyId：{}", awardRequest.getStrategyId());
             // 查询奖品配置
             List<StrategyAwardEntity> strategyAwardEntities = iAwardService.getAwardList(awardRequest.getStrategyId());
-            List<AwardResponseDTO> raffleAwardListResponseDTOS = new ArrayList<>(strategyAwardEntities.size());
+            List<AwardResponseDTO> awardResponseDTOS = new ArrayList<>(strategyAwardEntities.size());
             for (StrategyAwardEntity strategyAward : strategyAwardEntities) {
-                raffleAwardListResponseDTOS.add(AwardResponseDTO.builder()
+                awardResponseDTOS.add(AwardResponseDTO.builder()
                         .awardId(strategyAward.getAwardId())
                         .awardTitle(strategyAward.getAwardTitle())
                         .awardSubtitle(strategyAward.getAwardSubtitle())
-                        .sort(strategyAward.getSort())
+                        .sort(strategyAward.getSortOrder())
                         .build());
             }
-            Response<List<RaffleAwardListResponseDTO>> response = Response.<List<RaffleAwardListResponseDTO>>builder()
+            Response<List<AwardResponseDTO>> response = Response.<List<AwardResponseDTO>>builder()
                     .code(ResponseCode.SUCCESS.getCode())
                     .info(ResponseCode.SUCCESS.getInfo())
-                    .data(raffleAwardListResponseDTOS)
+                    .data(awardResponseDTOS)
                     .build();
-            log.info("查询抽奖奖品列表配置完成 strategyId：{} response: {}", requestDTO.getStrategyId(), JSON.toJSONString(response));
+            log.info("查询抽奖奖品列表配置完成 strategyId：{} response: {}", awardRequest.getStrategyId(), JSON.toJSONString(response));
             // 返回结果
             return response;
         } catch (Exception e) {
-            log.error("查询抽奖奖品列表配置失败 strategyId：{}", requestDTO.getStrategyId(), e);
-            return Response.<List<RaffleAwardListResponseDTO>>builder()
+            log.error("查询抽奖奖品列表配置失败 strategyId：{}", awardRequest.getStrategyId(), e);
+            return Response.<List<AwardResponseDTO>>builder()
                     .code(ResponseCode.UN_ERROR.getCode())
                     .info(ResponseCode.UN_ERROR.getInfo())
                     .build();
@@ -96,6 +98,37 @@ public class LotteryController implements IControllerService {
     @PostMapping(value = "lottery")
     @Override
     public Response<LotteryResponseDTO> lottery(@RequestBody LotteryRequestDTO lotteryRequestDTO) {
-        return null;
+        try {
+            log.info("随机抽奖开始 strategyId: {}", lotteryRequestDTO.getStrategyId());
+            // 调用抽奖接口
+            LotteryReqEntity lotteryReq = new LotteryReqEntity();
+            lotteryReq.setStrategyId(lotteryRequestDTO.getStrategyId());
+            lotteryReq.setUserId(lotteryReq.getUserId());
+            LotteryResEntity lotteryRes = iLotteryService.performLottery(lotteryReq);
+            // 封装返回结果
+            Response<LotteryResponseDTO> response = Response.<LotteryResponseDTO>builder()
+                    .code(ResponseCode.SUCCESS.getCode())
+                    .info(ResponseCode.SUCCESS.getInfo())
+                    .data(LotteryResponseDTO.builder()
+                            .awardId(lotteryRes.getAwardId())
+                            .awardIndex(lotteryRes.getSortOrder())
+                            .build())
+                    .build();
+            log.info("随机抽奖完成 strategyId: {} response: {}", requestDTO.getStrategyId(), JSON.toJSONString(response));
+            return response;
+        } catch (AppException e) {
+            log.error("随机抽奖失败 strategyId：{} {}", requestDTO.getStrategyId(), e.getInfo());
+            return Response.<RaffleResponseDTO>builder()
+                    .code(e.getCode())
+                    .info(e.getInfo())
+                    .build();
+        } catch (Exception e) {
+            log.error("随机抽奖失败 strategyId：{}", requestDTO.getStrategyId(), e);
+            return Response.<RaffleResponseDTO>builder()
+                    .code(ResponseCode.UN_ERROR.getCode())
+                    .info(ResponseCode.UN_ERROR.getInfo())
+                    .build();
+        }
+    }
     }
 }

@@ -53,7 +53,7 @@ public class StrategyRepo implements IStrategyRepo {
 
     @Override
     public List<StrategyAwardEntity> queryStrategyAwardEntityList(Long strategyId) {
-        String key = Constants.RedisKey.STRATEGY_AWARD_KEY + strategyId;
+        String key = Constants.RedisKey.STRATEGY_AWARD_LIST_KEY + strategyId;
         List<StrategyAwardEntity> strategyAwardEntityList = iRedisService.getValue(key);
 
         // query redis first
@@ -251,5 +251,27 @@ public class StrategyRepo implements IStrategyRepo {
         iStrategyAwardDAO.decrAwardCount(strategyId, awardId, 1);
     }
 
+    @Override
+    public StrategyAwardEntity queryStrategyAward(Long strategyId, Integer awardId) {
+        // 优先从缓存获取
+        String cacheKey = Constants.RedisKey.STRATEGY_AWARD_KEY + strategyId + Constants.UNDERLINE + awardId;
+        StrategyAwardEntity strategyAwardEntity = iRedisService.getValue(cacheKey);
 
+        if (null != strategyAwardEntity) return strategyAwardEntity;
+        // 查询数据
+        StrategyAward strategyAward = iStrategyAwardDAO.queryStrategyAward(strategyId, awardId);
+        // 转换数据
+        strategyAwardEntity.setStrategyId(strategyAward.getStrategyId());
+        strategyAwardEntity.setAwardTitle(strategyAward.getAwardTitle());
+        strategyAwardEntity.setAwardSubtitle(strategyAward.getAwardSubtitle());
+        strategyAwardEntity.setAwardId(strategyAward.getAwardId());
+        strategyAwardEntity.setAwardTotal(strategyAward.getAwardTotal());
+        strategyAwardEntity.setAwardRemaining(strategyAward.getAwardRemaining());
+        strategyAwardEntity.setAwardRate(strategyAward.getAwardRate());
+        strategyAwardEntity.setSortOrder(strategyAward.getSortOrder());
+        // 缓存结果
+        iRedisService.setValue(cacheKey, strategyAwardEntity);
+        // 返回数据
+        return strategyAwardEntity;
+    }
 }

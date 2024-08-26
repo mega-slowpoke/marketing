@@ -10,6 +10,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AwardResponseDTO {
-    // 抽奖策略ID
-    private Long strategyId;
+    // 奖品ID
+    private Integer awardId;
+    // 奖品标题
+    private String awardTitle;
+    // 奖品副标题【抽奖1次后解锁】
+    private String awardSubtitle;
+    // 排序编号
+    private Integer sort;
 }

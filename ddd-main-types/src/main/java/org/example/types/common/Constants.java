@@ -14,6 +14,7 @@ public class Constants {
     public static class RedisKey {
         public static String STRATEGY_KEY = "strategy_key_";
         public static String STRATEGY_AWARD_KEY = "strategy_award_key_";
+        public static String STRATEGY_AWARD_LIST_KEY ="strategy_award_list_key_";
         public static String AWARD_DISTRIBUTION_KEY = "strategy_award_distribution_key_";
         public static String STRATEGY_TOTAL_BUCKET_KEY = "strategy_total_bucket_key_";
         public static String RULE_TREE_VO_KEY = "rule_tree_vo_key_";

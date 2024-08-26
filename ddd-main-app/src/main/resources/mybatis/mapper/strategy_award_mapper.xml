@@ -26,6 +26,12 @@
         where strategy_id = #{strategyId} and award_id = #{awardId}
     </select>
 
+    <select id="queryStrategyAward"  resultMap="CaseMap">
+        SELECT id, strategy_id, award_id, award_total, award_remaining, award_rate,  rule_model, create_time, update_time
+        FROM strategy_award
+        where strategy_id = #{strategyId} and award_id = #{awardId}
+    </select>
+
     <update id="decrAwardCount" parameterType="org.example.infrastructure.persistent.po.StrategyAward">
         update strategy_award
         set award_remaining = award_remaining - #{decrAmount}

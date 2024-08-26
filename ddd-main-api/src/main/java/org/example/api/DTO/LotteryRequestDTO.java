@@ -6,4 +6,6 @@ import lombok.Data;
 public class LotteryRequestDTO {
     // 抽奖策略ID
     private Long strategyId;
+
+    private String userId;
 }
