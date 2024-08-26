@@ -19,6 +19,7 @@ import org.example.domain.strategy.service.ILotteryService;
 import org.example.domain.strategy.service.initializer.IStrategyInitializer;
 import org.example.types.common.Response;
 import org.example.types.enums.ResponseCode;
+import org.example.types.exception.AppException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -114,21 +115,20 @@ public class LotteryController implements IControllerService {
                             .awardIndex(lotteryRes.getSortOrder())
                             .build())
                     .build();
-            log.info("随机抽奖完成 strategyId: {} response: {}", requestDTO.getStrategyId(), JSON.toJSONString(response));
+            log.info("随机抽奖完成 strategyId: {} response: {}", lotteryRequestDTO.getStrategyId(), JSON.toJSONString(response));
             return response;
         } catch (AppException e) {
-            log.error("随机抽奖失败 strategyId：{} {}", requestDTO.getStrategyId(), e.getInfo());
-            return Response.<RaffleResponseDTO>builder()
+            log.error("随机抽奖失败 strategyId：{} {}", lotteryRequestDTO.getStrategyId(), e.getInfo());
+            return Response.<LotteryResponseDTO>builder()
                     .code(e.getCode())
                     .info(e.getInfo())
                     .build();
         } catch (Exception e) {
-            log.error("随机抽奖失败 strategyId：{}", requestDTO.getStrategyId(), e);
-            return Response.<RaffleResponseDTO>builder()
+            log.error("随机抽奖失败 strategyId：{}", lotteryRequestDTO.getStrategyId(), e);
+            return Response.<LotteryResponseDTO>builder()
                     .code(ResponseCode.UN_ERROR.getCode())
                     .info(ResponseCode.UN_ERROR.getInfo())
                     .build();
         }
-    }
     }
 }

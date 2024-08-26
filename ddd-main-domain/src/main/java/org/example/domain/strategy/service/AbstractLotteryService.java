@@ -44,8 +44,8 @@ public abstract class AbstractLotteryService implements ILotteryService, IStockS
         if (!Constants.RuleName.DEFAULT_RULE.equals(chainStrategyAwardVO.getRuleModel())) {
             // 如果有黑名单或者权重，黑名单和权重抽奖会返回奖品id
             lotteryRes.setAwardId(chainStrategyAwardVO.getAwardId());
-            iStrategyRepo.queryStrategyAward(strategyId, chainStrategyAwardVO.getAwardId());
-            lotteryRes.setSortOrder();
+            StrategyAwardEntity strategyAwardEntity = iStrategyRepo.queryStrategyAward(strategyId, chainStrategyAwardVO.getAwardId());
+            lotteryRes.setSortOrder(strategyAwardEntity.getSortOrder());
             return lotteryRes;
         }
 
@@ -55,14 +55,12 @@ public abstract class AbstractLotteryService implements ILotteryService, IStockS
 
         lotteryRes.setAwardId(treeStrategyAwardVO.getAwardId());
         lotteryRes.setAwardConfig(treeStrategyAwardVO.getAwardRuleValue());
-        lotteryRes.setSortOrder(treeStrategyAwardVO.get);
+        StrategyAwardEntity strategyAwardEntity = iStrategyRepo.queryStrategyAward(strategyId, chainStrategyAwardVO.getAwardId());
+        lotteryRes.setSortOrder(strategyAwardEntity.getSortOrder());
 
         // 4. 返回抽奖结果
         return lotteryRes;
     }
-
-
-
 
 
     public abstract BeforeFilterFactory.StrategyAwardVO beforeChainFilter(String userId, Long strategyId);
