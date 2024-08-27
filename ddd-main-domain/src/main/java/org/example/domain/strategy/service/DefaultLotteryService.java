@@ -1,6 +1,7 @@
 package org.example.domain.strategy.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.valobj.RuleTreeVO;
 import org.example.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import org.example.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
@@ -11,6 +12,7 @@ import org.example.domain.strategy.service.filter.treeFilter.factory.engine.IDec
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -53,5 +55,10 @@ public class DefaultLotteryService extends AbstractLotteryService {
     @Override
     public void decrDBAwardCountByOne(Long strategyId, Integer awardId) {
         iStrategyRepo.decrDBAwardCountByOne(strategyId, awardId);
+    }
+
+    @Override
+    public List<StrategyAwardEntity> getAwardList(Long strategyId) {
+        return iStrategyRepo.queryStrategyAwardEntityList(strategyId);
     }
 }

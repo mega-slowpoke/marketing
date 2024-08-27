@@ -1,6 +1,7 @@
 package org.example.test.infrastructure;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.types.common.Constants;
 import org.junit.Test;
@@ -37,5 +38,11 @@ public class RepoTest {
     @Test
     public void decrStockTest() {
         iStrategyRepo.decrDBAwardCountByOne(100006L, 102);
+    }
+
+    @Test
+    public void queryStrategyAwardTest() {
+        StrategyAwardEntity strategyAwardEntity = iStrategyRepo.queryStrategyAward(100006L, 102);
+        log.info(strategyAwardEntity.toString());
     }
 }

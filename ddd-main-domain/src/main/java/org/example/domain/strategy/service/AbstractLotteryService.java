@@ -3,8 +3,6 @@ package org.example.domain.strategy.service;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.example.domain.strategy.model.entity.*;
-import org.example.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
-import org.example.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import org.example.domain.strategy.repository.IStrategyRepo;
 import org.example.domain.strategy.service.executor.ILotteryExecutor;
 import org.example.domain.strategy.service.filter.beforeFilter.factory.BeforeFilterFactory;
@@ -16,13 +14,11 @@ import org.example.types.exception.AppException;
 import javax.annotation.Resource;
 
 @Slf4j
-public abstract class AbstractLotteryService implements ILotteryService, IStockService {
+public abstract class AbstractLotteryService implements ILotteryService, IStockService, IAwardService {
 
     @Resource
     protected IStrategyRepo iStrategyRepo;
 
-    @Resource
-    protected ILotteryExecutor iLotteryExecutor;
 
     @Override
     public LotteryResEntity performLottery(LotteryReqEntity lotteryRequestEntity) {
@@ -44,6 +40,8 @@ public abstract class AbstractLotteryService implements ILotteryService, IStockS
         if (!Constants.RuleName.DEFAULT_RULE.equals(chainStrategyAwardVO.getRuleModel())) {
             // 如果有黑名单或者权重，黑名单和权重抽奖会返回奖品id
             lotteryRes.setAwardId(chainStrategyAwardVO.getAwardId());
+            StrategyAwardEntity strategyAwardEntity = iStrategyRepo.queryStrategyAward(strategyId, chainStrategyAwardVO.getAwardId());
+            lotteryRes.setSortOrder(strategyAwardEntity.getSortOrder());
             return lotteryRes;
         }
 
@@ -53,11 +51,12 @@ public abstract class AbstractLotteryService implements ILotteryService, IStockS
 
         lotteryRes.setAwardId(treeStrategyAwardVO.getAwardId());
         lotteryRes.setAwardConfig(treeStrategyAwardVO.getAwardRuleValue());
+        StrategyAwardEntity strategyAwardEntity = iStrategyRepo.queryStrategyAward(strategyId, chainStrategyAwardVO.getAwardId());
+        lotteryRes.setSortOrder(strategyAwardEntity.getSortOrder());
 
         // 4. 返回抽奖结果
         return lotteryRes;
     }
-
 
 
     public abstract BeforeFilterFactory.StrategyAwardVO beforeChainFilter(String userId, Long strategyId);

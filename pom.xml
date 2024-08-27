@@ -13,6 +13,7 @@
         <module>ddd-main-trigger</module>
         <module>ddd-main-infrastructure</module>
         <module>ddd-main-types</module>
+        <module>ddd-main-api</module>
     </modules>
 
     <repositories>
