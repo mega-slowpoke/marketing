@@ -40,9 +40,6 @@ public class StrategyRepo implements IStrategyRepo {
     private IStrategyRuleDAO iStrategyRuleDAO;
 
     @Resource
-    private IAwardRuleDAO iAwardRuleDAO;
-
-    @Resource
     private IRuleTreeDAO iRuleTreeDAO;
 
     @Resource
@@ -142,18 +139,6 @@ public class StrategyRepo implements IStrategyRepo {
         strategyAward.setAwardId(awardId);
         String ruleModels = iStrategyAwardDAO.queryStrategyAwardRuleModels(strategyAward);
         return new StrategyAwardRuleModelVO(ruleModels);
-    }
-
-    @Override
-    public AwardRuleEntity queryAwardRuleByIdAndName(Long strategyId, Integer awardId, String ruleName) {
-        AwardRule awardRule = iAwardRuleDAO.queryAwardRuleByIdAndName(strategyId, awardId, ruleName);
-        AwardRuleEntity awardRuleEntity = new AwardRuleEntity();
-        awardRuleEntity.setStrategyId(awardRule.getStrategyId());
-        awardRuleEntity.setAwardId(awardRule.getAwardId());
-        awardRuleEntity.setRuleModel(awardRule.getRuleModel());
-        awardRuleEntity.setRuleValue(awardRule.getRuleValue());
-        awardRuleEntity.setRuleDesc(awardRule.getRuleDesc());
-        return awardRuleEntity;
     }
 
     @Override

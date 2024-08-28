@@ -29,11 +29,7 @@ public class RepoTest {
     public void queryStrategyRuleTest() {
         log.info(iStrategyRepo.queryStrategyRuleByIdAndName(100001L, "rule_weight").toString());
     }
-
-    @Test
-    public void queryAwardRuleTest() {
-        log.info(iStrategyRepo.queryAwardRuleByIdAndName(100001L, 107, Constants.RuleName.RULE_LOCK).toString());
-    }
+    
 
     @Test
     public void decrStockTest() {

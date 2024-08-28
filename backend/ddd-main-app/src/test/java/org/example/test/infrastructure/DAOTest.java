@@ -28,8 +28,7 @@ public class DAOTest {
     @Resource
     private IStrategyRuleDAO iStrategyRuleDAO;
 
-    @Resource
-    private IAwardRuleDAO iAwardRuleDAO;
+
 
     @Test
     public void testIStrategyDAO() {
@@ -67,15 +66,8 @@ public class DAOTest {
         log.info(strategy.toString());
     }
 
-    @Test
-    public void queryAwardRuleListTest() {
-        System.out.println(iAwardRuleDAO.queryAwardRulesById(100001L, 107));
-    }
 
-    @Test
-    public void queryAwardRuleTest() {
-        System.out.println(iAwardRuleDAO.queryAwardRuleByIdAndName(100001L, 107, Constants.RuleName.RULE_LUCK_AWARD));
-    }
+
 
     @Test
     public void decrStockTest() {
