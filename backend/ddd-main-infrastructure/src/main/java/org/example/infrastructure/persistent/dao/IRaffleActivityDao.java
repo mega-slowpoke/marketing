@@ -1,7 +1,7 @@
 package org.example.infrastructure.persistent.dao;
 
+import cn.bugstack.infrastructure.persistent.po.RaffleActivity;
 import org.apache.ibatis.annotations.Mapper;
-import org.example.infrastructure.persistent.po.RaffleActivity;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
