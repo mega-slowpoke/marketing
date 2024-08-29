@@ -1,14 +1,14 @@
-24-08-29.18:45:11.363 [main            ] INFO  ShardingTest           - Starting ShardingTest using Java 17.0.8 on MECHREVO with PID 223724 (started by wucha in E:\projects\marketing\backend\ddd-main-app)
-24-08-29.18:45:11.364 [main            ] INFO  ShardingTest           - The following 1 profile is active: "dev"
-24-08-29.18:45:12.170 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-29.18:45:12.173 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-29.18:45:12.200 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-24-08-29.18:45:13.482 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-29.18:45:18.324 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lotteryController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyInitializer': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
-24-08-29.18:45:18.334 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+24-08-27.22:10:37.230 [main            ] INFO  RedisTest              - Starting RedisTest using Java 17.0.8 on MECHREVO with PID 28804 (started by wucha in E:\projects\marketing\backend\ddd-main-app)
+24-08-27.22:10:37.231 [main            ] INFO  RedisTest              - The following 1 profile is active: "dev"
+24-08-27.22:10:37.977 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-27.22:10:37.980 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-27.22:10:38.004 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-08-27.22:10:39.109 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-27.22:10:43.976 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lotteryController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyInitializer': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
+24-08-27.22:10:43.984 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-24-08-29.18:45:18.358 [main            ] ERROR SpringApplication      - Application run failed
+24-08-27.22:10:44.002 [main            ] ERROR SpringApplication      - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lotteryController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyInitializer': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: localhost/127.0.0.1:6379
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
@@ -177,7 +177,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-24-08-29.18:45:18.362 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@76494737] to prepare test instance [org.example.test.domain.ShardingTest@579f3c8e]
+24-08-27.22:10:44.007 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7c137fd5] to prepare test instance [org.example.test.infrastructure.RedisTest@17d2b646]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
@@ -349,41 +349,13 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-24-08-29.18:45:30.528 [main            ] INFO  ShardingTest           - Starting ShardingTest using Java 17.0.8 on MECHREVO with PID 228160 (started by wucha in E:\projects\marketing\backend\ddd-main-app)
-24-08-29.18:45:30.529 [main            ] INFO  ShardingTest           - The following 1 profile is active: "dev"
-24-08-29.18:45:31.158 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-29.18:45:31.160 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-29.18:45:31.185 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-24-08-29.18:45:32.293 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-29.18:45:32.604 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-08-29.18:45:32.673 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-08-29.18:45:33.994 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-29.18:45:34.040 [main            ] INFO  ShardingTest           - Started ShardingTest in 3.87 seconds (JVM running for 4.62)
-24-08-29.18:45:34.454 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-08-29.18:45:34.776 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-08-29.18:45:34.911 [main            ] INFO  ShardingTest           - 测试结果：null
-24-08-29.18:47:59.962 [main            ] INFO  ShardingTest           - Starting ShardingTest using Java 17.0.8 on MECHREVO with PID 227140 (started by wucha in E:\projects\marketing\backend\ddd-main-app)
-24-08-29.18:47:59.963 [main            ] INFO  ShardingTest           - The following 1 profile is active: "dev"
-24-08-29.18:48:00.679 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-29.18:48:00.681 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-29.18:48:00.708 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-24-08-29.18:48:01.859 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-29.18:48:02.167 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-08-29.18:48:02.226 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-08-29.18:48:03.667 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-29.18:48:03.714 [main            ] INFO  ShardingTest           - Started ShardingTest in 4.089 seconds (JVM running for 4.655)
-24-08-29.18:48:04.100 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-08-29.18:48:04.359 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-24-08-29.18:48:04.463 [main            ] INFO  ShardingTest           - 测试结果：{"activityCountId":1,"activityDesc":"测试活动","activityId":100301,"activityName":"测试活动","beginDateTime":1709979310000,"endDateTime":2025512110000,"state":"0","stockCount":1000,"stockCountSurplus":1000,"strategyId":100006}
-24-08-29.18:49:11.547 [main            ] INFO  ShardingTest           - Starting ShardingTest using Java 17.0.8 on MECHREVO with PID 194196 (started by wucha in E:\projects\marketing\backend\ddd-main-app)
-24-08-29.18:49:11.547 [main            ] INFO  ShardingTest           - The following 1 profile is active: "dev"
-24-08-29.18:49:12.176 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-08-29.18:49:12.179 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-08-29.18:49:12.203 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-24-08-29.18:49:13.277 [main            ] INFO  Version                - Redisson 3.23.4
-24-08-29.18:49:13.591 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-08-29.18:49:13.657 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-08-29.18:49:15.091 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-08-29.18:49:15.145 [main            ] INFO  ShardingTest           - Started ShardingTest in 3.914 seconds (JVM running for 4.529)
-24-08-29.18:49:15.544 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-24-08-29.18:49:15.903 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-08-27.22:19:56.388 [main            ] INFO  RedisTest              - Starting RedisTest using Java 17.0.8 on MECHREVO with PID 3144 (started by wucha in E:\projects\marketing\backend\ddd-main-app)
+24-08-27.22:19:56.389 [main            ] INFO  RedisTest              - The following 1 profile is active: "dev"
+24-08-27.22:19:57.238 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-08-27.22:19:57.241 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-08-27.22:19:57.269 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-08-27.22:19:58.453 [main            ] INFO  Version                - Redisson 3.23.4
+24-08-27.22:19:58.819 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-08-27.22:19:58.889 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-08-27.22:20:00.450 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-08-27.22:20:00.517 [main            ] INFO  RedisTest              - Started RedisTest in 4.568 seconds (JVM running for 5.925)
