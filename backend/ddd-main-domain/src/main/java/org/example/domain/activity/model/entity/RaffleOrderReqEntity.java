@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class RaffleOrderReqEntity {
     public String userId;
 
-    public Long sku;
+    public Long skuId;
 }
