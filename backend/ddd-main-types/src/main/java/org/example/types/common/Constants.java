@@ -18,10 +18,10 @@ public class Constants {
         public static String AWARD_DISTRIBUTION_KEY = "strategy_award_distribution_key_";
         public static String STRATEGY_TOTAL_BUCKET_KEY = "strategy_total_bucket_key_";
         public static String RULE_TREE_VO_KEY = "rule_tree_vo_key_";
-
         public static String STRATEGY_AWARD_TOTAL_KEY = "strategy_award_total_key_";
-
         public static String STRATEGY_AWARD_REMAINING_KEY = "strategy_award_remaining_key";
+        public static String ACTIVITY_KEY = "activity_key_";
+        public static String ACTIVITY_COUNT_KEY = "activity_count_key_";
     }
 
 

@@ -52,6 +52,6 @@ public class ActivityEntity {
     /**
      * 活动状态
      */
-    private ActivityConstants.State state;
+    private String state;
 
 }
