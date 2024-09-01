@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 
 @Slf4j
 @Repository
-public class ActivityRepo implements IRaffleOrderRepo {
+public class ActivityRepoImpl implements IRaffleOrderRepo {
 
 
     @Resource

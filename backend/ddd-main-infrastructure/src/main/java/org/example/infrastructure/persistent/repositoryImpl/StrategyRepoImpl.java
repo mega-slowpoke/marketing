@@ -1,7 +1,6 @@
 package org.example.infrastructure.persistent.repositoryImpl;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.domain.strategy.model.entity.AwardRuleEntity;
 import org.example.domain.strategy.model.entity.StrategyAwardEntity;
 import org.example.domain.strategy.model.entity.StrategyEntity;
 import org.example.domain.strategy.model.entity.StrategyRuleEntity;
@@ -28,7 +27,7 @@ import static org.example.types.enums.ResponseCode.UN_ASSEMBLED_STRATEGY_ARMORY;
 
 @Slf4j
 @Repository
-public class StrategyRepo implements IStrategyRepo {
+public class StrategyRepoImpl implements IStrategyRepo {
 
     @Resource
     private IStrategyAwardDAO iStrategyAwardDAO;
