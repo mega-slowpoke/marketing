@@ -29,7 +29,7 @@ public class StrategyRuleEntity {
     private Map<Integer, List<Integer>> buildRuleWeightMap(String ruleValue) {
         // ["4000:102,103,104" , "5000:103,104,105" , "6000:..."]
         Map<Integer, List<Integer>> res = new HashMap<>();
-        String[] rules = ruleValue.split(Constants.SEMICOLON);
+        String[] rules = ruleValue.split(Constants.SPACE);
         for (String rule : rules) {
             // ["4000" , "102,103,104"]
             String[] separateKeyAndVars = rule.split(Constants.COLON);

@@ -122,7 +122,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:750)
-24-08-17.18:46:28.957 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@131ef10] to prepare test instance [org.example.test.domain.LogicTreeTest@4d09cade]
+24-08-17.18:46:28.957 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@131ef10] to prepare test instance [org.example.test.domain.strategy.LogicTreeTest@4d09cade]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
@@ -401,7 +401,7 @@ Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bea
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
 	... 43 common frames omitted
-24-08-17.22:48:32.326 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@70325e14] to prepare test instance [org.example.test.domain.StrategyTest@1e545821]
+24-08-17.22:48:32.326 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@70325e14] to prepare test instance [org.example.test.domain.strategy.StrategyTest@1e545821]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)

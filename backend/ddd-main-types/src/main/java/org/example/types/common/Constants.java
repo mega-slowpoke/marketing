@@ -2,6 +2,8 @@ package org.example.types.common;
 
 public class Constants {
 
+    public final static String SPACE = " ";
+
     public final static String COMMA = ",";
 
     public final static String SEMICOLON = ";";

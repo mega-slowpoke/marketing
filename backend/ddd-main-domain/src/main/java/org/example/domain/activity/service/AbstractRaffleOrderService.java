@@ -1,10 +1,13 @@
 package org.example.domain.activity.service;
 
+import com.alibaba.fastjson.JSON;
+import lombok.extern.slf4j.Slf4j;
 import org.example.domain.activity.model.entity.*;
 import org.example.domain.activity.repository.IRaffleOrderRepo;
 
 import javax.annotation.Resource;
 
+@Slf4j
 public class AbstractRaffleOrderService implements IRaffleOrderService{
 
     @Resource
@@ -21,7 +24,9 @@ public class AbstractRaffleOrderService implements IRaffleOrderService{
         ActivityEntity activityEntity = iRaffleOrderRepo.queryActivityEntityById(skuEntity.getActivityId());
         ActivityCountEntity activityCountEntity = iRaffleOrderRepo.queryActivityCountEntityById(skuEntity.getActivityCountId());
 
-        return null;
+        log.info("查询结果：{} {} {}", JSON.toJSONString(skuEntity), JSON.toJSONString(activityEntity), JSON.toJSONString(activityCountEntity));
+
+        return raffleOrderEntity;
     }
 
 }
