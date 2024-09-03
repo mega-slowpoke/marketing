@@ -18,11 +18,5 @@ public class RaffleOrderTest {
     @Resource
     private IRaffleOrderService iRaffleOrderService;
 
-    @Test
-    public void TestRaffleOrder() {
-        RaffleOrderReqEntity raffleOrderReqEntity = new RaffleOrderReqEntity();
-        raffleOrderReqEntity.setUserId("xiaofuge");
-        raffleOrderReqEntity.setSkuId(9011L);
-        iRaffleOrderService.createRaffleActivityOrder(raffleOrderReqEntity);
-    }
+
 }

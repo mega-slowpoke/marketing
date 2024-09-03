@@ -13,4 +13,7 @@ public class RaffleOrderReqEntity {
     public String userId;
 
     public Long skuId;
+
+    // used for duplicate detection
+    public String bizId;
 }
