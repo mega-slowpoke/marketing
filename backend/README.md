@@ -35,3 +35,7 @@ When you manually instantiate the class using new BlackListFilter(), Spring's de
 
 ### Scheduled job
 If we set up scheduled job in spring, we should add @EnableScheduling annotation for the application starter
+
+
+
+![img.png](docs/imgs/img.png)

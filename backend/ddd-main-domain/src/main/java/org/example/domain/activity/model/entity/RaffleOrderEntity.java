@@ -61,6 +61,8 @@ public class RaffleOrderEntity {
     /**
      * 订单状态
      */
-    private ActivityConstants.State state;
+    private String state;
 
+    // used for duplicate detection
+    public String bizId;
 }

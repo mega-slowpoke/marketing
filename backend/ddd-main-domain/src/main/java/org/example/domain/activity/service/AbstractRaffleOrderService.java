@@ -8,11 +8,12 @@ import org.example.domain.activity.model.entity.*;
 import org.example.domain.activity.repository.IRaffleOrderRepo;
 import org.example.types.enums.ResponseCode;
 import org.example.types.exception.AppException;
+import org.springframework.core.annotation.Order;
 
 import javax.annotation.Resource;
 
 @Slf4j
-public class AbstractRaffleOrderService implements IRaffleOrderService{
+public abstract class AbstractRaffleOrderService implements IRaffleOrderService{
 
     @Resource
     private IRaffleOrderRepo iRaffleOrderRepo;
@@ -31,20 +32,24 @@ public class AbstractRaffleOrderService implements IRaffleOrderService{
 
         // 2. fill in order info
         RaffleSkuEntity skuEntity = iRaffleOrderRepo.querySkuEntityById(skuId);
-        RaffleOrderEntity raffleOrderEntity = new RaffleOrderEntity();
         ActivityEntity activityEntity = iRaffleOrderRepo.queryActivityEntityById(skuEntity.getActivityId());
         ActivityCountEntity activityCountEntity = iRaffleOrderRepo.queryActivityCountEntityById(skuEntity.getActivityCountId());
 
-        log.info("查询结果：{} {} {}", JSON.toJSONString(skuEntity), JSON.toJSONString(activityEntity), JSON.toJSONString(activityCountEntity));
 
         // rule filter
-
+        // TODO
 
         // create order aggregate object
+        OrderAggregate orderAggregate = buildOrderAggregate(raffleOrderReqEntity, skuEntity, activityEntity, activityCountEntity);
 
         // save the order info
+        saveOrder(orderAggregate);
 
         return null;
     }
+
+    protected abstract OrderAggregate buildOrderAggregate(RaffleOrderReqEntity raffleOrderReqEntity, RaffleSkuEntity skuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity);
+
+    protected abstract void saveOrder(OrderAggregate orderAggregate);
 
 }
