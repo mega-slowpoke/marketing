@@ -1,6 +1,5 @@
 package org.example.domain.activity.service;
 
-import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.example.domain.activity.model.aggregate.OrderAggregate;
@@ -8,7 +7,6 @@ import org.example.domain.activity.model.entity.*;
 import org.example.domain.activity.repository.IRaffleOrderRepo;
 import org.example.types.enums.ResponseCode;
 import org.example.types.exception.AppException;
-import org.springframework.core.annotation.Order;
 
 import javax.annotation.Resource;
 
@@ -20,11 +18,11 @@ public abstract class AbstractRaffleOrderService implements IRaffleOrderService{
 
 
     @Override
-    public String createRaffleOrder(RaffleOrderReqEntity raffleOrderReqEntity) {
+    public String rechargeUserBalance(RechargeReqEntity rechargeReqEntity) {
         // parameter checkup
-        String userId = raffleOrderReqEntity.getUserId();
-        Long skuId = raffleOrderReqEntity.getSkuId();
-        String bizId = raffleOrderReqEntity.getBizId();
+        String userId = rechargeReqEntity.getUserId();
+        Long skuId = rechargeReqEntity.getSkuId();
+        String bizId = rechargeReqEntity.getOutBusinessNo();
         if (null == skuId || StringUtils.isBlank(userId) || StringUtils.isBlank(bizId)) {
             throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(), ResponseCode.ILLEGAL_PARAMETER.getInfo());
         }
@@ -39,15 +37,15 @@ public abstract class AbstractRaffleOrderService implements IRaffleOrderService{
         // TODO
 
         // create order aggregate object
-        OrderAggregate orderAggregate = buildOrderAggregate(raffleOrderReqEntity, skuEntity, activityEntity, activityCountEntity);
+        OrderAggregate orderAggregate = buildOrderAggregate(rechargeReqEntity, skuEntity, activityEntity, activityCountEntity);
 
         // save the order info, increment user's available balance
         saveOrder(orderAggregate);
 
-        return null;
+        return orderAggregate.getActivityOrderEntity().getOrderId();
     }
 
-    protected abstract OrderAggregate buildOrderAggregate(RaffleOrderReqEntity raffleOrderReqEntity, RaffleSkuEntity skuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity);
+    protected abstract OrderAggregate buildOrderAggregate(RechargeReqEntity rechargeReqEntity, RaffleSkuEntity skuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity);
 
     protected abstract void saveOrder(OrderAggregate orderAggregate);
 

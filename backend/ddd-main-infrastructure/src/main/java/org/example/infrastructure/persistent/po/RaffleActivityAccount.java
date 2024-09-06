@@ -1,6 +1,7 @@
 package org.example.infrastructure.persistent.po;
 
 import lombok.Data;
+import lombok.Getter;
 
 import java.util.Date;
 

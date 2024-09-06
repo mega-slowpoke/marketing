@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.domain.activity.model.valobj.ActivityConstants;
 
 import java.util.Date;
 
@@ -66,5 +65,5 @@ public class RaffleOrderEntity {
     private String state;
 
     // used for duplicate detection
-    public String bizId;
+    public String outBusinessNo;
 }

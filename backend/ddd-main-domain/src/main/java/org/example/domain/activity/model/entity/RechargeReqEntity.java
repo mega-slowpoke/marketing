@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RaffleOrderReqEntity {
+public class RechargeReqEntity {
     public String userId;
 
     public Long skuId;
 
     // used for duplicate detection
-    public String bizId;
+    public String outBusinessNo;
 }

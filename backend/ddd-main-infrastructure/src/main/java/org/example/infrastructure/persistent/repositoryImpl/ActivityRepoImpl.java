@@ -118,11 +118,8 @@ public class ActivityRepoImpl implements IRaffleOrderRepo {
             raffleActivityOrder.setTotalCount(activityOrderEntity.getTotalCount());
             raffleActivityOrder.setDayCount(activityOrderEntity.getDayCount());
             raffleActivityOrder.setMonthCount(activityOrderEntity.getMonthCount());
-            raffleActivityOrder.setTotalCount(orderAggregate.getTotalCount());
-            raffleActivityOrder.setDayCount(orderAggregate.getDayCount());
-            raffleActivityOrder.setMonthCount(orderAggregate.getMonthCount());
             raffleActivityOrder.setState(activityOrderEntity.getState());
-            raffleActivityOrder.setBizId(activityOrderEntity.getBizId());
+            raffleActivityOrder.setOutBusinessNo(activityOrderEntity.getOutBusinessNo());
 
             // 账户对象
             RaffleActivityAccount raffleActivityAccount = new RaffleActivityAccount();

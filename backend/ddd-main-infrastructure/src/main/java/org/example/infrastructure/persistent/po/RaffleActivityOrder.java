@@ -69,7 +69,7 @@ public class RaffleActivityOrder {
      */
     private String state;
 
-    private String bizId;
+    private String outBusinessNo;
 
     /**
      * 创建时间

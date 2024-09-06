@@ -36,7 +36,7 @@
             month_count_surplus = month_count_surplus + #{monthCountSurplus},
             month_count = month_count + #{monthCount},
             update_time = now()
-        WHERE user_id = #{userId} and activity_id = #{ActivityId}
+        WHERE user_id = #{userId} and activity_id = #{activityId}
 
     </update>
 
