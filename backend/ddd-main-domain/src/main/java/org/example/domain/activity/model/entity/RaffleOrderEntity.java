@@ -18,6 +18,8 @@ public class RaffleOrderEntity {
      */
     private String userId;
 
+
+    private Long skuId;
     /**
      * 活动ID
      */

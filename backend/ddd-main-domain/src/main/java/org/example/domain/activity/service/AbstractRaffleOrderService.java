@@ -16,8 +16,7 @@ import javax.annotation.Resource;
 public abstract class AbstractRaffleOrderService implements IRaffleOrderService{
 
     @Resource
-    private IRaffleOrderRepo iRaffleOrderRepo;
-
+    protected IRaffleOrderRepo iRaffleOrderRepo;
 
 
     @Override
@@ -42,7 +41,7 @@ public abstract class AbstractRaffleOrderService implements IRaffleOrderService{
         // create order aggregate object
         OrderAggregate orderAggregate = buildOrderAggregate(raffleOrderReqEntity, skuEntity, activityEntity, activityCountEntity);
 
-        // save the order info
+        // save the order info, increment user's available balance
         saveOrder(orderAggregate);
 
         return null;

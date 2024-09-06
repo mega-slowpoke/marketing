@@ -39,6 +39,6 @@ public class RaffleOrderService extends AbstractRaffleOrderService {
 
     @Override
     protected void saveOrder(OrderAggregate orderAggregate) {
-
+        iRaffleOrderRepo.saveOrder(orderAggregate);
     }
 }
